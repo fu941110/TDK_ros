@@ -23,7 +23,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 add_executable(navigator src/navigator.cpp)
 
-ament_target_dependencies(navigator
+ament_target_dependencies(
+  navigator
   rclcpp
   nav_msgs
   geometry_msgs

@@ -14,10 +14,14 @@ using namespace std::chrono_literals;
 class NavigatorNode : public rclcpp::Node
 {
 public:
+  using NavigateTo = mainspace::action::NavigateTo;
+  using GoalHandleNavigateTo = rclcpp_action::ServerGoalHandle<NavigateTo>;
+
   NavigatorNode()
-  : Node("navigator_node")
+  : Node("navigator_node")  
   {
     using std::placeholders::_1;
+    using std::placeholders::_2;
 
     position_sub_ = this->create_subscription<mainspace::msg::Position>(
       "/stm_position", 10, std::bind(&NavigatorNode::positionCallback, this, _1));
@@ -28,12 +32,91 @@ public:
     odom_pub_ = this->create_publisher<nav_msgs::msg::Odometry>("/odom", 10);
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
-    // 設定定時控制迴圈（例如 50Hz）
     control_timer_ = this->create_wall_timer(
       100ms, std::bind(&NavigatorNode::controlLoop, this));
+
+    action_server_ = rclcpp_action::create_server<NavigateTo>(
+      this,
+      "navigate_to",
+      std::bind(&NavigatorNode::handle_goal, this, std::placeholders::_1, std::placeholders::_2),
+      std::bind(&NavigatorNode::handle_cancel, this, std::placeholders::_1),
+      std::bind(&NavigatorNode::handle_accepted, this, std::placeholders::_1)
+    );
   }
 
 private:
+  rclcpp_action::GoalResponse handle_goal(
+    const rclcpp_action::GoalUUID & uuid,rclcpp_action::GoalResponse handle_goal(
+    const rclcpp_action::GoalUUID & uuid,
+    std::shared_ptr<const NavigateTo::Goal> goal)
+  {
+    RCLCPP_INFO(this->get_logger(), "Received goal: (%.2f, %.2f, %.2f)", goal->x, goal->y, goal->theta);
+    return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
+  }
+
+  rclcpp_action::CancelResponse handle_cancel(
+    const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+  {
+    RCLCPP_INFO(this->get_logger(), "Goal canceled");
+    return rclcpp_action::CancelResponse::ACCEPT;
+  }
+
+  void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+  {
+    std::thread{std::bind(&NavigatorNode::execute, this, goal_handle)}.detach();
+  }
+    std::shared_ptr<const NavigateTo::Goal> goal)
+  {
+    RCLCPP_INFO(this->get_logger(), "Received goal: (%.2f, %.2f, %.2f)", goal->x, goal->y, goal->theta);
+    return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
+  }
+
+  void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+  {
+    std::thread{std::bind(&NavigatorNode::execute, this, goal_handle)}.detach();
+  }
+
+  void execute(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+  {
+    RCLCPP_INFO(this->get_logger(), "Executing navigation goal...");
+
+    // 取得目標
+    const auto goal = goal_handle->get_goal();
+    target_x_ = goal->x;
+    target_y_ = goal->y;
+    target_theta_ = goal->theta;
+    reached_ = false;
+    current_goal_ = goal_handle;
+
+    rclcpp::Rate loop_rate(10);  // 10Hz
+
+    while (rclcpp::ok()) {
+      if (goal_handle->is_canceling()) {
+        RCLCPP_INFO(this->get_logger(), "Goal canceled by client.");
+        goal_handle->canceled(std::make_shared<NavigateTo::Result>());
+        return;
+      }
+
+      if (reached_) {
+        auto result = std::make_shared<NavigateTo::Result>();
+        result->success = true;
+        goal_handle->succeed(result);
+        RCLCPP_INFO(this->get_logger(), "Goal succeeded.");
+        return;
+      }
+
+      // 發送 feedback
+      auto feedback = std::make_shared<NavigateTo::Feedback>();
+      double dx = target_x_ - current_x_;
+      double dy = target_y_ - current_y_;
+      double dist = std::hypot(dx, dy);
+      feedback->progress = static_cast<float>(std::clamp(1.0 - dist, 0.0, 1.0));
+      goal_handle->publish_feedback(feedback);
+
+      loop_rate.sleep();
+    }
+  }
+
   void positionCallback(const mainspace::msg::Position::SharedPtr msg)
   {
     current_x_ = msg->x;
@@ -63,8 +146,8 @@ private:
     vy *= 25;   
     double w = 0.04 * angle_error;
 
-    vx = std::clamp(vx, -50.0, 50.0);  // 單位: m/s
-    vy = std::clamp(vy, -50.0, 50.0);
+    vx = std::clamp(vx, -200.0, 200.0);  // 單位: m/s
+    vy = std::clamp(vy, -200.0, 200.0);
     w = std::clamp(w, -1.0, 1.0);
 
     // [3] 將速度轉為輪子速度（Mecanum）
@@ -83,6 +166,13 @@ private:
     encoder_pub_->publish(cmd);
 
     RvizShow();
+
+    if (!reached_ && distance < 0.05 && std::abs(angle_error) < 0.05) {
+      reached_ = true;
+      RCLCPP_INFO(this->get_logger(), "Target reached, request next target from client.");
+      // 這裡可以用 topic 或 action 通知 client，或 client定期詢問 server 狀態
+      // 這裡用 log 示意
+    }
   }
 
   void RvizShow()
@@ -130,10 +220,13 @@ private:
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
   std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
 
+  rclcpp_action::Server<NavigateTo>::SharedPtr action_server_;
+  std::shared_ptr<GoalHandleNavigateTo> current_goal_;
   // 狀態
   double current_x_ = 0.0, current_y_ = 0.0, current_theta_ = 0.0;
-  double target_x_ = 1.0, target_y_ = 1.0, target_theta_ = M_PI/2;  // 可後續透過 service 或 param 設定
+  double target_x_ = 0.0, target_y_ = 0.0, target_theta_ = 0.0;  // 可後續透過 service 或 param 設定
   bool has_position_ = false;
+  bool reached_ = false;
 };
 
 

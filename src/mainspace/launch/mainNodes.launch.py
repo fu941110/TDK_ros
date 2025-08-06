@@ -16,23 +16,23 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        # Node(
-        #     package='mainspace',
-        #     executable='navigator',
-        #     name='navigator',
-        #     output='screen'
-        # ),
-        # Node(
-        #     package='mainspace',
-        #     executable='location_node',
-        #     name='location_node',
-        #     output='screen'
-        # ),
         Node(
-            package='rviz2',
-            executable='rviz2',
-            name='rviz2',
-            arguments=['-d', rviz_config],
+            package='mainspace',
+            executable='navigator',
+            name='navigator',
             output='screen'
-        )
+        ),
+        Node(
+            package='SerialTest',
+            executable='serial_node',
+            name='serial_node',
+            output='screen'
+        ),
+        # Node(
+        #     package='rviz2',
+        #     executable='rviz2',
+        #     name='rviz2',
+        #     arguments=['-d', rviz_config],
+        #     output='screen'
+        # )
     ])
