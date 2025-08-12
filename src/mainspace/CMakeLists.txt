@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(ament_index_cpp REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
@@ -16,7 +17,7 @@ find_package(tf2_geometry_msgs REQUIRED)  # 若未來使用 geometry 轉換
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/EncoderSpeed.msg"
+  "msg/ToStmSpeed.msg"
   "msg/Position.msg"
   DEPENDENCIES std_msgs
 )
@@ -31,12 +32,17 @@ ament_target_dependencies(
   tf2
   tf2_ros
   tf2_geometry_msgs
+  ament_index_cpp
 )
 
 rosidl_get_typesupport_target(cpp_typesupport_target
   ${PROJECT_NAME} rosidl_typesupport_cpp)
 
 target_link_libraries(navigator ${cpp_typesupport_target})
+
+install(DIRECTORY csv_file/
+  DESTINATION share/${PROJECT_NAME}/csv_file
+)
 
 install(TARGETS
   navigator

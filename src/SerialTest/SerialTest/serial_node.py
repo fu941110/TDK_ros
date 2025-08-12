@@ -2,7 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-from mainspace.msg import Position, EncoderSpeed
+from mainspace.msg import Position, ToStmSpeed
 import serial
 import time
 import threading
@@ -19,9 +19,9 @@ class SerialBridgeNode(Node):
 
         # EncoderSpeed subscriber（ROS2 ⇒ STM32）
         self.subscription = self.create_subscription(
-            EncoderSpeed,
+            ToStmSpeed,
             'motor_speed',
-            self.encoder_callback,
+            self.speed_callback,
             10
         )
         self.last_sent_time = 0.0
@@ -66,29 +66,6 @@ class SerialBridgeNode(Node):
                     self.get_logger().warn(f"[UNKNOWN LINE] {line}")
             except Exception as e:
                 self.get_logger().error(f"UART read exception: {e}")
-                    
-    # def timer_callback(self):
-    #     if self.ser.in_waiting:
-    #         try:
-    #             line = self.ser.readline().decode('utf-8').strip()
-    #             if line.startswith("POS:"):
-    #                 line = line.replace("POS:", "")
-    #                 parts = line.split(',')
-    #                 if len(parts) == 3:
-    #                     x, y, theta = map(float, parts)
-    #                     msg = Position()
-    #                     msg.x = x
-    #                     msg.y = y
-    #                     msg.theta = theta
-    #                     self.position_publisher.publish(msg)
-    #                     self.get_logger().info(f'[ROS2 ⇐ STM32] {msg}')
-    #                 else:
-    #                     self.get_logger().warn(f"[ROS2 ⇐ STM32] Invalid format: {line}")
-    #             else:
-    #                 # 如果不是 POS，那可能是 ACK 或其他訊息
-    #                 self.get_logger().info(f"[ROS2 ⇐ STM32] Other message: {line}")
-    #         except Exception as e:
-    #             self.get_logger().error(f"Serial read error: {e}")
                 
     def wait_for_ack(self, timeout=0.3):
         try:
@@ -96,14 +73,14 @@ class SerialBridgeNode(Node):
         except queue.Empty:
             return False
 
-    def encoder_callback(self, msg):
+    def speed_callback(self, msg):
         now = time.time()
         if now - self.last_sent_time < self.send_interval:
             return
 
         with self.lock:  # 保護 serial.write
             try:
-                data = f"{msg.fl},{msg.fr},{msg.rl},{msg.rr}\n"
+                data = f"Speed:{msg.vx},{msg.vy},{msg.w}\n"
                 self.ser.write(data.encode('utf-8'))
                 # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
             except Exception as e:
