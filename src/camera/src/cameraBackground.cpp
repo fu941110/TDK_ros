@@ -5,21 +5,21 @@ using namespace cv;
 using namespace std;
 
 Camera::Camera() {
-    TrackerBar();
+    // TrackerBar();
 }
 
 void Camera::TrackerBar() {
-    // namedWindow("tracker");
-    // resizeWindow("tracker", 300, 300);
+    namedWindow("tracker");
+    resizeWindow("tracker", 300, 300);
 
-    // createTrackbar("Hue Min", "tracker", &hue_min_, 179);
-    // createTrackbar("Hue Max", "tracker", &hue_max_, 179);
-    // createTrackbar("Sat Min", "tracker", &sat_min_, 255);
-    // createTrackbar("Sat Max", "tracker", &sat_max_, 255);
-    // createTrackbar("Val Min", "tracker", &val_min_, 255);
-    // createTrackbar("Val Max", "tracker", &val_max_, 255);
+    createTrackbar("Hue Min", "tracker", &hue_min_, 179);
+    createTrackbar("Hue Max", "tracker", &hue_max_, 179);
+    createTrackbar("Sat Min", "tracker", &sat_min_, 255);
+    createTrackbar("Sat Max", "tracker", &sat_max_, 255);
+    createTrackbar("Val Min", "tracker", &val_min_, 255);
+    createTrackbar("Val Max", "tracker", &val_max_, 255);
 
-    // updateTrackbarValues();
+    updateTrackbarValues();
 }     
 
 void Camera::updateTrackbarValues() {
@@ -53,3 +53,4 @@ cv::Mat Camera::EdgeDetect(Mat img) {
     medianBlur(gray, gray, 5);
     return edge;
 }
+

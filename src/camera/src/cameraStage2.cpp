@@ -264,7 +264,7 @@ private:
 
 
 int main() {
-    VideoCapture cap(0, CAP_V4L2);
+    VideoCapture cap(6, CAP_V4L2);
     Mat img, edge, masked, end; 
     CameraStage2 camera2;
 

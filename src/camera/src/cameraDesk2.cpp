@@ -7,47 +7,91 @@ using namespace std;
 class CameraDesk2 : public Camera {
 public:
     CameraDesk2() : Camera() {
-        
+        // setTrackbarPosition(desk_min_hue, desk_max_hue, 
+        //                     desk_min_sat, desk_max_sat, 
+        //                     desk_min_val, desk_max_val); 
     }
 
+    // Mat findDesk(Mat img) 
+    // {
+    //     Mat hsv, mask, result;
+    //     cvtColor(img, hsv, COLOR_BGR2HSV);
+    //     inRange(hsv, Scalar(hue_min_, sat_min_, val_min_), 
+    //             Scalar(hue_max_, sat_max_, val_max_),mask);
+    //     // inRange(hsv, Scalar(orange_min_hue, orange_min_sat, orange_min_val), 
+    //     //         Scalar(orange_max_hue, orange_max_sat, orange_max_val), mask);
+    //     bitwise_and(img, img, result, mask);
+
+    //     vector<vector<Point>> contours;
+    //     findContours(mask, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    //     double maxArea = 0;
+    //     vector<Point> bestContour;
+    //     for (const auto& contour : contours) {
+    //         double area = contourArea(contour);
+    //         if (area > maxArea && area > 1500) { 
+    //             maxArea = area;
+    //             bestContour = contour;
+    //         }
+    //     }
+
+    //     Mat masked(img.size(), img.type(), Scalar(255, 255, 255));
+    //     if (!bestContour.empty()) {
+    //         drawContours(result, vector<vector<Point>>{bestContour}, -1, Scalar(255, 0, 0), 2);
+    //         Mat mask = Mat::zeros(img.size(), CV_8UC1);
+    //         vector<vector<Point>> fillContours = { bestContour };
+    //         fillPoly(mask, fillContours, Scalar(255));
+    //         bitwise_and(result, result, masked, mask);
+    //         // imshow("Desk Masked", masked); // 顯示桌面遮罩結果
+
+    //         // Mat warped = warpDesk(masked, bestContour);
+    //         // return warped; // 回傳俯視圖
+    //     }
+
+    //     return masked;
+    // } 
+
+    // Mat warpDesk(Mat img, vector<Point> contour)
+    // {
+    //     // 擬合四邊形
+    //     vector<Point> approx;
+    //     approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
+
+    //     if (approx.size() != 4) {
+    //         return img.clone(); // 找不到四角就回原圖
+    //     }
+
+    //     // 將 Point 轉為 Point2f
+    //     vector<Point2f> srcPoints;
+    //     for (auto &p : approx) srcPoints.push_back(Point2f(p.x, p.y));
+
+    //     // 排序四個角（左上、右上、右下、左下）
+    //     sort(srcPoints.begin(), srcPoints.end(), [](Point2f a, Point2f b) {
+    //         return a.y < b.y || (a.y == b.y && a.x < b.x);
+    //     });
+    //     Point2f tl = srcPoints[0].x < srcPoints[1].x ? srcPoints[0] : srcPoints[1];
+    //     Point2f tr = srcPoints[0].x > srcPoints[1].x ? srcPoints[0] : srcPoints[1];
+    //     Point2f bl = srcPoints[2].x < srcPoints[3].x ? srcPoints[2] : srcPoints[3];
+    //     Point2f br = srcPoints[2].x > srcPoints[3].x ? srcPoints[2] : srcPoints[3];
+
+    //     // 設定輸出大小（這裡假設轉成 800x600）
+    //     float width = 800, height = 600;
+    //     vector<Point2f> dstPoints = {
+    //         Point2f(0, 0),
+    //         Point2f(width - 1, 0),
+    //         Point2f(width - 1, height - 1),
+    //         Point2f(0, height - 1)
+    //     };
+
+    //     // 計算透視變換矩陣
+    //     Mat matrix = getPerspectiveTransform(vector<Point2f>{tl, tr, br, bl}, dstPoints);
+
+    //     // 透視變換
+    //     Mat warped;
+    //     warpPerspective(img, warped, matrix, Size(width, height));
+
+    //     return warped;
+    // }
     Mat GetSquarePoint(Mat img){
-        // Mat edge = EdgeDetect(img);
-        // vector<vector<Point>> contours;
-        // findContours(edge, contours, RETR_TREE, CHAIN_APPROX_SIMPLE);
-
-        // double maxColor = 0;
-        // vector<Point> bestContour;
-
-        // for (const auto& contour : contours) {
-        //     // double area = contourArea(contour);
-
-        //     vector<Point> approx;
-        //     approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
-
-        //     if (approx.size() == 4 && isContourConvex(approx)) {
-        //         Mat mask = Mat::zeros(img.size(), CV_8UC1);
-        //         vector<vector<Point>> singleContour = {approx};
-        //         drawContours(mask, singleContour, 0, Scalar(255), FILLED);
-
-        //         // 計算平均顏色
-        //         Scalar meanColor = mean(img, mask);
-        //         double totalColor = meanColor[0] + meanColor[1] + meanColor[2];
-        //         if (totalColor > maxColor) {
-        //             maxColor = totalColor;
-        //             bestContour = approx;
-        //             Moments m = moments(approx);
-        //             center_x = static_cast<int>(m.m10 / m.m00);
-        //             center_y = static_cast<int>(m.m01 / m.m00);
-        //         }
-        //     }
-        // }
-
-        // Mat output = img.clone();
-        // if (!bestContour.empty()) {
-        //     polylines(output, bestContour, true, Scalar(0, 255, 0), 3);
-        // }
-
-        // return output;
 
         const int rectWidth = 160;
         const int rectHeight = 160;
@@ -72,7 +116,7 @@ public:
         }
 
         Mat output = img.clone();
-        rectangle(output, bestRect, Scalar(0, 255, 0), 2);
+        rectangle(output, bestRect, Scalar(255, 0, 0), 2);
         return output;
     }
 
@@ -84,8 +128,8 @@ private:
 
 
 int main() {
-    VideoCapture cap(0, CAP_V4L2);
-    Mat img, edge, findout, end; 
+    VideoCapture cap(6, CAP_V4L2);
+    Mat img, edge, findout; 
     CameraDesk2 camera2;
 
     while (true) {
@@ -96,12 +140,18 @@ int main() {
         }
         imshow("image", img); //初始
 
+        // desk = camera2.findDesk(img);
+        // imshow("Desk Detection", desk);  // 桌面檢測結果
+
         edge = camera2.EdgeDetect(img);
-        dilate(edge, edge, getStructuringElement(MORPH_RECT, Size(5, 5)));
         imshow("Edge Detection", edge);  // 邊緣檢測結果
 
-        findout = camera2.GetSquarePoint(img);
+        findout = camera2.GetSquarePoint(edge);
         imshow("Square Detection", findout);  // 四方形檢測結果
+
+        if(camera2.putdown()){
+            printf("putdown\n");
+        }
 
         if (waitKey(1) == 27) break;
     }
