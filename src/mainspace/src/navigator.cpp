@@ -87,9 +87,14 @@ void NavigatorNode::loadWayPoints(const std::string &filename)
 }
 
 //receive position from STM, update last_position_
+//also add a waypoint by setting theta to 9999
 void NavigatorNode::positionCallback(const mainspace::msg::Position::SharedPtr msg)
 {
-  if(msg->theta > 1000)
+  if(!waypoints_.empty()) 
+  {
+    return;
+  }
+  if(msg->theta > 1000) 
   {
     WayPoint wp;
     wp.x = msg->x + last_position_.x;

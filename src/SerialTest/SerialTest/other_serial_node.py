@@ -16,7 +16,6 @@ class OtherSerialNode(Node):
 
         self.command_publisher = self.create_publisher(Command, 'commandToRos', 10)
 
-        # EncoderSpeed subscriber（ROS2 ⇒ STM32）
         self.subscription = self.create_subscription(
             Commmand,
             'commandToSTM',
@@ -47,14 +46,13 @@ class OtherSerialNode(Node):
                 line = self.ser.readline().decode('utf-8').strip()
                 if not line:
                     continue
-                # self.get_logger().debug(f"[UART READ] {line}")
+                self.get_logger().debug(f"[UART READ] {line}")
 
                 if line == "ACK":
                     self.ack_queue.put(True)
                 elif line.startswith("CMD:"):
                     try:
                         cmd_str = line.replace("CMD:", "").strip()
-                        # 直接 publish Command msg (假設是 std_msgs/String 或自訂 msg)
                         msg = Command()
                         msg.info = cmd_str
                         self.command_publisher.publish(msg)

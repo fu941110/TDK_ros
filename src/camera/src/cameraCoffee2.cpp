@@ -14,8 +14,11 @@ public:
         using namespace std::chrono_literals;
 
         coffee_pub_ = this->create_publisher<mainspace::msg::Coffee>("/coffee", 10);
-        command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToRos", 10);
 
+        timer_ = this->create_wall_timer(
+            100ms, std::bind(&CameraCoffee2::timerCallback, this));
+
+        //test, 刪///////////////////////////////////////////////////////////////////////
         // mainspace::msg::Coffee coffee_msg;
         // coffee_msg.type = "black";
         // coffee_msg.number = 4;
@@ -24,21 +27,12 @@ public:
         //     coffee_pub_->publish(coffee_msg);
         //     rclcpp::sleep_for(30ms);
         // }
-
-        timer_ = this->create_wall_timer(
-            100ms, std::bind(&CameraCoffee2::timerCallback, this));
-
-
-        //test///////////////////////////////////////////////////////////////
-    //     rclcpp::sleep_for(500ms);
-    //     mainspace::msg::Command command_msg;
-    //     command_msg.info = "Stage2_getcoffee";
-    //     command_pub_->publish(command_msg);
-    // }
     }
 
+    //while loop for camera
     void timerCallback() 
     {
+        //find camera
         if (!cap.isOpened()) {
             cap.open(6, CAP_V4L2);
             if(!cap.isOpened()) return;
@@ -48,6 +42,7 @@ public:
              // std::cout << "can't receive frame\n";
             return;
         }
+
         // imshow("image", img); //初始
 
         edge = EdgeDetect(img);
@@ -58,36 +53,9 @@ public:
 
         end = findFourSquare(masked);
         // imshow("Four Square Detection", end);  // 四方形檢測結果
-
     }
-    // Mat EdgeDetect(Mat img) 
-    // {
-    //     Mat gray, edge, processed;
-        
-    //     // 1. 轉灰階
-    //     cvtColor(img, gray, COLOR_BGR2GRAY);
 
-    //     // 2. 模糊降雜訊
-    //     // GaussianBlur(gray, gray, Size(5, 5), 0);
-    //     // adaptiveThreshold(gray, gray, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_INV, 15, 10);
-    //     // medianBlur(gray, gray, 5);
-
-    //     // 3. 邊緣偵測
-    //     Canny(gray, edge, 80, 150);
-    //     // threshold(gray, edge, 20, 255, THRESH_BINARY_INV); 
-
-    //     // 4. 膨脹邊緣以加強輪廓
-    //     dilate(edge, edge, getStructuringElement(MORPH_RECT, Size(5, 5)));
-    //     morphologyEx(edge, edge, MORPH_OPEN, getStructuringElement(MORPH_RECT, Size(5, 5)));
-    //     erode(edge, edge, getStructuringElement(MORPH_RECT, Size(5, 5)));
-    //     adaptiveThreshold(gray, gray, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_INV, 15, 10);
-    //     medianBlur(gray, gray, 5);
-    //     // 5. 關閉操作修補邊緣裂縫
-    //     // morphologyEx(edge, edge, MORPH_CLOSE, getStructuringElement(MORPH_RECT, Size(5, 5)));
-
-    //     return edge;
-    // }
-
+    // LayerMask for black big rectangle
     Mat layerMask(Mat img)
     {
         Mat edge = EdgeDetect(img);
@@ -136,6 +104,7 @@ public:
         return masked;
     }
 
+    //find and distinguish four square inside the rectangle
     Mat findFourSquare(Mat masked)
     {
         Mat gray, edge;
@@ -190,13 +159,13 @@ public:
                 {
                     int dx = cx - center_x;
                     int dy = cy - center_y;
-                    if(dx > 0 && dy < 0) {
+                    if(dx >= 0 && dy <= 0) {
                         coffee_number = 2; // 假設咖啡杯在右上
-                    } else if(dx < 0 && dy < 0) {
+                    } else if(dx <= 0 && dy <= 0) {
                         coffee_number = 1; // 假設咖啡杯在左上
-                    } else if(dx < 0 && dy > 0) {
+                    } else if(dx <= 0 && dy >= 0) {
                         coffee_number = 3; // 假設咖啡杯在左下
-                    } else if(dx > 0 && dy > 0) {
+                    } else if(dx >= 0 && dy >= 0) {
                         coffee_number = 4; // 假設咖啡杯在右下
                     }
                     
@@ -205,13 +174,14 @@ public:
                     } else {
                         coffee_type = "black";
                     }
-                    printf("Coffee number: %d, Type: %s\n", coffee_number, coffee_type.c_str());
                     mainspace::msg::Coffee coffee_msg;
                     coffee_msg.type = coffee_type;
                     coffee_msg.number = coffee_number;
                     coffee_pub_->publish(coffee_msg);
+
+                    printf("Coffee number: %d, Type: %s\n", coffee_number, coffee_type.c_str());
                 }
-                // polylines(output, approx, true, color, 2);
+                polylines(output, approx, true, color, 2);
             }
         }
 
@@ -220,14 +190,14 @@ public:
 
 private:
 
-
+    //layerMask canter point
     int center_x, center_y;
 
+    // coffee info
     int coffee_number = 0;
     std::string coffee_type = "Unknown";
 
     rclcpp::Publisher<mainspace::msg::Coffee>::SharedPtr coffee_pub_;
-    rclcpp::Publisher<mainspace::msg::Command>::SharedPtr command_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
 
     VideoCapture cap;

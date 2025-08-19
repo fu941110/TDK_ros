@@ -58,6 +58,10 @@ private:
       SendRoute();
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
+    if(msg->info == "Stage2_putdowncoffee_OK")
+    {
+      pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
+    }
   }
   void SendRoute()
   {
@@ -88,7 +92,7 @@ private:
     number = msg->number;
 
     mainspace::msg::Position position_msg;
-    if(position_msg.y != 0.0)
+    if(position_msg.y != 0.0)  //only once
     {
       return;
     }
@@ -108,20 +112,16 @@ private:
     {
       return;
     }
-
     position_pub_->publish(position_msg);
     
-    // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
-    
+    //to STM, take coffee
+    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
+
+    //test, 寫在STM，/////////////////////////////////////////////////////////////////
+    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee_OK"));
+
+    //destory cameraCoffee2 node
     cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
-
-    mainspace::msg::Command command_msg;
-    command_msg.info = "Stage2_takecoffee";
-    command_pub_->publish(command_msg);
-
-    //test///////////////////////////
-    // SendRoute();
-    // pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
   }
 
   void deskRead(const mainspace::msg::Desk::SharedPtr msg)
@@ -129,8 +129,10 @@ private:
     double x = msg->x;
     double y = msg->y;
 
+    //can put down coffee
     if(x < 21 && x > -21 && y < -79 && y > -121) 
     {
+      //stop robot
       pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
 
       mainspace::msg::CsvFile csv_path;
@@ -154,11 +156,17 @@ private:
         csv_path.file = "/Stage2Path_csv/desk4.csv";
         csvfile_pub_->publish(csv_path);
       }
-      //發送給STM(put down the coffee on desk)
-      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
 
+      //to STM, put down coffee
+      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+
+      //test, 寫在STM，/////////////////////////////////////////////////////////////////
+      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+
+      //destory cameraDesk2 node
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
     } 
+    //adjust position
     else 
     {
       double px = 0.0005;
@@ -177,7 +185,7 @@ private:
       position_msg.x = dx;
       position_msg.y = dy;
       position_msg.theta = 9999;
-      // position_pub_->publish(position_msg);
+      position_pub_->publish(position_msg);
     }
   }
 

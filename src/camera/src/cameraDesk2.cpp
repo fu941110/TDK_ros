@@ -7,13 +7,11 @@ using namespace std;
 
 class CameraDesk2 : public Camera {
 public:
-    CameraDesk2() : Camera() 
+    CameraDesk2() : Camera(false) 
     {
         using namespace std::chrono_literals;
 
         desk_pub_ = this->create_publisher<mainspace::msg::Desk>("/desk", 10);
-
-        cap.open(6, CAP_V4L2);
 
         timer_ = this->create_wall_timer(
             100ms, std::bind(&CameraDesk2::timerCallback, this));
@@ -26,9 +24,14 @@ public:
     }
     void timerCallback() 
     {
+        //find camera
+        if (!cap.isOpened()) {
+            cap.open(6, CAP_V4L2);
+            if(!cap.isOpened()) return;
+        }
         bool ret = cap.read(img);
         if (!ret) {
-            std::cout << "can't receive frame\n";
+            // std::cout << "can't receive frame\n";
             return;
         }
         // imshow("image", img); //初始
@@ -42,6 +45,7 @@ public:
         findout = GetSquarePoint(edge);
         // imshow("Square Detection", findout);  // 四方形檢測結果
     }
+    //有一大段空閒時間再嘗試透視變換///////////////////////////////////////////////////////
     // Mat findDesk(Mat img) 
     // {
     //     Mat hsv, mask, result;
@@ -79,7 +83,6 @@ public:
 
     //     return masked;
     // } 
-
     // Mat warpDesk(Mat img, vector<Point> contour)
     // {
     //     // 擬合四邊形
@@ -121,8 +124,8 @@ public:
 
     //     return warped;
     // }
-    Mat GetSquarePoint(Mat img){
-
+    Mat GetSquarePoint(Mat img)
+    {
         const int rectWidth = 160;
         const int rectHeight = 160;
         double maxBrightness = -1;

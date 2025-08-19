@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'motor_serial_node = SerialTest.motor_serial_node:main',
+            'other_serial_node = SerialTest.other_serial_node:main',
             'control_node = SerialTest.control_node:main'
         ],
     },
