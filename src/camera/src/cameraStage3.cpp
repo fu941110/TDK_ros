@@ -4,20 +4,20 @@
 using namespace cv;
 using namespace std;
 
-class CameraStage3 : public Camera {
+class CameraStage3{
 public:
-    CameraStage3() : Camera() {
-        setTrackbarPosition(orange_min_hue, orange_max_hue, 
-                            orange_min_sat, orange_max_sat, 
-                            orange_min_val, orange_max_val); 
+    CameraStage3() {
+        // setTrackbarPosition(orange_min_hue, orange_max_hue, 
+        //                     orange_min_sat, orange_max_sat, 
+        //                     orange_min_val, orange_max_val); 
     }
 
 
     Mat FindOrange(Mat img) {
         Mat hsv, mask, result;
         cvtColor(img, hsv, COLOR_BGR2HSV);
-        inRange(hsv, Scalar(hue_min_, sat_min_, val_min_), 
-                Scalar(hue_max_, sat_max_, val_max_),mask);
+        inRange(hsv, Scalar(orange_min_hue, orange_min_sat, orange_min_val), 
+                Scalar(orange_max_hue, orange_max_sat, orange_max_val),mask);
         // inRange(hsv, Scalar(orange_min_hue, orange_min_sat, orange_min_val), 
         //         Scalar(orange_max_hue, orange_max_sat, orange_max_val), mask);
         bitwise_and(img, img, result, mask);
@@ -63,7 +63,7 @@ private:
 };
 
 
-int main() {
+int main(int argc, char **argv) {
     VideoCapture cap(6, CAP_V4L2);
     Mat img, edge, orange; 
     CameraStage3 camera3;

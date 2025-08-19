@@ -8,11 +8,21 @@
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <build_depend>mainspace</build_depend>
+  <exec_depend>mainspace</exec_depend>
 
   <depend>opencv4</depend>
 
+  <build_depend>rclcpp</build_depend>
+  <exec_depend>rclcpp</exec_depend>
+
   <build_depend>ament_cmake</build_depend>
   <exec_depend>ament_cmake</exec_depend>
+
+  <build_depend>ament_index_cpp</build_depend>
+  <exec_depend>ament_index_cpp</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

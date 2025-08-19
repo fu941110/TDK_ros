@@ -4,8 +4,13 @@
 using namespace cv;
 using namespace std;
 
-Camera::Camera() {
-    // TrackerBar();
+Camera::Camera(bool init) 
+: Node("cameraBackground")
+{
+    if (init) {
+        // TrackerBar();
+        // RCLCPP_INFO(this->get_logger(), "Camera node initialized with trackbars.");
+    }
 }
 
 void Camera::TrackerBar() {

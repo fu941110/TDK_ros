@@ -8,6 +8,11 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+find_package(mainspace REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -22,14 +27,14 @@ include_directories(
 # add_executable(cameraTest src/cameraTest.cpp)
 # ament_target_dependencies(cameraTest OpenCV)
 
-add_executable(cameraStage2 src/cameraStage2.cpp src/cameraBackground.cpp)
-ament_target_dependencies(cameraStage2 OpenCV)
+add_executable(cameraCoffee2 src/cameraCoffee2.cpp src/cameraBackground.cpp)
+ament_target_dependencies(cameraCoffee2 OpenCV rclcpp mainspace) 
 
 add_executable(cameraStage3 src/cameraStage3.cpp src/cameraBackground.cpp)
-ament_target_dependencies(cameraStage3 OpenCV)
+ament_target_dependencies(cameraStage3 OpenCV rclcpp mainspace)
 
 add_executable(cameraDesk2 src/cameraDesk2.cpp src/cameraBackground.cpp)
-ament_target_dependencies(cameraDesk2 OpenCV)
+ament_target_dependencies(cameraDesk2 OpenCV rclcpp mainspace)
 
 install(DIRECTORY include/
   DESTINATION include/
@@ -38,7 +43,7 @@ install(DIRECTORY include/
 install(TARGETS 
   # cameraBackground
   # cameraTest
-  cameraStage2
+  cameraCoffee2
   cameraDesk2
   cameraStage3
   DESTINATION lib/${PROJECT_NAME})

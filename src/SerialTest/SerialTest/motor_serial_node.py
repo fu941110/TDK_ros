@@ -8,9 +8,9 @@ import time
 import threading
 import queue
 
-class SerialBridgeNode(Node):
+class MotorSerialNode(Node):
     def __init__(self):
-        super().__init__('serial_bridge_node')
+        super().__init__('motor_serial_node')
         self.lock = threading.Lock()
         self.ack_queue = queue.Queue()
 
@@ -99,9 +99,9 @@ class SerialBridgeNode(Node):
         super().destroy_node()
             
 def main(args=None):
-    print("[serial_bridge_node] Starting node...")
+    print("[motor_serial_node] Starting node...")
     rclpy.init(args=args)
-    node = SerialBridgeNode()
+    node = MotorSerialNode()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

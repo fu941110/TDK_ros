@@ -1,2 +1,2 @@
-std::string type
-int number
+string type
+int32 number

@@ -19,13 +19,39 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ToStmSpeed.msg"
   "msg/Position.msg"
+  "msg/Desk.msg"
+  "msg/Coffee.msg"
+  "msg/CsvFile.msg"
+  "msg/Command.msg"
+  "msg/Pause.msg"
   DEPENDENCIES std_msgs
 )
+rosidl_get_typesupport_target(cpp_typesupport_target
+  ${PROJECT_NAME} rosidl_typesupport_cpp)
 
-add_executable(navigator src/navigator.cpp)
+add_library(navigator_lib
+  src/navigator.cpp
+)
 
-ament_target_dependencies(
-  navigator
+# add_executable(navigator src/navigator.cpp)
+ament_target_dependencies(navigator_lib
+  rclcpp
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  ament_index_cpp
+)
+target_link_libraries(navigator_lib
+  ${cpp_typesupport_target}
+)
+# install(TARGETS navigator
+#   DESTINATION lib/${PROJECT_NAME}
+# )
+
+# === 共用的依賴設定 ===
+set(NODE_DEPENDENCIES
   rclcpp
   nav_msgs
   geometry_msgs
@@ -35,18 +61,45 @@ ament_target_dependencies(
   ament_index_cpp
 )
 
-rosidl_get_typesupport_target(cpp_typesupport_target
-  ${PROJECT_NAME} rosidl_typesupport_cpp)
-
-target_link_libraries(navigator ${cpp_typesupport_target})
-
-install(DIRECTORY csv_file/
-  DESTINATION share/${PROJECT_NAME}/csv_file
+# === 要建立的 node 清單 ===
+set(NODE_SOURCES
+  navigator_main
+  Stage2
+  Stage3
+  Stage4
+  StageManager
 )
 
-install(TARGETS
-  navigator
-  DESTINATION lib/${PROJECT_NAME}
+include_directories(
+  ${PROJECT_SOURCE_DIR}/include
+)
+
+install(DIRECTORY include/
+  DESTINATION include/
+)
+
+install(TARGETS navigator_lib
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+foreach(node ${NODE_SOURCES})
+  add_executable(${node} src/${node}.cpp)
+  ament_target_dependencies(${node} ${NODE_DEPENDENCIES})
+  target_link_libraries(${node} navigator_lib ${cpp_typesupport_target})
+  install(TARGETS ${node}
+    DESTINATION lib/${PROJECT_NAME}
+  )
+endforeach()
+
+# === 安裝資料夾 ===
+install(DIRECTORY MainPath_csv/
+  DESTINATION share/${PROJECT_NAME}/MainPath_csv
+)
+
+install(DIRECTORY Stage2Path_csv/
+  DESTINATION share/${PROJECT_NAME}/Stage2Path_csv
 )
 
 install(DIRECTORY launch rviz

@@ -1,17 +1,47 @@
-#include <iostream>
 #include "camera/cameraBackground.hpp"
+#include <iostream>
+#include "mainspace/msg/desk.hpp"
 
 using namespace cv;
 using namespace std;
 
 class CameraDesk2 : public Camera {
 public:
-    CameraDesk2() : Camera() {
-        // setTrackbarPosition(desk_min_hue, desk_max_hue, 
-        //                     desk_min_sat, desk_max_sat, 
-        //                     desk_min_val, desk_max_val); 
-    }
+    CameraDesk2() : Camera() 
+    {
+        using namespace std::chrono_literals;
 
+        desk_pub_ = this->create_publisher<mainspace::msg::Desk>("/desk", 10);
+
+        cap.open(6, CAP_V4L2);
+
+        timer_ = this->create_wall_timer(
+            100ms, std::bind(&CameraDesk2::timerCallback, this));
+
+        // mainspace::msg::Desk desk_msg;
+        // desk_msg.x = 0; // 假設桌子位置
+        // desk_msg.y = -100; // 假設桌子位置
+        // desk_pub_->publish(desk_msg);
+
+    }
+    void timerCallback() 
+    {
+        bool ret = cap.read(img);
+        if (!ret) {
+            std::cout << "can't receive frame\n";
+            return;
+        }
+        // imshow("image", img); //初始
+
+        // desk = camera2.findDesk(img);
+        // imshow("Desk Detection", desk);  // 桌面檢測結果
+
+        edge = EdgeDetect(img);
+        // imshow("Edge Detection", edge);  // 邊緣檢測結果
+
+        findout = GetSquarePoint(edge);
+        // imshow("Square Detection", findout);  // 四方形檢測結果
+    }
     // Mat findDesk(Mat img) 
     // {
     //     Mat hsv, mask, result;
@@ -110,50 +140,40 @@ public:
                     bestRect = roi;
                     center_x = x + (rectWidth / 2) - (img.cols / 2);
                     center_y = y + (rectHeight / 2) - (img.rows / 2);
-                    printf("Center: (%d, %d)\n", center_x, center_y);
                 }
             }
         }
+        printf("Center: (%d, %d)\n", center_x, center_y);
+        
+        //send desk position
+        mainspace::msg::Desk desk_msg;
+        desk_msg.x = center_x;
+        desk_msg.y = center_y;
+        desk_pub_->publish(desk_msg);
 
-        Mat output = img.clone();
-        rectangle(output, bestRect, Scalar(255, 0, 0), 2);
-        return output;
+        // Mat output = img.clone();
+        // rectangle(output, bestRect, Scalar(255, 0, 0), 2);
+        return img;
     }
 
 private:
 
     int center_x, center_y;
+
+    rclcpp::Publisher<mainspace::msg::Desk>::SharedPtr desk_pub_;
+    rclcpp::TimerBase::SharedPtr timer_;
+
+    VideoCapture cap;
+    Mat img, edge, findout; 
 };
 
 
 
-int main() {
-    VideoCapture cap(6, CAP_V4L2);
-    Mat img, edge, findout; 
-    CameraDesk2 camera2;
-
-    while (true) {
-        bool ret = cap.read(img);
-        if (!ret) {
-            std::cout << "can't receive frame\n";
-            break;
-        }
-        imshow("image", img); //初始
-
-        // desk = camera2.findDesk(img);
-        // imshow("Desk Detection", desk);  // 桌面檢測結果
-
-        edge = camera2.EdgeDetect(img);
-        imshow("Edge Detection", edge);  // 邊緣檢測結果
-
-        findout = camera2.GetSquarePoint(edge);
-        imshow("Square Detection", findout);  // 四方形檢測結果
-
-        if(camera2.putdown()){
-            printf("putdown\n");
-        }
-
-        if (waitKey(1) == 27) break;
-    }
+int main(int argc, char **argv) 
+{
+    rclcpp::init(argc, argv);
+    auto camera2 = std::make_shared<CameraDesk2>();
+    rclcpp::spin(camera2);
+    rclcpp::shutdown();
     return 0;
 }
