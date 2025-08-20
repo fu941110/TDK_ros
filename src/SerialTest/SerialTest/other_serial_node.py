@@ -63,7 +63,7 @@ class OtherSerialNode(Node):
             except Exception as e:
                 self.get_logger().error(f"UART read exception: {e}")
                 
-    def wait_for_ack(self, timeout=0.3):
+    def wait_for_ack(self, timeout=10.0):
         try:
             return self.ack_queue.get(timeout=timeout)
         except queue.Empty:
