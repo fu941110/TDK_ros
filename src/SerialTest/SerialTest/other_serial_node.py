@@ -17,7 +17,7 @@ class OtherSerialNode(Node):
         self.command_publisher = self.create_publisher(Command, 'commandToRos', 10)
 
         self.subscription = self.create_subscription(
-            Commmand,
+            Command,
             'commandToSTM',
             self.command_callback,
             10

@@ -130,7 +130,7 @@ private:
     double y = msg->y;
 
     //can put down coffee
-    if(x < 21 && x > -21 && y < -79 && y > -121) 
+    if(x < -99 && x > -141 && y < -19 && y > -61) 
     {
       //stop robot
       pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
@@ -161,7 +161,7 @@ private:
       command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
 
       //test, 寫在STM，/////////////////////////////////////////////////////////////////
-      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
 
       //destory cameraDesk2 node
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
@@ -185,7 +185,7 @@ private:
       position_msg.x = dx;
       position_msg.y = dy;
       position_msg.theta = 9999;
-      position_pub_->publish(position_msg);
+      // position_pub_->publish(position_msg);
     }
   }
 
