@@ -48,11 +48,12 @@ class OtherSerialNode(Node):
                     continue
                 self.get_logger().debug(f"[UART READ] {line}")
 
-                if line == "ACK":
+                # if line == "ACK":
+                #     self.ack_queue.put(True)
+                elif line.startswith("ACK:"):
                     self.ack_queue.put(True)
-                elif line.startswith("CMD:"):
                     try:
-                        cmd_str = line.replace("CMD:", "").strip()
+                        cmd_str = line.replace("ACK:", "").strip()
                         msg = Command()
                         msg.info = cmd_str
                         self.command_publisher.publish(msg)
