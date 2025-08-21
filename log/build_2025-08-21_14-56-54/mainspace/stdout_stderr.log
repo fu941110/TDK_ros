@@ -1,0 +1,30 @@
+[  1%] Built target mainspace__cpp
+[ 10%] Built target mainspace__rosidl_generator_c
+[ 10%] Built target ament_cmake_python_copy_mainspace
+[ 20%] Built target mainspace__rosidl_typesupport_cpp
+[ 30%] Built target mainspace__rosidl_typesupport_fastrtps_cpp
+[ 40%] Built target mainspace__rosidl_typesupport_introspection_cpp
+[ 50%] Built target mainspace__rosidl_typesupport_fastrtps_c
+[ 60%] Built target mainspace__rosidl_typesupport_c
+[ 70%] Built target mainspace__rosidl_typesupport_introspection_c
+[ 70%] Built target mainspace
+[ 71%] [32mBuilding CXX object CMakeFiles/navigator_lib.dir/src/navigator.cpp.o[0m
+[ 72%] Built target mainspace__py
+[ 81%] Built target mainspace__rosidl_generator_py
+[ 83%] Built target mainspace__rosidl_typesupport_fastrtps_c__pyext
+[ 85%] Built target mainspace__rosidl_typesupport_introspection_c__pyext
+[ 87%] Built target mainspace__rosidl_typesupport_c__pyext
+running egg_info
+writing mainspace.egg-info/PKG-INFO
+writing dependency_links to mainspace.egg-info/dependency_links.txt
+writing top-level names to mainspace.egg-info/top_level.txt
+reading manifest file 'mainspace.egg-info/SOURCES.txt'
+writing manifest file 'mainspace.egg-info/SOURCES.txt'
+[ 87%] Built target ament_cmake_python_build_mainspace_egg
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:[m[K In member function ‘[01m[Kbool NavigatorNode::ArriveAtWaypoint()[m[K’:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:146:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<WayPoint>[m[K’ has no member named ‘[01m[Ktheta[m[K’
+  146 |     last_pos.theta = waypoints_.[01;31m[Ktheta[m[K;
+      |                                 [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/navigator_lib.dir/build.make:76: CMakeFiles/navigator_lib.dir/src/navigator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:603: CMakeFiles/navigator_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

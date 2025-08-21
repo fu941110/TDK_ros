@@ -1,0 +1,287 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-3f96cfde4b7c363ab56b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23
+					]
+				},
+				{
+					"build" : "mainspace__py",
+					"jsonFile" : "directory-mainspace__py-0a9e9d1747a6756133a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/fu941/TDK_ros/build/mainspace/mainspace__py",
+					"targetIndexes" : 
+					[
+						8
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "mainspace",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Stage2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Stage2-7c3424044524105142b3.json",
+					"name" : "Stage2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Stage3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Stage3-4c7fdfa40a814fdcc33e.json",
+					"name" : "Stage3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Stage4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Stage4-a3ad4fd354bc9668a26f.json",
+					"name" : "Stage4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "StageManager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-StageManager-e94a58f6b9421bd85967.json",
+					"name" : "StageManager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_mainspace_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_mainspace_egg-cbcaf42c50ee258a627e.json",
+					"name" : "ament_cmake_python_build_mainspace_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_mainspace::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_mainspace-10101734c4f361575d4a.json",
+					"name" : "ament_cmake_python_copy_mainspace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace-ba09870b2e930a64981c.json",
+					"name" : "mainspace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__cpp-d6b57461354eb971e838.json",
+					"name" : "mainspace__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "mainspace__py::@55ce7f976e7aca4cdf20",
+					"jsonFile" : "target-mainspace__py-03a262fd5a770c79d597.json",
+					"name" : "mainspace__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_generator_c-3aa04ba2c297736184fc.json",
+					"name" : "mainspace__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_generator_py-3e2cbae49d6a6f9604b2.json",
+					"name" : "mainspace__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_c-5144bafa977a83833138.json",
+					"name" : "mainspace__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_c__pyext-f6f0b5cef822ff798cda.json",
+					"name" : "mainspace__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_cpp-b4a6562fe64f5ba6d404.json",
+					"name" : "mainspace__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_fastrtps_c-1c57196fabfd8feac2dd.json",
+					"name" : "mainspace__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_fastrtps_c__pyext-633a5ee8a84bcb4dadf5.json",
+					"name" : "mainspace__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_fastrtps_cpp-3a37b83580d6afdf3e42.json",
+					"name" : "mainspace__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_introspection_c-114362e763ae893a9aad.json",
+					"name" : "mainspace__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_introspection_c__pyext-a7d147c69e687d6eaea0.json",
+					"name" : "mainspace__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace__rosidl_typesupport_introspection_cpp-57be64badb232d639b91.json",
+					"name" : "mainspace__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mainspace_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mainspace_uninstall-8a501907a305e2385080.json",
+					"name" : "mainspace_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "navigator_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-navigator_lib-adb8c8a19c298c4bcb5d.json",
+					"name" : "navigator_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "navigator_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-navigator_main-f6eca804ca40938b537d.json",
+					"name" : "navigator_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-28f2b0ab4ff79af04283.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/fu941/TDK_ros/build/mainspace",
+		"source" : "/home/fu941/TDK_ros/src/mainspace"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

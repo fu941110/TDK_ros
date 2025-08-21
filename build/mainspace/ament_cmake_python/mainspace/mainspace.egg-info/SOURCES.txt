@@ -1,0 +1,15 @@
+setup.py
+mainspace/__init__.py
+mainspace.egg-info/PKG-INFO
+mainspace.egg-info/SOURCES.txt
+mainspace.egg-info/dependency_links.txt
+mainspace.egg-info/top_level.txt
+mainspace/msg/__init__.py
+mainspace/msg/_coffee.py
+mainspace/msg/_command.py
+mainspace/msg/_csv_file.py
+mainspace/msg/_desk.py
+mainspace/msg/_encoder_speed.py
+mainspace/msg/_pause.py
+mainspace/msg/_position.py
+mainspace/msg/_to_stm_speed.py

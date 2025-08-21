@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "mainspace__py",
+		"source" : "/home/fu941/TDK_ros/build/mainspace/mainspace__py"
+	}
+}

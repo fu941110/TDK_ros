@@ -1,0 +1,157 @@
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:17:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction[m[K’ in namespace ‘[01m[Kmainspace[m[K’ does not name a type
+   17 |   using NavigateTo = mainspace::[01;31m[Kaction[m[K::NavigateTo;
+      |                                 [01;31m[K^~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:18:32:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+   18 |   using GoalHandleNavigateTo = [01;31m[Krclcpp_action[m[K::ServerGoalHandle<NavigateTo>;
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:48:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+   48 |   [01;31m[Krclcpp_action[m[K::GoalResponse handle_goal(
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:57:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+   57 |   [01;31m[Krclcpp_action[m[K::CancelResponse handle_cancel(
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+   64 |   void handle_accepted(const std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> goal_handle)
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   64 |   void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K goal_handle)
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:37:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Ktype name[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   68 |     std::shared_ptr<const NavigateTo[01;31m[K::[m[KGoal> goal)
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   68 |     std::shared_ptr<const NavigateTo::Goal[01;31m[K>[m[K goal)
+      |                                           [01;31m[K^[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   68 |     std::shared_ptr<const NavigateTo::Goal> [01;31m[Kgoal[m[K)
+      |                                             [01;31m[K^~~~[m[K
+      |                                                 [32m[K;[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:49:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+   68 |     std::shared_ptr<const NavigateTo::Goal> goal[01;31m[K)[m[K
+      |                                                 [01;31m[K^[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+   74 |   void handle_accepted(const std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> goal_handle)
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   74 |   void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K goal_handle)
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid NavigatorNode::handle_accepted(int)[m[K’ cannot be overloaded with ‘[01m[Kvoid NavigatorNode::handle_accepted(int)[m[K’
+   74 |   void [01;31m[Khandle_accepted[m[K(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+      |        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid NavigatorNode::handle_accepted(int)[m[K’
+   64 |   void [01;36m[Khandle_accepted[m[K(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+      |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:79:38:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+   79 |   void execute(const std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> goal_handle)
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:79:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   79 |   void execute(const std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K goal_handle)
+      |                                                          [01;31m[K^[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:223:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+  223 |   [01;31m[Krclcpp_action[m[K::Server<NavigateTo>::SharedPtr action_server_;
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:224:19:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+  224 |   std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> current_goal_;
+      |                   [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:224:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  224 |   std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K current_goal_;
+      |                                       [01;31m[K^[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:[m[K In constructor ‘[01m[KNavigatorNode::NavigatorNode()[m[K’:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_server_[m[K’ was not declared in this scope
+   38 |     [01;31m[Kaction_server_[m[K = rclcpp_action::create_server<NavigateTo>(
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:22:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ has not been declared
+   38 |     action_server_ = [01;31m[Krclcpp_action[m[K::create_server<NavigateTo>(
+      |                      [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:51:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+   38 |     action_server_ = rclcpp_action::create_server<[01;31m[KNavigateTo[m[K>(
+      |                                                   [01;31m[K^~~~~~~~~~[m[K
+      |                                                   [32m[KNavigatorNode[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:39:7:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   39 |       [01;35m[Kthis[m[K,
+      |       [01;35m[K^~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:41:33:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_goal[m[K’ is not a member of ‘[01m[KNavigatorNode[m[K’
+   41 |       std::bind(&NavigatorNode::[01;31m[Khandle_goal[m[K, this, std::placeholders::_1, std::placeholders::_2),
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:42:33:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_cancel[m[K’ is not a member of ‘[01m[KNavigatorNode[m[K’
+   42 |       std::bind(&NavigatorNode::[01;31m[Khandle_cancel[m[K, this, std::placeholders::_1),
+      |                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:[m[K In member function ‘[01m[Kvoid NavigatorNode::execute(int)[m[K’:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:84:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+   84 |     const auto goal = goal_handle[01;31m[K->[m[Kget_goal();
+      |                                  [01;31m[K^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:94:22:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+   94 |       if (goal_handle[01;31m[K->[m[Kis_canceling()) {
+      |                      [01;31m[K^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+   96 |         goal_handle[01;31m[K->[m[Kcanceled(std::make_shared<NavigateTo::Result>());
+      |                    [01;31m[K^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:48:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+   96 |         goal_handle->canceled(std::make_shared<[01;31m[KNavigateTo[m[K::Result>());
+      |                                                [01;31m[K^~~~~~~~~~[m[K
+      |                                                [32m[KNavigatorNode[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:36:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   96 |         goal_handle->canceled(std::[01;31m[Kmake_shared<NavigateTo::Result>[m[K());
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+   96 |         goal_handle->canceled([01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K);
+      |                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:67:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   96 |         goal_handle->canceled([01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K);
+      |                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+  101 |         auto result = std::make_shared<[01;31m[KNavigateTo[m[K::Result>();
+      |                                        [01;31m[K^~~~~~~~~~[m[K
+      |                                        [32m[KNavigatorNode[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  101 |         auto result = std::[01;31m[Kmake_shared<NavigateTo::Result>[m[K();
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:59:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  101 |         auto result = [01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K;
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  101 |         auto result = [01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K;
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:103:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  103 |         goal_handle[01;31m[K->[m[Ksucceed(result);
+      |                    [01;31m[K^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+  109 |       auto feedback = std::make_shared<[01;31m[KNavigateTo[m[K::Feedback>();
+      |                                        [01;31m[K^~~~~~~~~~[m[K
+      |                                        [32m[KNavigatorNode[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  109 |       auto feedback = std::[01;31m[Kmake_shared<NavigateTo::Feedback>[m[K();
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  109 |       auto feedback = [01;31m[Kstd::make_shared<NavigateTo::Feedback>()[m[K;
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  109 |       auto feedback = [01;31m[Kstd::make_shared<NavigateTo::Feedback>()[m[K;
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:114:18:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  114 |       goal_handle[01;31m[K->[m[Kpublish_feedback(feedback);
+      |                  [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/navigator.dir/build.make:76: CMakeFiles/navigator.dir/src/navigator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/navigator.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

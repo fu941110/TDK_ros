@@ -1,0 +1,1271 @@
+[0.000000] (-) TimerEvent: {}
+[0.002639] (camera) JobQueued: {'identifier': 'camera', 'dependencies': OrderedDict()}
+[0.003963] (mainspace) JobQueued: {'identifier': 'mainspace', 'dependencies': OrderedDict()}
+[0.004218] (SerialTest) JobQueued: {'identifier': 'SerialTest', 'dependencies': OrderedDict([('mainspace', '/home/fu941/TDK_ros/install/mainspace')])}
+[0.004471] (mainspace) JobStarted: {'identifier': 'mainspace'}
+[0.079293] (camera) JobStarted: {'identifier': 'camera'}
+[0.097006] (-) TimerEvent: {}
+[0.140883] (mainspace) JobProgress: {'identifier': 'mainspace', 'progress': 'cmake'}
+[0.147175] (mainspace) Command: {'cmd': ['/usr/bin/cmake', '/home/fu941/TDK_ros/src/mainspace', '-DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace'], 'cwd': '/home/fu941/TDK_ros/build/mainspace', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.48.114.195 35776 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/fu941/TDK_ros/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/SerialTest:/home/fu941/TDK_ros/install/camera:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('PWD', '/home/fu941/TDK_ros/build/mainspace'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.48.114.195 35776 10.48.114.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble')]), 'shell': False}
+[0.186176] (camera) JobProgress: {'identifier': 'camera', 'progress': 'cmake'}
+[0.193916] (camera) JobProgress: {'identifier': 'camera', 'progress': 'build'}
+[0.205775] (camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fu941/TDK_ros/build/camera', '--', '-j4', '-l4'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.48.114.195 35776 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/fu941/TDK_ros/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/SerialTest:/home/fu941/TDK_ros/install/camera:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.48.114.195 35776 10.48.114.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble')]), 'shell': False}
+[0.225007] (-) TimerEvent: {}
+[0.326523] (-) TimerEvent: {}
+[0.427896] (-) TimerEvent: {}
+[0.528903] (-) TimerEvent: {}
+[0.630033] (-) TimerEvent: {}
+[0.731734] (-) TimerEvent: {}
+[0.833441] (-) TimerEvent: {}
+[0.909277] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraStage2\x1b[0m\n'}
+[0.911579] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraDesk2\x1b[0m\n'}
+[0.917275] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraStage3\x1b[0m\n'}
+[0.933805] (-) TimerEvent: {}
+[1.035321] (-) TimerEvent: {}
+[1.136637] (-) TimerEvent: {}
+[1.238101] (-) TimerEvent: {}
+[1.260285] (camera) StdoutLine: {'line': b'[ 33%] Built target cameraStage2\n'}
+[1.266729] (camera) StdoutLine: {'line': b'[ 66%] Built target cameraDesk2\n'}
+[1.271352] (camera) StdoutLine: {'line': b'[100%] Built target cameraStage3\n'}
+[1.338432] (-) TimerEvent: {}
+[1.375915] (camera) CommandEnded: {'returncode': 0}
+[1.385617] (camera) JobProgress: {'identifier': 'camera', 'progress': 'install'}
+[1.438862] (-) TimerEvent: {}
+[1.463825] (camera) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fu941/TDK_ros/build/camera'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.48.114.195 35776 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/fu941/TDK_ros/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/SerialTest:/home/fu941/TDK_ros/install/camera:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.48.114.195 35776 10.48.114.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble')]), 'shell': False}
+[1.539185] (-) TimerEvent: {}
+[1.543717] (camera) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.545304] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include/\n'}
+[1.546791] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera\n'}
+[1.548171] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp\n'}
+[1.556558] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage2\n'}
+[1.562995] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2\n'}
+[1.572151] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3\n'}
+[1.573658] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera\n'}
+[1.576038] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera\n'}
+[1.577528] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh\n'}
+[1.578932] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv\n'}
+[1.580260] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh\n'}
+[1.581397] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv\n'}
+[1.582844] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash\n'}
+[1.584183] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh\n'}
+[1.585511] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh\n'}
+[1.586834] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv\n'}
+[1.588018] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv\n'}
+[1.593699] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera\n'}
+[1.595848] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake\n'}
+[1.597109] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake\n'}
+[1.598449] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/package.xml\n'}
+[1.610895] (camera) CommandEnded: {'returncode': 0}
+[1.639505] (-) TimerEvent: {}
+[1.741089] (-) TimerEvent: {}
+[1.745780] (mainspace) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.822929] (camera) JobEnded: {'identifier': 'camera', 'rc': 0}
+[1.841356] (-) TimerEvent: {}
+[1.942527] (-) TimerEvent: {}
+[2.043471] (-) TimerEvent: {}
+[2.144525] (-) TimerEvent: {}
+[2.245437] (-) TimerEvent: {}
+[2.346481] (-) TimerEvent: {}
+[2.447457] (-) TimerEvent: {}
+[2.548500] (-) TimerEvent: {}
+[2.642702] (mainspace) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[2.648724] (-) TimerEvent: {}
+[2.729778] (mainspace) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.748988] (-) TimerEvent: {}
+[2.850304] (-) TimerEvent: {}
+[2.951601] (-) TimerEvent: {}
+[3.052961] (-) TimerEvent: {}
+[3.154207] (-) TimerEvent: {}
+[3.255093] (-) TimerEvent: {}
+[3.354090] (mainspace) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.355193] (-) TimerEvent: {}
+[3.424394] (mainspace) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.429503] (mainspace) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.434085] (mainspace) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.455495] (-) TimerEvent: {}
+[3.469652] (mainspace) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.555908] (-) TimerEvent: {}
+[3.657179] (-) TimerEvent: {}
+[3.758693] (-) TimerEvent: {}
+[3.859879] (-) TimerEvent: {}
+[3.960761] (-) TimerEvent: {}
+[4.061711] (-) TimerEvent: {}
+[4.066297] (mainspace) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.138991] (mainspace) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.141448] (mainspace) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.145886] (mainspace) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.162001] (-) TimerEvent: {}
+[4.235608] (mainspace) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[4.262247] (-) TimerEvent: {}
+[4.363381] (-) TimerEvent: {}
+[4.464694] (-) TimerEvent: {}
+[4.565987] (-) TimerEvent: {}
+[4.667333] (-) TimerEvent: {}
+[4.768629] (-) TimerEvent: {}
+[4.869941] (-) TimerEvent: {}
+[4.971015] (-) TimerEvent: {}
+[5.072310] (-) TimerEvent: {}
+[5.173911] (-) TimerEvent: {}
+[5.275028] (-) TimerEvent: {}
+[5.376228] (-) TimerEvent: {}
+[5.477486] (-) TimerEvent: {}
+[5.578839] (-) TimerEvent: {}
+[5.680000] (-) TimerEvent: {}
+[5.781206] (-) TimerEvent: {}
+[5.882564] (-) TimerEvent: {}
+[5.912303] (mainspace) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.982833] (-) TimerEvent: {}
+[6.084071] (-) TimerEvent: {}
+[6.185290] (-) TimerEvent: {}
+[6.286479] (-) TimerEvent: {}
+[6.387508] (-) TimerEvent: {}
+[6.488427] (-) TimerEvent: {}
+[6.590091] (-) TimerEvent: {}
+[6.691242] (-) TimerEvent: {}
+[6.792431] (-) TimerEvent: {}
+[6.893647] (-) TimerEvent: {}
+[6.994936] (-) TimerEvent: {}
+[7.096059] (-) TimerEvent: {}
+[7.197287] (-) TimerEvent: {}
+[7.262138] (mainspace) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[7.297525] (-) TimerEvent: {}
+[7.398364] (-) TimerEvent: {}
+[7.499633] (-) TimerEvent: {}
+[7.600819] (-) TimerEvent: {}
+[7.702052] (-) TimerEvent: {}
+[7.803227] (-) TimerEvent: {}
+[7.904431] (-) TimerEvent: {}
+[8.005661] (-) TimerEvent: {}
+[8.106774] (-) TimerEvent: {}
+[8.207565] (-) TimerEvent: {}
+[8.268308] (mainspace) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[8.307823] (-) TimerEvent: {}
+[8.409004] (-) TimerEvent: {}
+[8.420747] (mainspace) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[8.509296] (-) TimerEvent: {}
+[8.610569] (-) TimerEvent: {}
+[8.619127] (mainspace) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[8.710803] (-) TimerEvent: {}
+[8.735235] (mainspace) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.811020] (-) TimerEvent: {}
+[8.875997] (mainspace) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.911210] (-) TimerEvent: {}
+[9.011903] (-) TimerEvent: {}
+[9.112572] (-) TimerEvent: {}
+[9.213271] (-) TimerEvent: {}
+[9.314171] (-) TimerEvent: {}
+[9.360293] (mainspace) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[9.414477] (-) TimerEvent: {}
+[9.439746] (mainspace) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[9.514778] (-) TimerEvent: {}
+[9.616005] (-) TimerEvent: {}
+[9.717206] (-) TimerEvent: {}
+[9.818485] (-) TimerEvent: {}
+[9.919578] (-) TimerEvent: {}
+[10.020423] (-) TimerEvent: {}
+[10.121633] (-) TimerEvent: {}
+[10.222842] (-) TimerEvent: {}
+[10.324048] (-) TimerEvent: {}
+[10.425369] (-) TimerEvent: {}
+[10.526770] (-) TimerEvent: {}
+[10.628006] (-) TimerEvent: {}
+[10.714417] (mainspace) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[10.728184] (-) TimerEvent: {}
+[10.828867] (-) TimerEvent: {}
+[10.929653] (-) TimerEvent: {}
+[11.016774] (mainspace) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[11.029944] (-) TimerEvent: {}
+[11.131172] (-) TimerEvent: {}
+[11.232378] (-) TimerEvent: {}
+[11.333597] (-) TimerEvent: {}
+[11.434844] (-) TimerEvent: {}
+[11.536034] (-) TimerEvent: {}
+[11.637250] (-) TimerEvent: {}
+[11.738496] (-) TimerEvent: {}
+[11.839696] (-) TimerEvent: {}
+[11.940937] (-) TimerEvent: {}
+[12.014739] (mainspace) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[12.041213] (-) TimerEvent: {}
+[12.142490] (-) TimerEvent: {}
+[12.244078] (-) TimerEvent: {}
+[12.252526] (mainspace) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[12.344307] (-) TimerEvent: {}
+[12.445213] (-) TimerEvent: {}
+[12.546060] (-) TimerEvent: {}
+[12.604556] (mainspace) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[12.607090] (mainspace) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[12.646350] (-) TimerEvent: {}
+[12.747572] (-) TimerEvent: {}
+[12.848935] (-) TimerEvent: {}
+[12.950254] (-) TimerEvent: {}
+[13.051527] (-) TimerEvent: {}
+[13.152909] (-) TimerEvent: {}
+[13.254289] (-) TimerEvent: {}
+[13.336520] (mainspace) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[13.346599] (mainspace) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[13.354498] (-) TimerEvent: {}
+[13.455683] (-) TimerEvent: {}
+[13.556819] (-) TimerEvent: {}
+[13.657576] (-) TimerEvent: {}
+[13.758841] (-) TimerEvent: {}
+[13.860099] (-) TimerEvent: {}
+[13.961319] (-) TimerEvent: {}
+[14.062667] (-) TimerEvent: {}
+[14.063797] (mainspace) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[14.162959] (-) TimerEvent: {}
+[14.264204] (-) TimerEvent: {}
+[14.365435] (-) TimerEvent: {}
+[14.466828] (-) TimerEvent: {}
+[14.533273] (mainspace) StdoutLine: {'line': b'-- Found tf2: 0.25.15 (/opt/ros/humble/share/tf2/cmake)\n'}
+[14.566952] (-) TimerEvent: {}
+[14.667709] (-) TimerEvent: {}
+[14.768948] (-) TimerEvent: {}
+[14.816318] (mainspace) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.15 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[14.869242] (-) TimerEvent: {}
+[14.970488] (-) TimerEvent: {}
+[15.071682] (-) TimerEvent: {}
+[15.172891] (-) TimerEvent: {}
+[15.274283] (-) TimerEvent: {}
+[15.375077] (-) TimerEvent: {}
+[15.476276] (-) TimerEvent: {}
+[15.577506] (-) TimerEvent: {}
+[15.678788] (-) TimerEvent: {}
+[15.780148] (-) TimerEvent: {}
+[15.881342] (-) TimerEvent: {}
+[15.982595] (-) TimerEvent: {}
+[16.083835] (-) TimerEvent: {}
+[16.168940] (mainspace) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.15 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[16.184043] (-) TimerEvent: {}
+[16.284733] (-) TimerEvent: {}
+[16.385570] (-) TimerEvent: {}
+[16.430888] (mainspace) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[16.446563] (mainspace) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[16.448004] (mainspace) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[16.485823] (-) TimerEvent: {}
+[16.518453] (mainspace) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[16.586138] (-) TimerEvent: {}
+[16.687320] (-) TimerEvent: {}
+[16.788459] (-) TimerEvent: {}
+[16.889727] (-) TimerEvent: {}
+[16.991367] (-) TimerEvent: {}
+[17.092461] (-) TimerEvent: {}
+[17.193358] (-) TimerEvent: {}
+[17.294850] (-) TimerEvent: {}
+[17.396163] (-) TimerEvent: {}
+[17.497464] (-) TimerEvent: {}
+[17.598633] (-) TimerEvent: {}
+[17.699806] (-) TimerEvent: {}
+[17.801044] (-) TimerEvent: {}
+[17.902234] (-) TimerEvent: {}
+[18.003523] (-) TimerEvent: {}
+[18.105207] (-) TimerEvent: {}
+[18.206286] (-) TimerEvent: {}
+[18.307084] (-) TimerEvent: {}
+[18.408384] (-) TimerEvent: {}
+[18.509621] (-) TimerEvent: {}
+[18.611009] (-) TimerEvent: {}
+[18.712378] (-) TimerEvent: {}
+[18.813685] (-) TimerEvent: {}
+[18.914908] (-) TimerEvent: {}
+[19.016143] (-) TimerEvent: {}
+[19.117381] (-) TimerEvent: {}
+[19.218660] (-) TimerEvent: {}
+[19.319896] (-) TimerEvent: {}
+[19.421377] (-) TimerEvent: {}
+[19.523131] (-) TimerEvent: {}
+[19.546909] (mainspace) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[19.623429] (-) TimerEvent: {}
+[19.724490] (-) TimerEvent: {}
+[19.825383] (-) TimerEvent: {}
+[19.926581] (-) TimerEvent: {}
+[20.027773] (-) TimerEvent: {}
+[20.128987] (-) TimerEvent: {}
+[20.230438] (-) TimerEvent: {}
+[20.331590] (-) TimerEvent: {}
+[20.432808] (-) TimerEvent: {}
+[20.534088] (-) TimerEvent: {}
+[20.635329] (-) TimerEvent: {}
+[20.736611] (-) TimerEvent: {}
+[20.837808] (-) TimerEvent: {}
+[20.938989] (-) TimerEvent: {}
+[21.040156] (-) TimerEvent: {}
+[21.141464] (-) TimerEvent: {}
+[21.242698] (-) TimerEvent: {}
+[21.343847] (-) TimerEvent: {}
+[21.444601] (-) TimerEvent: {}
+[21.545292] (-) TimerEvent: {}
+[21.646569] (-) TimerEvent: {}
+[21.748183] (-) TimerEvent: {}
+[21.849486] (-) TimerEvent: {}
+[21.950720] (-) TimerEvent: {}
+[22.051908] (-) TimerEvent: {}
+[22.153067] (-) TimerEvent: {}
+[22.254320] (-) TimerEvent: {}
+[22.355457] (-) TimerEvent: {}
+[22.456787] (-) TimerEvent: {}
+[22.558053] (-) TimerEvent: {}
+[22.659498] (-) TimerEvent: {}
+[22.760596] (-) TimerEvent: {}
+[22.861384] (-) TimerEvent: {}
+[22.962756] (-) TimerEvent: {}
+[23.064289] (-) TimerEvent: {}
+[23.165559] (-) TimerEvent: {}
+[23.236246] (mainspace) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[23.265886] (-) TimerEvent: {}
+[23.367095] (-) TimerEvent: {}
+[23.468293] (-) TimerEvent: {}
+[23.569500] (-) TimerEvent: {}
+[23.670839] (-) TimerEvent: {}
+[23.772276] (-) TimerEvent: {}
+[23.874044] (-) TimerEvent: {}
+[23.975287] (-) TimerEvent: {}
+[24.076908] (-) TimerEvent: {}
+[24.178115] (-) TimerEvent: {}
+[24.279192] (-) TimerEvent: {}
+[24.379930] (-) TimerEvent: {}
+[24.481321] (-) TimerEvent: {}
+[24.582641] (-) TimerEvent: {}
+[24.683838] (-) TimerEvent: {}
+[24.697254] (mainspace) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[24.784108] (-) TimerEvent: {}
+[24.885546] (-) TimerEvent: {}
+[24.959703] (mainspace) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[24.985781] (-) TimerEvent: {}
+[25.019217] (mainspace) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[25.086048] (-) TimerEvent: {}
+[25.187299] (-) TimerEvent: {}
+[25.288516] (-) TimerEvent: {}
+[25.318275] (mainspace) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[25.319884] (mainspace) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[25.320984] (mainspace) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[25.321974] (mainspace) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[25.388846] (-) TimerEvent: {}
+[25.490071] (-) TimerEvent: {}
+[25.562410] (mainspace) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[25.590232] (-) TimerEvent: {}
+[25.690990] (-) TimerEvent: {}
+[25.792201] (-) TimerEvent: {}
+[25.893494] (-) TimerEvent: {}
+[25.994825] (-) TimerEvent: {}
+[26.096083] (-) TimerEvent: {}
+[26.099002] (mainspace) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[26.196383] (-) TimerEvent: {}
+[26.297559] (-) TimerEvent: {}
+[26.399049] (-) TimerEvent: {}
+[26.500211] (-) TimerEvent: {}
+[26.579399] (mainspace) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[26.581787] (mainspace) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[26.582434] (mainspace) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[26.587482] (mainspace) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[26.592084] (mainspace) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[26.595785] (mainspace) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[26.600326] (-) TimerEvent: {}
+[26.606586] (mainspace) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[26.607135] (mainspace) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[26.611983] (mainspace) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[26.631474] (mainspace) StdoutLine: {'line': b'-- Configuring done\n'}
+[26.700552] (-) TimerEvent: {}
+[26.801300] (-) TimerEvent: {}
+[26.902607] (-) TimerEvent: {}
+[27.003770] (-) TimerEvent: {}
+[27.072839] (mainspace) StdoutLine: {'line': b'-- Generating done\n'}
+[27.104049] (-) TimerEvent: {}
+[27.205214] (-) TimerEvent: {}
+[27.221779] (mainspace) StdoutLine: {'line': b'-- Build files have been written to: /home/fu941/TDK_ros/build/mainspace\n'}
+[27.305610] (-) TimerEvent: {}
+[27.315200] (mainspace) CommandEnded: {'returncode': 0}
+[27.319863] (mainspace) JobProgress: {'identifier': 'mainspace', 'progress': 'build'}
+[27.322701] (mainspace) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fu941/TDK_ros/build/mainspace', '--', '-j4', '-l4'], 'cwd': '/home/fu941/TDK_ros/build/mainspace', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.48.114.195 35776 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/fu941/TDK_ros/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/SerialTest:/home/fu941/TDK_ros/install/camera:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('PWD', '/home/fu941/TDK_ros/build/mainspace'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.48.114.195 35776 10.48.114.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble')]), 'shell': False}
+[27.405967] (-) TimerEvent: {}
+[27.507444] (-) TimerEvent: {}
+[27.614007] (-) TimerEvent: {}
+[27.715293] (-) TimerEvent: {}
+[27.777934] (mainspace) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[27.815612] (-) TimerEvent: {}
+[27.879697] (mainspace) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[27.915972] (-) TimerEvent: {}
+[27.940273] (mainspace) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_mainspace\n'}
+[28.016398] (-) TimerEvent: {}
+[28.119455] (-) TimerEvent: {}
+[28.222322] (-) TimerEvent: {}
+[28.325485] (-) TimerEvent: {}
+[28.428797] (-) TimerEvent: {}
+[28.533043] (-) TimerEvent: {}
+[28.636332] (-) TimerEvent: {}
+[28.739359] (-) TimerEvent: {}
+[28.842451] (-) TimerEvent: {}
+[28.945414] (-) TimerEvent: {}
+[29.048438] (-) TimerEvent: {}
+[29.151419] (-) TimerEvent: {}
+[29.254517] (-) TimerEvent: {}
+[29.357624] (-) TimerEvent: {}
+[29.460986] (-) TimerEvent: {}
+[29.564027] (-) TimerEvent: {}
+[29.667203] (-) TimerEvent: {}
+[29.770183] (-) TimerEvent: {}
+[29.873195] (-) TimerEvent: {}
+[29.976180] (-) TimerEvent: {}
+[30.078993] (-) TimerEvent: {}
+[30.182025] (-) TimerEvent: {}
+[30.284934] (-) TimerEvent: {}
+[30.387886] (-) TimerEvent: {}
+[30.491277] (-) TimerEvent: {}
+[30.594379] (-) TimerEvent: {}
+[30.697423] (-) TimerEvent: {}
+[30.800423] (-) TimerEvent: {}
+[30.903399] (-) TimerEvent: {}
+[31.007693] (-) TimerEvent: {}
+[31.113081] (-) TimerEvent: {}
+[31.199836] (mainspace) StdoutLine: {'line': b'running egg_info\n'}
+[31.207114] (mainspace) StdoutLine: {'line': b'creating mainspace.egg-info\n'}
+[31.208927] (mainspace) StdoutLine: {'line': b'writing mainspace.egg-info/PKG-INFO\n'}
+[31.212540] (mainspace) StdoutLine: {'line': b'writing dependency_links to mainspace.egg-info/dependency_links.txt\n'}
+[31.213752] (-) TimerEvent: {}
+[31.216468] (mainspace) StdoutLine: {'line': b'writing top-level names to mainspace.egg-info/top_level.txt\n'}
+[31.219081] (mainspace) StdoutLine: {'line': b"writing manifest file 'mainspace.egg-info/SOURCES.txt'\n"}
+[31.242947] (mainspace) StdoutLine: {'line': b"reading manifest file 'mainspace.egg-info/SOURCES.txt'\n"}
+[31.250104] (mainspace) StdoutLine: {'line': b"writing manifest file 'mainspace.egg-info/SOURCES.txt'\n"}
+[31.314592] (-) TimerEvent: {}
+[31.418045] (-) TimerEvent: {}
+[31.521254] (-) TimerEvent: {}
+[31.540166] (mainspace) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_mainspace_egg\n'}
+[31.621621] (-) TimerEvent: {}
+[31.652371] (mainspace) StdoutLine: {'line': b'[  4%] Built target mainspace__cpp\n'}
+[31.722036] (-) TimerEvent: {}
+[31.760894] (mainspace) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[31.768374] (mainspace) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[31.771689] (mainspace) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[31.822314] (-) TimerEvent: {}
+[31.831927] (mainspace) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_generator_c.dir/rosidl_generator_c/mainspace/msg/detail/encoder_speed__functions.c.o\x1b[0m\n'}
+[31.922724] (-) TimerEvent: {}
+[32.024889] (-) TimerEvent: {}
+[32.127792] (-) TimerEvent: {}
+[32.231119] (-) TimerEvent: {}
+[32.332681] (-) TimerEvent: {}
+[32.434196] (-) TimerEvent: {}
+[32.535689] (-) TimerEvent: {}
+[32.623865] (mainspace) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_generator_c.dir/rosidl_generator_c/mainspace/msg/detail/position__functions.c.o\x1b[0m\n'}
+[32.635988] (-) TimerEvent: {}
+[32.739104] (-) TimerEvent: {}
+[32.843742] (-) TimerEvent: {}
+[32.946541] (-) TimerEvent: {}
+[33.049743] (-) TimerEvent: {}
+[33.152985] (-) TimerEvent: {}
+[33.256169] (-) TimerEvent: {}
+[33.279858] (mainspace) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libmainspace__rosidl_generator_c.so\x1b[0m\n'}
+[33.356554] (-) TimerEvent: {}
+[33.459858] (-) TimerEvent: {}
+[33.563104] (-) TimerEvent: {}
+[33.664624] (-) TimerEvent: {}
+[33.724480] (mainspace) StdoutLine: {'line': b'[ 19%] Built target mainspace__rosidl_generator_c\n'}
+[33.765049] (-) TimerEvent: {}
+[33.834149] (mainspace) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[33.865411] (-) TimerEvent: {}
+[33.966984] (-) TimerEvent: {}
+[34.068557] (-) TimerEvent: {}
+[34.170187] (-) TimerEvent: {}
+[34.271711] (-) TimerEvent: {}
+[34.373188] (-) TimerEvent: {}
+[34.475050] (-) TimerEvent: {}
+[34.577076] (-) TimerEvent: {}
+[34.678722] (-) TimerEvent: {}
+[34.780739] (-) TimerEvent: {}
+[34.875189] (mainspace) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mainspace/msg/encoder_speed__type_support.cpp.o\x1b[0m\n'}
+[34.881216] (-) TimerEvent: {}
+[34.982999] (-) TimerEvent: {}
+[35.084933] (-) TimerEvent: {}
+[35.186938] (-) TimerEvent: {}
+[35.288509] (-) TimerEvent: {}
+[35.295039] (mainspace) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mainspace/msg/detail/encoder_speed__type_support.cpp.o\x1b[0m\n'}
+[35.388920] (-) TimerEvent: {}
+[35.490970] (-) TimerEvent: {}
+[35.531257] (mainspace) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mainspace/msg/detail/dds_fastrtps/encoder_speed__type_support.cpp.o\x1b[0m\n'}
+[35.591251] (-) TimerEvent: {}
+[35.693999] (-) TimerEvent: {}
+[35.796869] (-) TimerEvent: {}
+[35.899886] (-) TimerEvent: {}
+[36.003017] (-) TimerEvent: {}
+[36.106071] (-) TimerEvent: {}
+[36.209179] (-) TimerEvent: {}
+[36.312481] (-) TimerEvent: {}
+[36.416203] (-) TimerEvent: {}
+[36.519309] (-) TimerEvent: {}
+[36.622299] (-) TimerEvent: {}
+[36.725749] (-) TimerEvent: {}
+[36.829574] (-) TimerEvent: {}
+[36.933439] (-) TimerEvent: {}
+[37.037039] (-) TimerEvent: {}
+[37.140033] (-) TimerEvent: {}
+[37.244253] (-) TimerEvent: {}
+[37.347352] (-) TimerEvent: {}
+[37.449197] (-) TimerEvent: {}
+[37.552461] (-) TimerEvent: {}
+[37.602721] (mainspace) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mainspace/msg/detail/encoder_speed__type_support_c.cpp.o\x1b[0m\n'}
+[37.652859] (-) TimerEvent: {}
+[37.754786] (-) TimerEvent: {}
+[37.856817] (-) TimerEvent: {}
+[37.958499] (-) TimerEvent: {}
+[38.060291] (-) TimerEvent: {}
+[38.162040] (-) TimerEvent: {}
+[38.263878] (-) TimerEvent: {}
+[38.365724] (-) TimerEvent: {}
+[38.469388] (-) TimerEvent: {}
+[38.552653] (mainspace) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mainspace/msg/position__type_support.cpp.o\x1b[0m\n'}
+[38.569753] (-) TimerEvent: {}
+[38.672698] (-) TimerEvent: {}
+[38.774262] (-) TimerEvent: {}
+[38.875915] (-) TimerEvent: {}
+[38.977658] (-) TimerEvent: {}
+[39.079470] (-) TimerEvent: {}
+[39.181178] (-) TimerEvent: {}
+[39.283282] (-) TimerEvent: {}
+[39.385562] (-) TimerEvent: {}
+[39.487859] (-) TimerEvent: {}
+[39.589812] (-) TimerEvent: {}
+[39.691478] (-) TimerEvent: {}
+[39.793105] (-) TimerEvent: {}
+[39.894787] (-) TimerEvent: {}
+[39.996868] (-) TimerEvent: {}
+[40.099056] (-) TimerEvent: {}
+[40.201053] (-) TimerEvent: {}
+[40.265517] (mainspace) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mainspace/msg/detail/position__type_support.cpp.o\x1b[0m\n'}
+[40.301437] (-) TimerEvent: {}
+[40.403067] (-) TimerEvent: {}
+[40.505022] (-) TimerEvent: {}
+[40.606796] (-) TimerEvent: {}
+[40.709621] (-) TimerEvent: {}
+[40.800857] (mainspace) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mainspace/msg/detail/dds_fastrtps/position__type_support.cpp.o\x1b[0m\n'}
+[40.810030] (-) TimerEvent: {}
+[40.912616] (-) TimerEvent: {}
+[41.015528] (-) TimerEvent: {}
+[41.118197] (-) TimerEvent: {}
+[41.221323] (-) TimerEvent: {}
+[41.324314] (-) TimerEvent: {}
+[41.427744] (-) TimerEvent: {}
+[41.530552] (-) TimerEvent: {}
+[41.633589] (-) TimerEvent: {}
+[41.735262] (-) TimerEvent: {}
+[41.837157] (-) TimerEvent: {}
+[41.938727] (-) TimerEvent: {}
+[42.040193] (-) TimerEvent: {}
+[42.046384] (mainspace) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mainspace/msg/detail/position__type_support_c.cpp.o\x1b[0m\n'}
+[42.140640] (-) TimerEvent: {}
+[42.184578] (mainspace) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libmainspace__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[42.241045] (-) TimerEvent: {}
+[42.342777] (-) TimerEvent: {}
+[42.444347] (-) TimerEvent: {}
+[42.546057] (-) TimerEvent: {}
+[42.646156] (mainspace) StdoutLine: {'line': b'[ 43%] Built target mainspace__rosidl_typesupport_cpp\n'}
+[42.647635] (-) TimerEvent: {}
+[42.749248] (-) TimerEvent: {}
+[42.766277] (mainspace) StdoutLine: {'line': b'[ 46%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[42.849668] (-) TimerEvent: {}
+[42.953510] (-) TimerEvent: {}
+[43.055501] (-) TimerEvent: {}
+[43.157596] (-) TimerEvent: {}
+[43.259331] (-) TimerEvent: {}
+[43.361256] (-) TimerEvent: {}
+[43.463273] (-) TimerEvent: {}
+[43.565063] (-) TimerEvent: {}
+[43.666807] (-) TimerEvent: {}
+[43.768586] (-) TimerEvent: {}
+[43.870439] (-) TimerEvent: {}
+[43.972125] (-) TimerEvent: {}
+[44.073946] (-) TimerEvent: {}
+[44.175769] (-) TimerEvent: {}
+[44.278061] (-) TimerEvent: {}
+[44.379893] (-) TimerEvent: {}
+[44.481746] (-) TimerEvent: {}
+[44.583890] (-) TimerEvent: {}
+[44.685968] (-) TimerEvent: {}
+[44.787577] (-) TimerEvent: {}
+[44.889272] (-) TimerEvent: {}
+[44.991072] (-) TimerEvent: {}
+[45.093121] (-) TimerEvent: {}
+[45.195299] (-) TimerEvent: {}
+[45.297082] (-) TimerEvent: {}
+[45.380060] (mainspace) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libmainspace__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[45.397434] (-) TimerEvent: {}
+[45.499206] (-) TimerEvent: {}
+[45.600981] (-) TimerEvent: {}
+[45.702724] (-) TimerEvent: {}
+[45.804664] (-) TimerEvent: {}
+[45.873104] (mainspace) StdoutLine: {'line': b'[ 48%] Built target mainspace__rosidl_typesupport_introspection_cpp\n'}
+[45.905021] (-) TimerEvent: {}
+[45.993535] (mainspace) StdoutLine: {'line': b'[ 51%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[46.005366] (-) TimerEvent: {}
+[46.106907] (-) TimerEvent: {}
+[46.149059] (mainspace) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libmainspace__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[46.207297] (-) TimerEvent: {}
+[46.309119] (-) TimerEvent: {}
+[46.411749] (-) TimerEvent: {}
+[46.513495] (-) TimerEvent: {}
+[46.617087] (-) TimerEvent: {}
+[46.720475] (-) TimerEvent: {}
+[46.734264] (mainspace) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX shared library libmainspace__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[46.816424] (mainspace) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mainspace/msg/detail/encoder_speed__type_support.c.o\x1b[0m\n'}
+[46.820972] (-) TimerEvent: {}
+[46.923147] (-) TimerEvent: {}
+[47.005145] (mainspace) StdoutLine: {'line': b'[ 58%] Built target mainspace__rosidl_typesupport_fastrtps_cpp\n'}
+[47.023488] (-) TimerEvent: {}
+[47.105638] (mainspace) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mainspace/msg/detail/position__type_support.c.o\x1b[0m\n'}
+[47.124381] (-) TimerEvent: {}
+[47.227808] (-) TimerEvent: {}
+[47.330470] (-) TimerEvent: {}
+[47.433410] (-) TimerEvent: {}
+[47.466425] (mainspace) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/navigator.dir/src/navigator.cpp.o\x1b[0m\n'}
+[47.533800] (-) TimerEvent: {}
+[47.584147] (mainspace) StdoutLine: {'line': b'[ 63%] Built target mainspace__rosidl_typesupport_fastrtps_c\n'}
+[47.601415] (mainspace) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking C shared library libmainspace__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[47.634283] (-) TimerEvent: {}
+[47.745161] (-) TimerEvent: {}
+[47.847776] (-) TimerEvent: {}
+[47.935554] (mainspace) StdoutLine: {'line': b'[ 65%] Built target mainspace__rosidl_typesupport_introspection_c\n'}
+[47.948074] (-) TimerEvent: {}
+[48.049921] (-) TimerEvent: {}
+[48.151724] (-) TimerEvent: {}
+[48.253033] (-) TimerEvent: {}
+[48.354302] (-) TimerEvent: {}
+[48.455495] (-) TimerEvent: {}
+[48.556661] (-) TimerEvent: {}
+[48.658245] (-) TimerEvent: {}
+[48.760234] (-) TimerEvent: {}
+[48.862016] (-) TimerEvent: {}
+[48.963347] (-) TimerEvent: {}
+[49.038553] (mainspace) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_c.dir/rosidl_typesupport_c/mainspace/msg/encoder_speed__type_support.cpp.o\x1b[0m\n'}
+[49.043691] (mainspace) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_c.dir/rosidl_typesupport_c/mainspace/msg/position__type_support.cpp.o\x1b[0m\n'}
+[49.063653] (-) TimerEvent: {}
+[49.166179] (-) TimerEvent: {}
+[49.267633] (-) TimerEvent: {}
+[49.369065] (-) TimerEvent: {}
+[49.412300] (mainspace) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libmainspace__rosidl_typesupport_c.so\x1b[0m\n'}
+[49.469287] (-) TimerEvent: {}
+[49.570702] (-) TimerEvent: {}
+[49.659957] (mainspace) StdoutLine: {'line': b'[ 73%] Built target mainspace__rosidl_typesupport_c\n'}
+[49.670995] (-) TimerEvent: {}
+[49.772894] (-) TimerEvent: {}
+[49.856066] (mainspace) StdoutLine: {'line': b'[ 73%] Built target mainspace\n'}
+[49.873201] (-) TimerEvent: {}
+[49.975197] (-) TimerEvent: {}
+[50.055302] (mainspace) StdoutLine: {'line': b'[ 75%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[50.075511] (-) TimerEvent: {}
+[50.176822] (-) TimerEvent: {}
+[50.278422] (-) TimerEvent: {}
+[50.379716] (-) TimerEvent: {}
+[50.480997] (-) TimerEvent: {}
+[50.582488] (-) TimerEvent: {}
+[50.683910] (-) TimerEvent: {}
+[50.785431] (-) TimerEvent: {}
+[50.886713] (-) TimerEvent: {}
+[50.987987] (-) TimerEvent: {}
+[51.089250] (-) TimerEvent: {}
+[51.190620] (-) TimerEvent: {}
+[51.291975] (-) TimerEvent: {}
+[51.393347] (-) TimerEvent: {}
+[51.494713] (-) TimerEvent: {}
+[51.596002] (-) TimerEvent: {}
+[51.697236] (-) TimerEvent: {}
+[51.798582] (-) TimerEvent: {}
+[51.899924] (-) TimerEvent: {}
+[52.001284] (-) TimerEvent: {}
+[52.102551] (-) TimerEvent: {}
+[52.203991] (-) TimerEvent: {}
+[52.305203] (-) TimerEvent: {}
+[52.406488] (-) TimerEvent: {}
+[52.507691] (-) TimerEvent: {}
+[52.608897] (-) TimerEvent: {}
+[52.710154] (-) TimerEvent: {}
+[52.811457] (-) TimerEvent: {}
+[52.913328] (-) TimerEvent: {}
+[53.015136] (-) TimerEvent: {}
+[53.116555] (-) TimerEvent: {}
+[53.217771] (-) TimerEvent: {}
+[53.319105] (-) TimerEvent: {}
+[53.420343] (-) TimerEvent: {}
+[53.521566] (-) TimerEvent: {}
+[53.622944] (-) TimerEvent: {}
+[53.724177] (-) TimerEvent: {}
+[53.825427] (-) TimerEvent: {}
+[53.926748] (-) TimerEvent: {}
+[54.028290] (-) TimerEvent: {}
+[54.130046] (-) TimerEvent: {}
+[54.231693] (-) TimerEvent: {}
+[54.333425] (-) TimerEvent: {}
+[54.388630] (mainspace) StdoutLine: {'line': b'[ 75%] Built target mainspace__py\n'}
+[54.433807] (-) TimerEvent: {}
+[54.535294] (-) TimerEvent: {}
+[54.598832] (mainspace) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_generator_py.dir/rosidl_generator_py/mainspace/msg/_encoder_speed_s.c.o\x1b[0m\n'}
+[54.603491] (mainspace) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_generator_py.dir/rosidl_generator_py/mainspace/msg/_position_s.c.o\x1b[0m\n'}
+[54.635592] (-) TimerEvent: {}
+[54.739236] (-) TimerEvent: {}
+[54.842574] (-) TimerEvent: {}
+[54.945812] (-) TimerEvent: {}
+[55.049135] (-) TimerEvent: {}
+[55.152403] (-) TimerEvent: {}
+[55.255755] (-) TimerEvent: {}
+[55.359400] (-) TimerEvent: {}
+[55.461110] (-) TimerEvent: {}
+[55.562552] (-) TimerEvent: {}
+[55.664019] (-) TimerEvent: {}
+[55.767140] (-) TimerEvent: {}
+[55.870732] (-) TimerEvent: {}
+[55.974203] (-) TimerEvent: {}
+[55.992811] (mainspace) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mainspace/libmainspace__rosidl_generator_py.so\x1b[0m\n'}
+[56.074542] (-) TimerEvent: {}
+[56.177321] (-) TimerEvent: {}
+[56.280100] (-) TimerEvent: {}
+[56.382998] (-) TimerEvent: {}
+[56.401307] (mainspace) StdoutLine: {'line': b'[ 82%] Built target mainspace__rosidl_generator_py\n'}
+[56.483414] (-) TimerEvent: {}
+[56.586426] (-) TimerEvent: {}
+[56.632966] (mainspace) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/mainspace/_mainspace_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[56.635587] (mainspace) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/mainspace/_mainspace_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[56.637590] (mainspace) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/mainspace/_mainspace_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[56.686811] (-) TimerEvent: {}
+[56.788435] (-) TimerEvent: {}
+[56.891402] (-) TimerEvent: {}
+[56.994436] (-) TimerEvent: {}
+[57.097061] (-) TimerEvent: {}
+[57.199700] (-) TimerEvent: {}
+[57.302516] (-) TimerEvent: {}
+[57.405522] (-) TimerEvent: {}
+[57.508421] (-) TimerEvent: {}
+[57.611087] (-) TimerEvent: {}
+[57.714122] (-) TimerEvent: {}
+[57.817600] (-) TimerEvent: {}
+[57.920667] (-) TimerEvent: {}
+[58.023623] (-) TimerEvent: {}
+[58.126943] (-) TimerEvent: {}
+[58.148131] (mainspace) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mainspace/mainspace_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[58.168891] (mainspace) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mainspace/mainspace_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[58.194986] (mainspace) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mainspace/mainspace_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[58.227333] (-) TimerEvent: {}
+[58.328982] (-) TimerEvent: {}
+[58.432133] (-) TimerEvent: {}
+[58.536475] (-) TimerEvent: {}
+[58.638575] (-) TimerEvent: {}
+[58.709402] (mainspace) StdoutLine: {'line': b'[ 97%] Built target mainspace__rosidl_typesupport_c__pyext\n'}
+[58.734773] (mainspace) StdoutLine: {'line': b'[ 97%] Built target mainspace__rosidl_typesupport_introspection_c__pyext\n'}
+[58.738889] (-) TimerEvent: {}
+[58.744271] (mainspace) StdoutLine: {'line': b'[ 97%] Built target mainspace__rosidl_typesupport_fastrtps_c__pyext\n'}
+[58.839224] (-) TimerEvent: {}
+[58.940581] (-) TimerEvent: {}
+[59.042083] (-) TimerEvent: {}
+[59.143531] (-) TimerEvent: {}
+[59.244854] (-) TimerEvent: {}
+[59.346173] (-) TimerEvent: {}
+[59.447541] (-) TimerEvent: {}
+[59.548899] (-) TimerEvent: {}
+[59.650254] (-) TimerEvent: {}
+[59.751539] (-) TimerEvent: {}
+[59.852805] (-) TimerEvent: {}
+[59.954118] (-) TimerEvent: {}
+[60.055440] (-) TimerEvent: {}
+[60.156917] (-) TimerEvent: {}
+[60.258320] (-) TimerEvent: {}
+[60.359668] (-) TimerEvent: {}
+[60.461192] (-) TimerEvent: {}
+[60.562569] (-) TimerEvent: {}
+[60.663897] (-) TimerEvent: {}
+[60.765263] (-) TimerEvent: {}
+[60.866674] (-) TimerEvent: {}
+[60.968213] (-) TimerEvent: {}
+[61.069524] (-) TimerEvent: {}
+[61.170765] (-) TimerEvent: {}
+[61.271526] (-) TimerEvent: {}
+[61.372433] (-) TimerEvent: {}
+[61.473728] (-) TimerEvent: {}
+[61.575107] (-) TimerEvent: {}
+[61.676403] (-) TimerEvent: {}
+[61.777672] (-) TimerEvent: {}
+[61.879038] (-) TimerEvent: {}
+[61.980298] (-) TimerEvent: {}
+[62.081740] (-) TimerEvent: {}
+[62.183146] (-) TimerEvent: {}
+[62.284470] (-) TimerEvent: {}
+[62.385755] (-) TimerEvent: {}
+[62.487141] (-) TimerEvent: {}
+[62.588465] (-) TimerEvent: {}
+[62.689919] (-) TimerEvent: {}
+[62.791184] (-) TimerEvent: {}
+[62.892478] (-) TimerEvent: {}
+[62.993980] (-) TimerEvent: {}
+[63.096156] (-) TimerEvent: {}
+[63.197511] (-) TimerEvent: {}
+[63.298912] (-) TimerEvent: {}
+[63.400191] (-) TimerEvent: {}
+[63.501523] (-) TimerEvent: {}
+[63.602898] (-) TimerEvent: {}
+[63.704372] (-) TimerEvent: {}
+[63.805647] (-) TimerEvent: {}
+[63.906982] (-) TimerEvent: {}
+[64.008253] (-) TimerEvent: {}
+[64.109588] (-) TimerEvent: {}
+[64.210951] (-) TimerEvent: {}
+[64.312262] (-) TimerEvent: {}
+[64.413621] (-) TimerEvent: {}
+[64.515008] (-) TimerEvent: {}
+[64.616383] (-) TimerEvent: {}
+[64.717675] (-) TimerEvent: {}
+[64.819035] (-) TimerEvent: {}
+[64.920341] (-) TimerEvent: {}
+[65.021639] (-) TimerEvent: {}
+[65.123087] (-) TimerEvent: {}
+[65.224410] (-) TimerEvent: {}
+[65.325770] (-) TimerEvent: {}
+[65.427151] (-) TimerEvent: {}
+[65.528525] (-) TimerEvent: {}
+[65.629836] (-) TimerEvent: {}
+[65.731186] (-) TimerEvent: {}
+[65.832516] (-) TimerEvent: {}
+[65.933813] (-) TimerEvent: {}
+[66.035183] (-) TimerEvent: {}
+[66.136501] (-) TimerEvent: {}
+[66.237904] (-) TimerEvent: {}
+[66.339187] (-) TimerEvent: {}
+[66.440586] (-) TimerEvent: {}
+[66.541969] (-) TimerEvent: {}
+[66.643270] (-) TimerEvent: {}
+[66.744575] (-) TimerEvent: {}
+[66.846004] (-) TimerEvent: {}
+[66.947288] (-) TimerEvent: {}
+[67.048610] (-) TimerEvent: {}
+[67.150010] (-) TimerEvent: {}
+[67.251322] (-) TimerEvent: {}
+[67.352722] (-) TimerEvent: {}
+[67.454085] (-) TimerEvent: {}
+[67.555311] (-) TimerEvent: {}
+[67.656097] (-) TimerEvent: {}
+[67.756900] (-) TimerEvent: {}
+[67.857632] (-) TimerEvent: {}
+[67.958543] (-) TimerEvent: {}
+[68.059906] (-) TimerEvent: {}
+[68.161483] (-) TimerEvent: {}
+[68.262837] (-) TimerEvent: {}
+[68.364168] (-) TimerEvent: {}
+[68.465537] (-) TimerEvent: {}
+[68.566851] (-) TimerEvent: {}
+[68.668253] (-) TimerEvent: {}
+[68.769620] (-) TimerEvent: {}
+[68.871009] (-) TimerEvent: {}
+[68.972343] (-) TimerEvent: {}
+[69.073787] (-) TimerEvent: {}
+[69.175318] (-) TimerEvent: {}
+[69.276808] (-) TimerEvent: {}
+[69.378155] (-) TimerEvent: {}
+[69.479443] (-) TimerEvent: {}
+[69.580731] (-) TimerEvent: {}
+[69.682116] (-) TimerEvent: {}
+[69.783423] (-) TimerEvent: {}
+[69.884756] (-) TimerEvent: {}
+[69.986140] (-) TimerEvent: {}
+[70.087470] (-) TimerEvent: {}
+[70.188875] (-) TimerEvent: {}
+[70.290169] (-) TimerEvent: {}
+[70.391596] (-) TimerEvent: {}
+[70.492856] (-) TimerEvent: {}
+[70.594223] (-) TimerEvent: {}
+[70.695731] (-) TimerEvent: {}
+[70.797152] (-) TimerEvent: {}
+[70.898573] (-) TimerEvent: {}
+[71.000007] (-) TimerEvent: {}
+[71.101354] (-) TimerEvent: {}
+[71.202714] (-) TimerEvent: {}
+[71.303942] (-) TimerEvent: {}
+[71.404901] (-) TimerEvent: {}
+[71.506232] (-) TimerEvent: {}
+[71.607547] (-) TimerEvent: {}
+[71.708855] (-) TimerEvent: {}
+[71.810173] (-) TimerEvent: {}
+[71.911455] (-) TimerEvent: {}
+[72.012768] (-) TimerEvent: {}
+[72.114158] (-) TimerEvent: {}
+[72.215413] (-) TimerEvent: {}
+[72.316788] (-) TimerEvent: {}
+[72.418115] (-) TimerEvent: {}
+[72.519427] (-) TimerEvent: {}
+[72.620710] (-) TimerEvent: {}
+[72.722081] (-) TimerEvent: {}
+[72.823378] (-) TimerEvent: {}
+[72.924702] (-) TimerEvent: {}
+[73.026110] (-) TimerEvent: {}
+[73.127422] (-) TimerEvent: {}
+[73.228750] (-) TimerEvent: {}
+[73.330109] (-) TimerEvent: {}
+[73.431393] (-) TimerEvent: {}
+[73.463497] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:17:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaction\x1b[m\x1b[K\xe2\x80\x99 in namespace \xe2\x80\x98\x1b[01m\x1b[Kmainspace\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[73.464859] (mainspace) StderrLine: {'line': b'   17 |   using NavigateTo = mainspace::\x1b[01;31m\x1b[Kaction\x1b[m\x1b[K::NavigateTo;\n'}
+[73.465640] (mainspace) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[73.488123] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:18:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp_action\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[73.489429] (mainspace) StderrLine: {'line': b'   18 |   using GoalHandleNavigateTo = \x1b[01;31m\x1b[Krclcpp_action\x1b[m\x1b[K::ServerGoalHandle<NavigateTo>;\n'}
+[73.490580] (mainspace) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.508130] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:48:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp_action\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[73.509372] (mainspace) StderrLine: {'line': b'   48 |   \x1b[01;31m\x1b[Krclcpp_action\x1b[m\x1b[K::GoalResponse handle_goal(\n'}
+[73.510452] (mainspace) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.528055] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:57:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp_action\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[73.529398] (mainspace) StderrLine: {'line': b'   57 |   \x1b[01;31m\x1b[Krclcpp_action\x1b[m\x1b[K::CancelResponse handle_cancel(\n'}
+[73.530523] (mainspace) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.531583] (-) TimerEvent: {}
+[73.628449] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[73.629798] (mainspace) StderrLine: {'line': b'   64 |   void handle_accepted(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K> goal_handle)\n'}
+[73.630686] (mainspace) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.631432] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[73.632148] (-) TimerEvent: {}
+[73.632857] (mainspace) StderrLine: {'line': b'   64 |   void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[73.634485] (mainspace) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[73.636573] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[KISO C++ forbids declaration of \xe2\x80\x98\x1b[01m\x1b[Ktype name\x1b[m\x1b[K\xe2\x80\x99 with no type [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[73.637736] (mainspace) StderrLine: {'line': b'   68 |     std::shared_ptr<const NavigateTo\x1b[01;31m\x1b[K::\x1b[m\x1b[KGoal> goal)\n'}
+[73.638737] (mainspace) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[73.639725] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[73.640686] (mainspace) StderrLine: {'line': b'   68 |     std::shared_ptr<const NavigateTo::Goal\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal)\n'}
+[73.641654] (mainspace) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[73.642687] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[73.643655] (mainspace) StderrLine: {'line': b'   68 |     std::shared_ptr<const NavigateTo::Goal> \x1b[01;31m\x1b[Kgoal\x1b[m\x1b[K)\n'}
+[73.644638] (mainspace) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[73.645527] (mainspace) StderrLine: {'line': b'      |                                                 \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[73.646558] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[73.647613] (mainspace) StderrLine: {'line': b'   68 |     std::shared_ptr<const NavigateTo::Goal> goal\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[73.648671] (mainspace) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[73.732573] (-) TimerEvent: {}
+[73.736917] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[73.739199] (mainspace) StderrLine: {'line': b'   74 |   void handle_accepted(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K> goal_handle)\n'}
+[73.740236] (mainspace) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.741055] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[73.742112] (mainspace) StderrLine: {'line': b'   74 |   void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[73.743287] (mainspace) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[73.744322] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvoid NavigatorNode::handle_accepted(int)\x1b[m\x1b[K\xe2\x80\x99 cannot be overloaded with \xe2\x80\x98\x1b[01m\x1b[Kvoid NavigatorNode::handle_accepted(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[73.745513] (mainspace) StderrLine: {'line': b'   74 |   void \x1b[01;31m\x1b[Khandle_accepted\x1b[m\x1b[K(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)\n'}
+[73.746578] (mainspace) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.747630] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kvoid NavigatorNode::handle_accepted(int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[73.748569] (mainspace) StderrLine: {'line': b'   64 |   void \x1b[01;36m\x1b[Khandle_accepted\x1b[m\x1b[K(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)\n'}
+[73.749508] (mainspace) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.832905] (-) TimerEvent: {}
+[73.839181] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:79:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[73.840562] (mainspace) StderrLine: {'line': b'   79 |   void execute(const std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K> goal_handle)\n'}
+[73.841461] (mainspace) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[73.842605] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:79:58:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[73.843511] (mainspace) StderrLine: {'line': b'   79 |   void execute(const std::shared_ptr<GoalHandleNavigateTo\x1b[01;31m\x1b[K>\x1b[m\x1b[K goal_handle)\n'}
+[73.844370] (mainspace) StderrLine: {'line': b'      |                                                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[73.933219] (-) TimerEvent: {}
+[74.034605] (-) TimerEvent: {}
+[74.135951] (-) TimerEvent: {}
+[74.237251] (-) TimerEvent: {}
+[74.251732] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:223:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp_action\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[74.252376] (mainspace) StderrLine: {'line': b'  223 |   \x1b[01;31m\x1b[Krclcpp_action\x1b[m\x1b[K::Server<NavigateTo>::SharedPtr action_server_;\n'}
+[74.252812] (mainspace) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.295126] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:224:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[74.296332] (mainspace) StderrLine: {'line': b'  224 |   std::shared_ptr<\x1b[01;31m\x1b[KGoalHandleNavigateTo\x1b[m\x1b[K> current_goal_;\n'}
+[74.297274] (mainspace) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.298433] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:224:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[74.299379] (mainspace) StderrLine: {'line': b'  224 |   std::shared_ptr<GoalHandleNavigateTo\x1b[01;31m\x1b[K>\x1b[m\x1b[K current_goal_;\n'}
+[74.300242] (mainspace) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[74.337606] (-) TimerEvent: {}
+[74.439022] (-) TimerEvent: {}
+[74.532992] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode::NavigatorNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[74.534931] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaction_server_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[74.536032] (mainspace) StderrLine: {'line': b'   38 |     \x1b[01;31m\x1b[Kaction_server_\x1b[m\x1b[K = rclcpp_action::create_server<NavigateTo>(\n'}
+[74.537006] (mainspace) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.538041] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp_action\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[74.539017] (-) TimerEvent: {}
+[74.539865] (mainspace) StderrLine: {'line': b'   38 |     action_server_ = \x1b[01;31m\x1b[Krclcpp_action\x1b[m\x1b[K::create_server<NavigateTo>(\n'}
+[74.540999] (mainspace) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.590277] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[74.592108] (mainspace) StderrLine: {'line': b'   38 |     action_server_ = rclcpp_action::create_server<\x1b[01;31m\x1b[KNavigateTo\x1b[m\x1b[K>(\n'}
+[74.592993] (mainspace) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.593907] (mainspace) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[KNavigatorNode\x1b[m\x1b[K\n'}
+[74.594861] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:39:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value\x07-Wunused-value\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[74.595983] (mainspace) StderrLine: {'line': b'   39 |       \x1b[01;35m\x1b[Kthis\x1b[m\x1b[K,\n'}
+[74.596889] (mainspace) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[74.597766] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:41:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khandle_goal\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.598936] (mainspace) StderrLine: {'line': b'   41 |       std::bind(&NavigatorNode::\x1b[01;31m\x1b[Khandle_goal\x1b[m\x1b[K, this, std::placeholders::_1, std::placeholders::_2),\n'}
+[74.599828] (mainspace) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.600687] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:42:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khandle_cancel\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.601662] (mainspace) StderrLine: {'line': b'   42 |       std::bind(&NavigatorNode::\x1b[01;31m\x1b[Khandle_cancel\x1b[m\x1b[K, this, std::placeholders::_1),\n'}
+[74.602641] (mainspace) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.639365] (-) TimerEvent: {}
+[74.651083] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid NavigatorNode::execute(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[74.652248] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:84:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[74.653178] (mainspace) StderrLine: {'line': b'   84 |     const auto goal = goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kget_goal();\n'}
+[74.654645] (mainspace) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[74.655528] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:94:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[74.656397] (mainspace) StderrLine: {'line': b'   94 |       if (goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kis_canceling()) {\n'}
+[74.658046] (mainspace) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[74.659203] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[74.660146] (mainspace) StderrLine: {'line': b'   96 |         goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kcanceled(std::make_shared<NavigateTo::Result>());\n'}
+[74.661097] (mainspace) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[74.713219] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[74.714767] (mainspace) StderrLine: {'line': b'   96 |         goal_handle->canceled(std::make_shared<\x1b[01;31m\x1b[KNavigateTo\x1b[m\x1b[K::Result>());\n'}
+[74.715531] (mainspace) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.716260] (mainspace) StderrLine: {'line': b'      |                                                \x1b[32m\x1b[KNavigatorNode\x1b[m\x1b[K\n'}
+[74.716982] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[74.717715] (mainspace) StderrLine: {'line': b'   96 |         goal_handle->canceled(std::\x1b[01;31m\x1b[Kmake_shared<NavigateTo::Result>\x1b[m\x1b[K());\n'}
+[74.718802] (mainspace) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.719734] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.721786] (mainspace) StderrLine: {'line': b'   96 |         goal_handle->canceled(\x1b[01;31m\x1b[Kstd::make_shared<NavigateTo::Result>()\x1b[m\x1b[K);\n'}
+[74.723072] (mainspace) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[74.724025] (mainspace) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[74.724979] (mainspace) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[74.726013] (mainspace) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1\x1b[m\x1b[K:\n'}
+[74.727051] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.727977] (mainspace) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[74.728886] (mainspace) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.730102] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[74.731123] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[74.732166] (mainspace) StderrLine: {'line': b'   96 |         goal_handle->canceled(\x1b[01;31m\x1b[Kstd::make_shared<NavigateTo::Result>()\x1b[m\x1b[K);\n'}
+[74.733248] (mainspace) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[74.739684] (-) TimerEvent: {}
+[74.779182] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[74.781260] (mainspace) StderrLine: {'line': b'  101 |         auto result = std::make_shared<\x1b[01;31m\x1b[KNavigateTo\x1b[m\x1b[K::Result>();\n'}
+[74.782277] (mainspace) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.783218] (mainspace) StderrLine: {'line': b'      |                                        \x1b[32m\x1b[KNavigatorNode\x1b[m\x1b[K\n'}
+[74.784480] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[74.785542] (mainspace) StderrLine: {'line': b'  101 |         auto result = std::\x1b[01;31m\x1b[Kmake_shared<NavigateTo::Result>\x1b[m\x1b[K();\n'}
+[74.786569] (mainspace) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.787673] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.788741] (mainspace) StderrLine: {'line': b'  101 |         auto result = \x1b[01;31m\x1b[Kstd::make_shared<NavigateTo::Result>()\x1b[m\x1b[K;\n'}
+[74.789702] (mainspace) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[74.790734] (mainspace) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[74.791662] (mainspace) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[74.792612] (mainspace) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1\x1b[m\x1b[K:\n'}
+[74.793495] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.794571] (mainspace) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[74.795630] (mainspace) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.796518] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[74.797377] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[74.798416] (mainspace) StderrLine: {'line': b'  101 |         auto result = \x1b[01;31m\x1b[Kstd::make_shared<NavigateTo::Result>()\x1b[m\x1b[K;\n'}
+[74.799460] (mainspace) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[74.800363] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:103:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[74.801409] (mainspace) StderrLine: {'line': b'  103 |         goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Ksucceed(result);\n'}
+[74.802571] (mainspace) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[74.840009] (-) TimerEvent: {}
+[74.842592] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KNavigateTo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KNavigatorNode\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[74.844252] (mainspace) StderrLine: {'line': b'  109 |       auto feedback = std::make_shared<\x1b[01;31m\x1b[KNavigateTo\x1b[m\x1b[K::Feedback>();\n'}
+[74.845129] (mainspace) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.846029] (mainspace) StderrLine: {'line': b'      |                                        \x1b[32m\x1b[KNavigatorNode\x1b[m\x1b[K\n'}
+[74.847012] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[74.847885] (mainspace) StderrLine: {'line': b'  109 |       auto feedback = std::\x1b[01;31m\x1b[Kmake_shared<NavigateTo::Feedback>\x1b[m\x1b[K();\n'}
+[74.848771] (mainspace) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.849639] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_shared<<expression error> >()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.850701] (mainspace) StderrLine: {'line': b'  109 |       auto feedback = \x1b[01;31m\x1b[Kstd::make_shared<NavigateTo::Feedback>()\x1b[m\x1b[K;\n'}
+[74.851646] (mainspace) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[74.852640] (mainspace) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/memory:77\x1b[m\x1b[K,\n'}
+[74.853546] (mainspace) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[74.854524] (mainspace) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1\x1b[m\x1b[K:\n'}
+[74.855351] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[74.856193] (mainspace) StderrLine: {'line': b'  875 |     \x1b[01;36m\x1b[Kmake_shared\x1b[m\x1b[K(_Args&&... __args)\n'}
+[74.857011] (mainspace) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[74.857837] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:875:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[74.858816] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[74.859700] (mainspace) StderrLine: {'line': b'  109 |       auto feedback = \x1b[01;31m\x1b[Kstd::make_shared<NavigateTo::Feedback>()\x1b[m\x1b[K;\n'}
+[74.860685] (mainspace) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[74.861510] (mainspace) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:114:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kbase operand of \xe2\x80\x98\x1b[01m\x1b[K->\x1b[m\x1b[K\xe2\x80\x99 is not a pointer\n'}
+[74.862590] (mainspace) StderrLine: {'line': b'  114 |       goal_handle\x1b[01;31m\x1b[K->\x1b[m\x1b[Kpublish_feedback(feedback);\n'}
+[74.863447] (mainspace) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[74.940347] (-) TimerEvent: {}
+[75.041721] (-) TimerEvent: {}
+[75.143218] (-) TimerEvent: {}
+[75.244525] (-) TimerEvent: {}
+[75.345798] (-) TimerEvent: {}
+[75.447176] (-) TimerEvent: {}
+[75.548481] (-) TimerEvent: {}
+[75.649763] (-) TimerEvent: {}
+[75.751080] (-) TimerEvent: {}
+[75.852459] (-) TimerEvent: {}
+[75.953722] (-) TimerEvent: {}
+[76.055091] (-) TimerEvent: {}
+[76.156404] (-) TimerEvent: {}
+[76.257709] (-) TimerEvent: {}
+[76.359075] (-) TimerEvent: {}
+[76.460446] (-) TimerEvent: {}
+[76.561975] (-) TimerEvent: {}
+[76.663259] (-) TimerEvent: {}
+[76.764487] (-) TimerEvent: {}
+[76.865773] (-) TimerEvent: {}
+[76.967092] (-) TimerEvent: {}
+[77.068260] (-) TimerEvent: {}
+[77.169045] (-) TimerEvent: {}
+[77.269749] (-) TimerEvent: {}
+[77.370526] (-) TimerEvent: {}
+[77.471257] (-) TimerEvent: {}
+[77.571992] (-) TimerEvent: {}
+[77.672761] (-) TimerEvent: {}
+[77.773468] (-) TimerEvent: {}
+[77.874370] (-) TimerEvent: {}
+[77.975657] (-) TimerEvent: {}
+[78.076980] (-) TimerEvent: {}
+[78.178280] (-) TimerEvent: {}
+[78.279473] (-) TimerEvent: {}
+[78.380826] (-) TimerEvent: {}
+[78.482092] (-) TimerEvent: {}
+[78.583368] (-) TimerEvent: {}
+[78.684606] (-) TimerEvent: {}
+[78.785990] (-) TimerEvent: {}
+[78.887254] (-) TimerEvent: {}
+[78.988578] (-) TimerEvent: {}
+[79.089905] (-) TimerEvent: {}
+[79.191183] (-) TimerEvent: {}
+[79.292422] (-) TimerEvent: {}
+[79.393724] (-) TimerEvent: {}
+[79.495017] (-) TimerEvent: {}
+[79.596265] (-) TimerEvent: {}
+[79.697559] (-) TimerEvent: {}
+[79.798881] (-) TimerEvent: {}
+[79.900212] (-) TimerEvent: {}
+[80.001480] (-) TimerEvent: {}
+[80.103045] (-) TimerEvent: {}
+[80.204413] (-) TimerEvent: {}
+[80.305789] (-) TimerEvent: {}
+[80.407260] (-) TimerEvent: {}
+[80.508704] (-) TimerEvent: {}
+[80.610114] (-) TimerEvent: {}
+[80.711406] (-) TimerEvent: {}
+[80.812619] (-) TimerEvent: {}
+[80.913965] (-) TimerEvent: {}
+[81.015499] (-) TimerEvent: {}
+[81.116844] (-) TimerEvent: {}
+[81.218023] (-) TimerEvent: {}
+[81.318782] (-) TimerEvent: {}
+[81.420042] (-) TimerEvent: {}
+[81.521302] (-) TimerEvent: {}
+[81.622667] (-) TimerEvent: {}
+[81.723909] (-) TimerEvent: {}
+[81.825185] (-) TimerEvent: {}
+[81.926595] (-) TimerEvent: {}
+[82.027866] (-) TimerEvent: {}
+[82.129195] (-) TimerEvent: {}
+[82.230644] (-) TimerEvent: {}
+[82.331983] (-) TimerEvent: {}
+[82.433284] (-) TimerEvent: {}
+[82.534808] (-) TimerEvent: {}
+[82.636255] (-) TimerEvent: {}
+[82.737624] (-) TimerEvent: {}
+[82.838965] (-) TimerEvent: {}
+[82.940218] (-) TimerEvent: {}
+[83.041526] (-) TimerEvent: {}
+[83.142872] (-) TimerEvent: {}
+[83.244218] (-) TimerEvent: {}
+[83.345491] (-) TimerEvent: {}
+[83.446811] (-) TimerEvent: {}
+[83.548029] (-) TimerEvent: {}
+[83.649343] (-) TimerEvent: {}
+[83.750681] (-) TimerEvent: {}
+[83.851949] (-) TimerEvent: {}
+[83.953174] (-) TimerEvent: {}
+[84.054538] (-) TimerEvent: {}
+[84.155807] (-) TimerEvent: {}
+[84.257116] (-) TimerEvent: {}
+[84.358506] (-) TimerEvent: {}
+[84.459805] (-) TimerEvent: {}
+[84.561027] (-) TimerEvent: {}
+[84.661989] (-) TimerEvent: {}
+[84.763302] (-) TimerEvent: {}
+[84.864577] (-) TimerEvent: {}
+[84.965949] (-) TimerEvent: {}
+[85.067223] (-) TimerEvent: {}
+[85.168536] (-) TimerEvent: {}
+[85.269958] (-) TimerEvent: {}
+[85.371282] (-) TimerEvent: {}
+[85.472666] (-) TimerEvent: {}
+[85.574042] (-) TimerEvent: {}
+[85.675361] (-) TimerEvent: {}
+[85.776745] (-) TimerEvent: {}
+[85.878168] (-) TimerEvent: {}
+[85.979632] (-) TimerEvent: {}
+[86.081206] (-) TimerEvent: {}
+[86.182657] (-) TimerEvent: {}
+[86.284008] (-) TimerEvent: {}
+[86.385400] (-) TimerEvent: {}
+[86.486760] (-) TimerEvent: {}
+[86.588069] (-) TimerEvent: {}
+[86.689347] (-) TimerEvent: {}
+[86.790689] (-) TimerEvent: {}
+[86.891938] (-) TimerEvent: {}
+[86.993276] (-) TimerEvent: {}
+[87.094653] (-) TimerEvent: {}
+[87.195876] (-) TimerEvent: {}
+[87.297129] (-) TimerEvent: {}
+[87.398488] (-) TimerEvent: {}
+[87.499744] (-) TimerEvent: {}
+[87.600976] (-) TimerEvent: {}
+[87.702285] (-) TimerEvent: {}
+[87.803531] (-) TimerEvent: {}
+[87.904852] (-) TimerEvent: {}
+[88.006019] (-) TimerEvent: {}
+[88.106832] (-) TimerEvent: {}
+[88.208107] (-) TimerEvent: {}
+[88.309353] (-) TimerEvent: {}
+[88.410699] (-) TimerEvent: {}
+[88.511952] (-) TimerEvent: {}
+[88.613243] (-) TimerEvent: {}
+[88.714554] (-) TimerEvent: {}
+[88.815842] (-) TimerEvent: {}
+[88.917099] (-) TimerEvent: {}
+[89.018408] (-) TimerEvent: {}
+[89.119681] (-) TimerEvent: {}
+[89.221070] (-) TimerEvent: {}
+[89.322510] (-) TimerEvent: {}
+[89.423829] (-) TimerEvent: {}
+[89.525065] (-) TimerEvent: {}
+[89.626400] (-) TimerEvent: {}
+[89.727669] (-) TimerEvent: {}
+[89.828958] (-) TimerEvent: {}
+[89.930255] (-) TimerEvent: {}
+[90.031508] (-) TimerEvent: {}
+[90.132870] (-) TimerEvent: {}
+[90.234129] (-) TimerEvent: {}
+[90.335390] (-) TimerEvent: {}
+[90.436671] (-) TimerEvent: {}
+[90.537963] (-) TimerEvent: {}
+[90.639255] (-) TimerEvent: {}
+[90.740551] (-) TimerEvent: {}
+[90.841959] (-) TimerEvent: {}
+[90.943271] (-) TimerEvent: {}
+[91.044612] (-) TimerEvent: {}
+[91.145990] (-) TimerEvent: {}
+[91.247456] (-) TimerEvent: {}
+[91.348584] (-) TimerEvent: {}
+[91.449332] (-) TimerEvent: {}
+[91.550043] (-) TimerEvent: {}
+[91.650769] (-) TimerEvent: {}
+[91.751493] (-) TimerEvent: {}
+[91.852281] (-) TimerEvent: {}
+[91.953319] (-) TimerEvent: {}
+[92.054542] (-) TimerEvent: {}
+[92.155759] (-) TimerEvent: {}
+[92.257007] (-) TimerEvent: {}
+[92.358251] (-) TimerEvent: {}
+[92.459487] (-) TimerEvent: {}
+[92.560718] (-) TimerEvent: {}
+[92.662000] (-) TimerEvent: {}
+[92.763204] (-) TimerEvent: {}
+[92.864473] (-) TimerEvent: {}
+[92.965714] (-) TimerEvent: {}
+[93.067040] (-) TimerEvent: {}
+[93.168354] (-) TimerEvent: {}
+[93.269685] (-) TimerEvent: {}
+[93.371020] (-) TimerEvent: {}
+[93.472354] (-) TimerEvent: {}
+[93.573702] (-) TimerEvent: {}
+[93.675330] (-) TimerEvent: {}
+[93.776587] (-) TimerEvent: {}
+[93.877934] (-) TimerEvent: {}
+[93.979232] (-) TimerEvent: {}
+[94.080496] (-) TimerEvent: {}
+[94.181808] (-) TimerEvent: {}
+[94.283198] (-) TimerEvent: {}
+[94.384591] (-) TimerEvent: {}
+[94.485968] (-) TimerEvent: {}
+[94.587213] (-) TimerEvent: {}
+[94.688452] (-) TimerEvent: {}
+[94.789734] (-) TimerEvent: {}
+[94.891381] (-) TimerEvent: {}
+[94.992883] (-) TimerEvent: {}
+[95.094316] (-) TimerEvent: {}
+[95.159450] (mainspace) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/navigator.dir/build.make:76: CMakeFiles/navigator.dir/src/navigator.cpp.o] Error 1\n'}
+[95.161418] (mainspace) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/navigator.dir/all] Error 2\n'}
+[95.163660] (mainspace) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[95.179925] (mainspace) CommandEnded: {'returncode': 2}
+[95.194841] (-) TimerEvent: {}
+[95.235408] (mainspace) JobEnded: {'identifier': 'mainspace', 'rc': 2}
+[95.248880] (SerialTest) JobSkipped: {'identifier': 'SerialTest'}
+[95.249346] (-) EventReactorShutdown: {}

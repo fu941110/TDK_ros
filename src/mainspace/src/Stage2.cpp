@@ -39,7 +39,7 @@ public:
 
     //command ROS -> STM
     //test  改爲“/commandToSTM“
-    command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToROS", 10);
+    command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToSTM", 10);
 
     //test, 刪///////////////////////////////////////////////////////////////
     // mainspace::msg::CsvFile csv_path;
@@ -118,10 +118,19 @@ private:
     command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
 
     //test, 寫在STM，/////////////////////////////////////////////////////////////////
-    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee_OK"));
+    // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee_OK"));
 
     //destory cameraCoffee2 node
     cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
+  }
+
+  bool RangeCheck(double x, double k)
+  {
+    if(x < k+21 && x > k-21) 
+    {
+      return true; // 在範圍內
+    }
+    return false; // 不在範圍內
   }
 
   void deskRead(const mainspace::msg::Desk::SharedPtr msg)
@@ -130,7 +139,7 @@ private:
     double y = msg->y;
 
     //can put down coffee
-    if(x < -99 && x > -141 && y < -19 && y > -61) 
+    if(RangeCheck(x, 160) && RangeCheck(y,  0)) 
     {
       //stop robot
       pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
@@ -161,7 +170,7 @@ private:
       command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
 
       //test, 寫在STM，/////////////////////////////////////////////////////////////////
-      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
+      // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
 
       //destory cameraDesk2 node
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
@@ -172,8 +181,8 @@ private:
       double px = 0.0005;
       double py = 0.0005;
 
-      double dx = -(y+100)*py;
-      double dy = -x*px;
+      double dx = -y*py;
+      double dy = -(x-160)*px;
 
       if(number == 2 || number == 4)
       {

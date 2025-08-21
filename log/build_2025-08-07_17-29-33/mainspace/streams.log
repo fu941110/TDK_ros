@@ -1,0 +1,286 @@
+[0.151s] Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/mainspace -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace
+[1.743s] -- The C compiler identification is GNU 11.4.0
+[2.639s] -- The CXX compiler identification is GNU 11.4.0
+[2.726s] -- Detecting C compiler ABI info
+[3.350s] -- Detecting C compiler ABI info - done
+[3.421s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.426s] -- Detecting C compile features
+[3.430s] -- Detecting C compile features - done
+[3.466s] -- Detecting CXX compiler ABI info
+[4.063s] -- Detecting CXX compiler ABI info - done
+[4.135s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.138s] -- Detecting CXX compile features
+[4.142s] -- Detecting CXX compile features - done
+[4.232s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.909s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[7.258s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[8.265s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[8.417s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[8.615s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[8.731s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.872s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.357s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[9.436s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[10.710s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[11.013s] -- Found FastRTPS: /opt/ros/humble/include  
+[12.011s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[12.248s] -- Looking for pthread.h
+[12.600s] -- Looking for pthread.h - found
+[12.603s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[13.333s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[13.343s] -- Found Threads: TRUE  
+[14.060s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[14.529s] -- Found tf2: 0.25.15 (/opt/ros/humble/share/tf2/cmake)
+[14.813s] -- Found tf2_ros: 0.25.15 (/opt/ros/humble/share/tf2_ros/cmake)
+[16.165s] -- Found tf2_geometry_msgs: 0.25.15 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[16.427s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[16.443s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[16.444s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[16.515s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[19.543s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[23.233s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[24.694s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[24.956s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[25.016s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[25.315s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[25.316s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[25.317s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[25.318s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[25.558s] -- Found PythonExtra: .so  
+[26.095s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[26.575s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[26.578s] -- Configured cppcheck include dirs: 
+[26.578s] -- Configured cppcheck exclude dirs and/or files: 
+[26.583s] -- Added test 'flake8' to check Python code syntax and style conventions
+[26.588s] -- Added test 'lint_cmake' to check CMake code style
+[26.592s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[26.602s] -- Added test 'uncrustify' to check C / C++ code style
+[26.603s] -- Configured uncrustify additional arguments: 
+[26.608s] -- Added test 'xmllint' to check XML markup files
+[26.627s] -- Configuring done
+[27.069s] -- Generating done
+[27.218s] -- Build files have been written to: /home/fu941/TDK_ros/build/mainspace
+[27.312s] Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/mainspace -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace
+[27.325s] Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
+[27.775s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[27.876s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[27.936s] [  4%] Built target ament_cmake_python_copy_mainspace
+[31.196s] running egg_info
+[31.203s] creating mainspace.egg-info
+[31.205s] writing mainspace.egg-info/PKG-INFO
+[31.209s] writing dependency_links to mainspace.egg-info/dependency_links.txt
+[31.213s] writing top-level names to mainspace.egg-info/top_level.txt
+[31.215s] writing manifest file 'mainspace.egg-info/SOURCES.txt'
+[31.239s] reading manifest file 'mainspace.egg-info/SOURCES.txt'
+[31.246s] writing manifest file 'mainspace.egg-info/SOURCES.txt'
+[31.537s] [  4%] Built target ament_cmake_python_build_mainspace_egg
+[31.649s] [  4%] Built target mainspace__cpp
+[31.757s] [  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[31.765s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[31.768s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[31.828s] [ 14%] [32mBuilding C object CMakeFiles/mainspace__rosidl_generator_c.dir/rosidl_generator_c/mainspace/msg/detail/encoder_speed__functions.c.o[0m
+[32.620s] [ 17%] [32mBuilding C object CMakeFiles/mainspace__rosidl_generator_c.dir/rosidl_generator_c/mainspace/msg/detail/position__functions.c.o[0m
+[33.276s] [ 19%] [32m[1mLinking C shared library libmainspace__rosidl_generator_c.so[0m
+[33.722s] [ 19%] Built target mainspace__rosidl_generator_c
+[33.830s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[34.872s] [ 24%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mainspace/msg/encoder_speed__type_support.cpp.o[0m
+[35.291s] [ 26%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mainspace/msg/detail/encoder_speed__type_support.cpp.o[0m
+[35.528s] [ 29%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mainspace/msg/detail/dds_fastrtps/encoder_speed__type_support.cpp.o[0m
+[37.600s] [ 31%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mainspace/msg/detail/encoder_speed__type_support_c.cpp.o[0m
+[38.549s] [ 34%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mainspace/msg/position__type_support.cpp.o[0m
+[40.262s] [ 36%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mainspace/msg/detail/position__type_support.cpp.o[0m
+[40.797s] [ 39%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mainspace/msg/detail/dds_fastrtps/position__type_support.cpp.o[0m
+[42.043s] [ 41%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mainspace/msg/detail/position__type_support_c.cpp.o[0m
+[42.181s] [ 43%] [32m[1mLinking CXX shared library libmainspace__rosidl_typesupport_cpp.so[0m
+[42.643s] [ 43%] Built target mainspace__rosidl_typesupport_cpp
+[42.763s] [ 46%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[45.377s] [ 48%] [32m[1mLinking CXX shared library libmainspace__rosidl_typesupport_introspection_cpp.so[0m
+[45.870s] [ 48%] Built target mainspace__rosidl_typesupport_introspection_cpp
+[45.990s] [ 51%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[46.146s] [ 53%] [32m[1mLinking CXX shared library libmainspace__rosidl_typesupport_fastrtps_cpp.so[0m
+[46.731s] [ 56%] [32m[1mLinking CXX shared library libmainspace__rosidl_typesupport_fastrtps_c.so[0m
+[46.813s] [ 58%] [32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mainspace/msg/detail/encoder_speed__type_support.c.o[0m
+[47.002s] [ 58%] Built target mainspace__rosidl_typesupport_fastrtps_cpp
+[47.102s] [ 60%] [32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mainspace/msg/detail/position__type_support.c.o[0m
+[47.463s] [ 63%] [32mBuilding CXX object CMakeFiles/navigator.dir/src/navigator.cpp.o[0m
+[47.581s] [ 63%] Built target mainspace__rosidl_typesupport_fastrtps_c
+[47.598s] [ 65%] [32m[1mLinking C shared library libmainspace__rosidl_typesupport_introspection_c.so[0m
+[47.932s] [ 65%] Built target mainspace__rosidl_typesupport_introspection_c
+[49.035s] [ 68%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_c.dir/rosidl_typesupport_c/mainspace/msg/encoder_speed__type_support.cpp.o[0m
+[49.040s] [ 70%] [32mBuilding CXX object CMakeFiles/mainspace__rosidl_typesupport_c.dir/rosidl_typesupport_c/mainspace/msg/position__type_support.cpp.o[0m
+[49.409s] [ 73%] [32m[1mLinking CXX shared library libmainspace__rosidl_typesupport_c.so[0m
+[49.656s] [ 73%] Built target mainspace__rosidl_typesupport_c
+[49.852s] [ 73%] Built target mainspace
+[50.052s] [ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[54.386s] [ 75%] Built target mainspace__py
+[54.595s] [ 78%] [32mBuilding C object CMakeFiles/mainspace__rosidl_generator_py.dir/rosidl_generator_py/mainspace/msg/_encoder_speed_s.c.o[0m
+[54.600s] [ 80%] [32mBuilding C object CMakeFiles/mainspace__rosidl_generator_py.dir/rosidl_generator_py/mainspace/msg/_position_s.c.o[0m
+[55.989s] [ 82%] [32m[1mLinking C shared library rosidl_generator_py/mainspace/libmainspace__rosidl_generator_py.so[0m
+[56.398s] [ 82%] Built target mainspace__rosidl_generator_py
+[56.630s] [ 87%] [32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/mainspace/_mainspace_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[56.632s] [ 87%] [32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/mainspace/_mainspace_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[56.634s] [ 90%] [32mBuilding C object CMakeFiles/mainspace__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/mainspace/_mainspace_s.ep.rosidl_typesupport_c.c.o[0m
+[58.145s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/mainspace/mainspace_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[58.165s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/mainspace/mainspace_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[58.192s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/mainspace/mainspace_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[58.707s] [ 97%] Built target mainspace__rosidl_typesupport_c__pyext
+[58.731s] [ 97%] Built target mainspace__rosidl_typesupport_introspection_c__pyext
+[58.741s] [ 97%] Built target mainspace__rosidl_typesupport_fastrtps_c__pyext
+[73.460s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:17:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction[m[K’ in namespace ‘[01m[Kmainspace[m[K’ does not name a type
+[73.461s]    17 |   using NavigateTo = mainspace::[01;31m[Kaction[m[K::NavigateTo;
+[73.462s]       |                                 [01;31m[K^~~~~~[m[K
+[73.484s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:18:32:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+[73.486s]    18 |   using GoalHandleNavigateTo = [01;31m[Krclcpp_action[m[K::ServerGoalHandle<NavigateTo>;
+[73.487s]       |                                [01;31m[K^~~~~~~~~~~~~[m[K
+[73.504s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:48:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+[73.506s]    48 |   [01;31m[Krclcpp_action[m[K::GoalResponse handle_goal(
+[73.506s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[73.524s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:57:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+[73.526s]    57 |   [01;31m[Krclcpp_action[m[K::CancelResponse handle_cancel(
+[73.527s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[73.625s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+[73.626s]    64 |   void handle_accepted(const std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> goal_handle)
+[73.627s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[73.627s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[73.629s]    64 |   void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K goal_handle)
+[73.632s]       |                                                                  [01;31m[K^[m[K
+[73.633s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:37:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Ktype name[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[73.634s]    68 |     std::shared_ptr<const NavigateTo[01;31m[K::[m[KGoal> goal)
+[73.635s]       |                                     [01;31m[K^~[m[K
+[73.636s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[73.637s]    68 |     std::shared_ptr<const NavigateTo::Goal[01;31m[K>[m[K goal)
+[73.638s]       |                                           [01;31m[K^[m[K
+[73.639s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[73.640s]    68 |     std::shared_ptr<const NavigateTo::Goal> [01;31m[Kgoal[m[K)
+[73.641s]       |                                             [01;31m[K^~~~[m[K
+[73.642s]       |                                                 [32m[K;[m[K
+[73.643s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:68:49:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+[73.644s]    68 |     std::shared_ptr<const NavigateTo::Goal> goal[01;31m[K)[m[K
+[73.645s]       |                                                 [01;31m[K^[m[K
+[73.734s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+[73.735s]    74 |   void handle_accepted(const std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> goal_handle)
+[73.736s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[73.737s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[73.738s]    74 |   void handle_accepted(const std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K goal_handle)
+[73.739s]       |                                                                  [01;31m[K^[m[K
+[73.741s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:74:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid NavigatorNode::handle_accepted(int)[m[K’ cannot be overloaded with ‘[01m[Kvoid NavigatorNode::handle_accepted(int)[m[K’
+[73.742s]    74 |   void [01;31m[Khandle_accepted[m[K(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+[73.743s]       |        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[73.744s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:64:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid NavigatorNode::handle_accepted(int)[m[K’
+[73.745s]    64 |   void [01;36m[Khandle_accepted[m[K(const std::shared_ptr<GoalHandleNavigateTo> goal_handle)
+[73.746s]       |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[73.836s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:79:38:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+[73.837s]    79 |   void execute(const std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> goal_handle)
+[73.838s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[73.839s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:79:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[73.840s]    79 |   void execute(const std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K goal_handle)
+[73.840s]       |                                                          [01;31m[K^[m[K
+[74.248s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:223:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+[74.248s]   223 |   [01;31m[Krclcpp_action[m[K::Server<NavigateTo>::SharedPtr action_server_;
+[74.248s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[74.291s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:224:19:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandleNavigateTo[m[K’ was not declared in this scope
+[74.292s]   224 |   std::shared_ptr<[01;31m[KGoalHandleNavigateTo[m[K> current_goal_;
+[74.294s]       |                   [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[74.295s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:224:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[74.295s]   224 |   std::shared_ptr<GoalHandleNavigateTo[01;31m[K>[m[K current_goal_;
+[74.296s]       |                                       [01;31m[K^[m[K
+[74.530s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:[m[K In constructor ‘[01m[KNavigatorNode::NavigatorNode()[m[K’:
+[74.531s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_server_[m[K’ was not declared in this scope
+[74.532s]    38 |     [01;31m[Kaction_server_[m[K = rclcpp_action::create_server<NavigateTo>(
+[74.533s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[74.534s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:22:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ has not been declared
+[74.536s]    38 |     action_server_ = [01;31m[Krclcpp_action[m[K::create_server<NavigateTo>(
+[74.537s]       |                      [01;31m[K^~~~~~~~~~~~~[m[K
+[74.587s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:38:51:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+[74.588s]    38 |     action_server_ = rclcpp_action::create_server<[01;31m[KNavigateTo[m[K>(
+[74.589s]       |                                                   [01;31m[K^~~~~~~~~~[m[K
+[74.590s]       |                                                   [32m[KNavigatorNode[m[K
+[74.591s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:39:7:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[74.592s]    39 |       [01;35m[Kthis[m[K,
+[74.593s]       |       [01;35m[K^~~~[m[K
+[74.594s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:41:33:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_goal[m[K’ is not a member of ‘[01m[KNavigatorNode[m[K’
+[74.595s]    41 |       std::bind(&NavigatorNode::[01;31m[Khandle_goal[m[K, this, std::placeholders::_1, std::placeholders::_2),
+[74.596s]       |                                 [01;31m[K^~~~~~~~~~~[m[K
+[74.597s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:42:33:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_cancel[m[K’ is not a member of ‘[01m[KNavigatorNode[m[K’
+[74.598s]    42 |       std::bind(&NavigatorNode::[01;31m[Khandle_cancel[m[K, this, std::placeholders::_1),
+[74.599s]       |                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[74.647s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:[m[K In member function ‘[01m[Kvoid NavigatorNode::execute(int)[m[K’:
+[74.648s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:84:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[74.650s]    84 |     const auto goal = goal_handle[01;31m[K->[m[Kget_goal();
+[74.651s]       |                                  [01;31m[K^~[m[K
+[74.652s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:94:22:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[74.653s]    94 |       if (goal_handle[01;31m[K->[m[Kis_canceling()) {
+[74.654s]       |                      [01;31m[K^~[m[K
+[74.655s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[74.656s]    96 |         goal_handle[01;31m[K->[m[Kcanceled(std::make_shared<NavigateTo::Result>());
+[74.657s]       |                    [01;31m[K^~[m[K
+[74.710s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:48:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+[74.711s]    96 |         goal_handle->canceled(std::make_shared<[01;31m[KNavigateTo[m[K::Result>());
+[74.711s]       |                                                [01;31m[K^~~~~~~~~~[m[K
+[74.712s]       |                                                [32m[KNavigatorNode[m[K
+[74.713s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:36:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[74.714s]    96 |         goal_handle->canceled(std::[01;31m[Kmake_shared<NavigateTo::Result>[m[K());
+[74.715s]       |                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[74.717s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+[74.718s]    96 |         goal_handle->canceled([01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K);
+[74.719s]       |                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[74.720s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[74.721s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[74.722s]                  from [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1[m[K:
+[74.723s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[74.724s]   875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[74.725s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[74.726s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[74.727s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:96:67:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[74.728s]    96 |         goal_handle->canceled([01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K);
+[74.729s]       |                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[74.776s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+[74.777s]   101 |         auto result = std::make_shared<[01;31m[KNavigateTo[m[K::Result>();
+[74.778s]       |                                        [01;31m[K^~~~~~~~~~[m[K
+[74.780s]       |                                        [32m[KNavigatorNode[m[K
+[74.781s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[74.782s]   101 |         auto result = std::[01;31m[Kmake_shared<NavigateTo::Result>[m[K();
+[74.783s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[74.784s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:59:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+[74.785s]   101 |         auto result = [01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K;
+[74.786s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[74.787s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[74.788s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[74.789s]                  from [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1[m[K:
+[74.790s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[74.791s]   875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[74.792s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[74.793s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[74.794s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:101:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[74.795s]   101 |         auto result = [01;31m[Kstd::make_shared<NavigateTo::Result>()[m[K;
+[74.796s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[74.797s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:103:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[74.798s]   103 |         goal_handle[01;31m[K->[m[Ksucceed(result);
+[74.799s]       |                    [01;31m[K^~[m[K
+[74.839s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNavigateTo[m[K’ was not declared in this scope; did you mean ‘[01m[KNavigatorNode[m[K’?
+[74.840s]   109 |       auto feedback = std::make_shared<[01;31m[KNavigateTo[m[K::Feedback>();
+[74.841s]       |                                        [01;31m[K^~~~~~~~~~[m[K
+[74.842s]       |                                        [32m[KNavigatorNode[m[K
+[74.843s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[74.844s]   109 |       auto feedback = std::[01;31m[Kmake_shared<NavigateTo::Feedback>[m[K();
+[74.845s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[74.846s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+[74.847s]   109 |       auto feedback = [01;31m[Kstd::make_shared<NavigateTo::Feedback>()[m[K;
+[74.848s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[74.849s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[74.850s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[74.851s]                  from [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:1[m[K:
+[74.851s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[74.852s]   875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[74.853s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[74.854s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[74.855s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:109:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[74.856s]   109 |       auto feedback = [01;31m[Kstd::make_shared<NavigateTo::Feedback>()[m[K;
+[74.857s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[74.858s] [01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:114:18:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[74.859s]   114 |       goal_handle[01;31m[K->[m[Kpublish_feedback(feedback);
+[74.859s]       |                  [01;31m[K^~[m[K
+[95.156s] gmake[2]: *** [CMakeFiles/navigator.dir/build.make:76: CMakeFiles/navigator.dir/src/navigator.cpp.o] Error 1
+[95.158s] gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/navigator.dir/all] Error 2
+[95.160s] gmake: *** [Makefile:146: all] Error 2
+[95.177s] Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4

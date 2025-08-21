@@ -1,0 +1,23 @@
+[7.209s] Invoking command in '/home/fu941/TDK_ros/src/SerialTest': PYTHONPATH=/home/fu941/TDK_ros/build/SerialTest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/SerialTest build --build-base /home/fu941/TDK_ros/build/SerialTest/build install --record /home/fu941/TDK_ros/build/SerialTest/install.log --single-version-externally-managed install_data
+[9.938s] running egg_info
+[9.943s] writing ../../build/SerialTest/SerialTest.egg-info/PKG-INFO
+[9.946s] writing dependency_links to ../../build/SerialTest/SerialTest.egg-info/dependency_links.txt
+[9.948s] writing entry points to ../../build/SerialTest/SerialTest.egg-info/entry_points.txt
+[9.951s] writing requirements to ../../build/SerialTest/SerialTest.egg-info/requires.txt
+[9.954s] writing top-level names to ../../build/SerialTest/SerialTest.egg-info/top_level.txt
+[9.972s] reading manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+[9.982s] writing manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+[9.984s] running build
+[9.985s] running build_py
+[9.990s] running install
+[9.993s] running install_lib
+[10.009s] running install_data
+[10.011s] running install_egg_info
+[10.029s] removing '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info' (and everything under it)
+[10.033s] Copying ../../build/SerialTest/SerialTest.egg-info to /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info
+[10.048s] running install_scripts
+[10.249s] Installing control_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+[10.251s] Installing motor_serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+[10.254s] Installing other_serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+[10.258s] writing list of installed files to '/home/fu941/TDK_ros/build/SerialTest/install.log'
+[10.477s] Invoked command in '/home/fu941/TDK_ros/src/SerialTest' returned '0': PYTHONPATH=/home/fu941/TDK_ros/build/SerialTest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/SerialTest build --build-base /home/fu941/TDK_ros/build/SerialTest/build install --record /home/fu941/TDK_ros/build/SerialTest/install.log --single-version-externally-managed install_data

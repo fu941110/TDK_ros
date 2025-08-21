@@ -1,0 +1,204 @@
+[1.124s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.125s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8d2335b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8d374940>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8d374940>>)
+[3.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.155s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.155s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.155s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.155s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.155s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/fu941/TDK_ros'
+[3.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.156s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.203s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.204s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.205s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.205s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.205s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.206s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.207s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[3.208s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[3.209s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[3.210s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[3.210s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[3.210s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[3.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extensions ['ignore', 'ignore_ament_install']
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extension 'ignore'
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extension 'ignore_ament_install'
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extensions ['colcon_pkg']
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extension 'colcon_pkg'
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extensions ['colcon_meta']
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extension 'colcon_meta'
+[3.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extensions ['ros']
+[3.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/SerialTest) by extension 'ros'
+[3.220s] DEBUG:colcon.colcon_core.package_identification:Package 'src/SerialTest' with type 'ros.ament_python' and name 'SerialTest'
+[3.220s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extensions ['ignore', 'ignore_ament_install']
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extension 'ignore'
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extension 'ignore_ament_install'
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extensions ['colcon_pkg']
+[3.221s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extension 'colcon_pkg'
+[3.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extensions ['colcon_meta']
+[3.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extension 'colcon_meta'
+[3.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extensions ['ros']
+[3.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera) by extension 'ros'
+[3.224s] DEBUG:colcon.colcon_core.package_identification:Package 'src/camera' with type 'ros.ament_cmake' and name 'camera'
+[3.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extensions ['ignore', 'ignore_ament_install']
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extension 'ignore'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extension 'ignore_ament_install'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extensions ['colcon_pkg']
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extension 'colcon_pkg'
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extensions ['colcon_meta']
+[3.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extension 'colcon_meta'
+[3.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extensions ['ros']
+[3.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/mainspace) by extension 'ros'
+[3.230s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mainspace' with type 'ros.ament_cmake' and name 'mainspace'
+[3.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[3.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.313s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/fu941/TDK_ros/install
+[3.334s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[3.359s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.890s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'cmake_args' from command line to 'None'
+[3.890s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'cmake_target' from command line to 'None'
+[3.891s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.891s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'cmake_clean_cache' from command line to 'False'
+[3.891s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'cmake_clean_first' from command line to 'False'
+[3.892s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'cmake_force_configure' from command line to 'False'
+[3.892s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'ament_cmake_args' from command line to 'None'
+[3.892s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'catkin_cmake_args' from command line to 'None'
+[3.892s] Level 5:colcon.colcon_core.verb:set package 'camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.893s] DEBUG:colcon.colcon_core.verb:Building package 'camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fu941/TDK_ros/build/camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fu941/TDK_ros/install/camera', 'merge_install': False, 'path': '/home/fu941/TDK_ros/src/camera', 'symlink_install': False, 'test_result_base': None}
+[3.897s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'cmake_args' from command line to 'None'
+[3.897s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'cmake_target' from command line to 'None'
+[3.898s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.898s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'cmake_clean_cache' from command line to 'False'
+[3.898s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'cmake_clean_first' from command line to 'False'
+[3.899s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'cmake_force_configure' from command line to 'False'
+[3.899s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'ament_cmake_args' from command line to 'None'
+[3.899s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'catkin_cmake_args' from command line to 'None'
+[3.899s] Level 5:colcon.colcon_core.verb:set package 'mainspace' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.900s] DEBUG:colcon.colcon_core.verb:Building package 'mainspace' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fu941/TDK_ros/build/mainspace', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fu941/TDK_ros/install/mainspace', 'merge_install': False, 'path': '/home/fu941/TDK_ros/src/mainspace', 'symlink_install': False, 'test_result_base': None}
+[3.904s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'cmake_args' from command line to 'None'
+[3.904s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'cmake_target' from command line to 'None'
+[3.904s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.905s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'cmake_clean_cache' from command line to 'False'
+[3.905s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'cmake_clean_first' from command line to 'False'
+[3.905s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'cmake_force_configure' from command line to 'False'
+[3.906s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'ament_cmake_args' from command line to 'None'
+[3.906s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'catkin_cmake_args' from command line to 'None'
+[3.906s] Level 5:colcon.colcon_core.verb:set package 'SerialTest' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.906s] DEBUG:colcon.colcon_core.verb:Building package 'SerialTest' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fu941/TDK_ros/build/SerialTest', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fu941/TDK_ros/install/SerialTest', 'merge_install': False, 'path': '/home/fu941/TDK_ros/src/SerialTest', 'symlink_install': False, 'test_result_base': None}
+[3.908s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.915s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.917s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fu941/TDK_ros/src/mainspace' with build type 'ament_cmake'
+[3.919s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fu941/TDK_ros/src/mainspace'
+[3.940s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.943s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.943s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.994s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fu941/TDK_ros/src/camera' with build type 'ament_cmake'
+[3.995s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fu941/TDK_ros/src/camera'
+[3.998s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.999s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/mainspace -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace
+[4.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[5.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[5.394s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera
+[5.526s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera)
+[5.530s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera
+[5.563s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera' for CMake module files
+[5.572s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera' for CMake config files
+[5.577s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera', 'cmake_prefix_path')
+[5.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fu941/TDK_ros/install/camera/share/camera/hook/cmake_prefix_path.ps1'
+[5.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fu941/TDK_ros/install/camera/share/camera/hook/cmake_prefix_path.dsv'
+[5.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fu941/TDK_ros/install/camera/share/camera/hook/cmake_prefix_path.sh'
+[5.603s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/lib'
+[5.605s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/bin'
+[5.606s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/lib/pkgconfig/camera.pc'
+[5.610s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/lib/python3.10/site-packages'
+[5.613s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/bin'
+[5.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.ps1'
+[5.626s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fu941/TDK_ros/install/camera/share/camera/package.dsv'
+[5.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.sh'
+[5.642s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.bash'
+[5.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.zsh'
+[5.659s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fu941/TDK_ros/install/camera/share/colcon-core/packages/camera)
+[5.667s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera)
+[5.670s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera' for CMake module files
+[5.677s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera' for CMake config files
+[5.681s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera', 'cmake_prefix_path')
+[5.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fu941/TDK_ros/install/camera/share/camera/hook/cmake_prefix_path.ps1'
+[5.688s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fu941/TDK_ros/install/camera/share/camera/hook/cmake_prefix_path.dsv'
+[5.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fu941/TDK_ros/install/camera/share/camera/hook/cmake_prefix_path.sh'
+[5.699s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/lib'
+[5.700s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/bin'
+[5.701s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/lib/pkgconfig/camera.pc'
+[5.703s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/lib/python3.10/site-packages'
+[5.706s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/camera/bin'
+[5.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.ps1'
+[5.714s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fu941/TDK_ros/install/camera/share/camera/package.dsv'
+[5.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.sh'
+[5.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.bash'
+[5.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/camera/share/camera/package.zsh'
+[5.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fu941/TDK_ros/install/camera/share/colcon-core/packages/camera)
+[31.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/mainspace -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace
+[31.252s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
+[99.097s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
+[99.102s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mainspace)
+[99.104s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/mainspace' for CMake module files
+[99.110s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/mainspace' for CMake config files
+[99.115s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/mainspace/bin'
+[99.115s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/mainspace/lib/pkgconfig/mainspace.pc'
+[99.118s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/mainspace/lib/python3.10/site-packages'
+[99.120s] Level 1:colcon.colcon_core.environment:checking '/home/fu941/TDK_ros/install/mainspace/bin'
+[99.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/mainspace/share/mainspace/package.ps1'
+[99.127s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fu941/TDK_ros/install/mainspace/share/mainspace/package.dsv'
+[99.133s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/mainspace/share/mainspace/package.sh'
+[99.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/mainspace/share/mainspace/package.bash'
+[99.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/fu941/TDK_ros/install/mainspace/share/mainspace/package.zsh'
+[99.148s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fu941/TDK_ros/install/mainspace/share/colcon-core/packages/mainspace)
+[99.161s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[99.162s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[99.163s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[99.164s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[99.209s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[99.210s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[99.211s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[99.211s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[99.218s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[99.219s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[99.221s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fu941/TDK_ros/install/local_setup.ps1'
+[99.234s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fu941/TDK_ros/install/_local_setup_util_ps1.py'
+[99.250s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fu941/TDK_ros/install/setup.ps1'
+[99.263s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fu941/TDK_ros/install/local_setup.sh'
+[99.270s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fu941/TDK_ros/install/_local_setup_util_sh.py'
+[99.277s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fu941/TDK_ros/install/setup.sh'
+[99.289s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fu941/TDK_ros/install/local_setup.bash'
+[99.295s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fu941/TDK_ros/install/setup.bash'
+[99.306s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fu941/TDK_ros/install/local_setup.zsh'
+[99.312s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fu941/TDK_ros/install/setup.zsh'

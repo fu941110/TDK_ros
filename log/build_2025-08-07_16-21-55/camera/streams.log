@@ -1,0 +1,43 @@
+[0.046s] Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[0.205s] [35m[1mConsolidate compiler generated dependencies of target cameraStage2[0m
+[0.207s] [35m[1mConsolidate compiler generated dependencies of target cameraStage3[0m
+[0.208s] [35m[1mConsolidate compiler generated dependencies of target cameraDesk2[0m
+[0.278s] [ 11%] [32mBuilding CXX object CMakeFiles/cameraStage2.dir/src/cameraBackground.cpp.o[0m
+[0.280s] [ 22%] [32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraStage3.cpp.o[0m
+[0.284s] [ 33%] [32mBuilding CXX object CMakeFiles/cameraDesk2.dir/src/cameraBackground.cpp.o[0m
+[0.285s] [ 44%] [32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraBackground.cpp.o[0m
+[18.159s] [01m[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:[m[K In member function ‘[01m[Kcv::Mat CameraStage3::FindOrange(cv::Mat)[m[K’:
+[18.161s] [01m[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:42:20:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KPointColor[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[18.163s]    42 |             Scalar [01;35m[KPointColor[m[K = (abs(orange_center_x) + abs(orange_center_y) > 50) ? Scalar(0, 0, 255) : Scalar(0, 255, 0);
+[18.164s]       |                    [01;35m[K^~~~~~~~~~[m[K
+[24.264s] [ 55%] [32m[1mLinking CXX executable cameraStage2[0m
+[24.602s] [ 66%] [32m[1mLinking CXX executable cameraDesk2[0m
+[24.662s] [ 77%] [32m[1mLinking CXX executable cameraStage3[0m
+[27.810s] [ 88%] Built target cameraStage2
+[27.931s] [100%] Built target cameraDesk2
+[27.982s] [100%] Built target cameraStage3
+[28.023s] Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[28.060s] Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera
+[28.089s] -- Install configuration: ""
+[28.090s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include/
+[28.090s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera
+[28.090s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp
+[28.091s] -- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage2
+[28.094s] -- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2
+[28.096s] -- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3
+[28.098s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera
+[28.098s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera
+[28.099s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh
+[28.099s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv
+[28.100s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh
+[28.100s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv
+[28.101s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash
+[28.101s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh
+[28.101s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh
+[28.102s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv
+[28.102s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv
+[28.103s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera
+[28.103s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake
+[28.103s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake
+[28.104s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/package.xml
+[28.109s] Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera

@@ -1,0 +1,80 @@
+[0.115s] Invoking command in '/home/fu941/TDK_ros/build/camera': AMENT_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble LD_LIBRARY_PATH=/home/fu941/TDK_ros/install/mainspace/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[0.374s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.189s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[1.516s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.562s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.619s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.690s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.788s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.070s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.092s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.650s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.099s] -- Found FastRTPS: /opt/ros/humble/include  
+[4.119s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.328s] -- Looking for pthread.h
+[4.743s] -- Looking for pthread.h - found
+[4.747s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.083s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[5.088s] -- Found Threads: TRUE  
+[5.332s] -- Found mainspace: 0.0.0 (/home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake)
+[5.397s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[5.454s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.776s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.777s] -- Configured cppcheck include dirs: /home/fu941/TDK_ros/src/camera/include
+[5.777s] -- Configured cppcheck exclude dirs and/or files: 
+[5.780s] -- Added test 'lint_cmake' to check CMake code style
+[5.789s] -- Added test 'uncrustify' to check C / C++ code style
+[5.789s] -- Configured uncrustify additional arguments: 
+[5.791s] -- Added test 'xmllint' to check XML markup files
+[5.798s] -- Configuring done
+[5.952s] -- Generating done
+[5.990s] -- Build files have been written to: /home/fu941/TDK_ros/build/camera
+[6.115s] [35m[1mConsolidate compiler generated dependencies of target cameraStage3[0m
+[6.124s] [35m[1mConsolidate compiler generated dependencies of target cameraDesk2[0m
+[6.329s] [ 11%] [32mBuilding CXX object CMakeFiles/cameraCoffee2.dir/src/cameraBackground.cpp.o[0m
+[6.343s] [ 22%] [32mBuilding CXX object CMakeFiles/cameraCoffee2.dir/src/cameraCoffee2.cpp.o[0m
+[6.523s] [ 33%] [32mBuilding CXX object CMakeFiles/cameraDesk2.dir/src/cameraDesk2.cpp.o[0m
+[6.535s] [ 44%] [32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraStage3.cpp.o[0m
+[55.650s] [01m[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[55.652s] [01m[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:66:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[55.654s]    66 | int main([01;35m[Kint argc[m[K, char **argv) {
+[55.655s]       |          [01;35m[K~~~~^~~~[m[K
+[55.656s] [01m[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:66:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[55.658s]    66 | int main(int argc, [01;35m[Kchar **argv[m[K) {
+[55.668s]       |                    [01;35m[K~~~~~~~^~~~[m[K
+[66.794s] [ 55%] [32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraBackground.cpp.o[0m
+[67.124s] [ 66%] [32mBuilding CXX object CMakeFiles/cameraDesk2.dir/src/cameraBackground.cpp.o[0m
+[88.255s] [ 77%] [32m[1mLinking CXX executable cameraCoffee2[0m
+[96.790s] [ 77%] Built target cameraCoffee2
+[113.722s] [ 88%] [32m[1mLinking CXX executable cameraStage3[0m
+[113.801s] [100%] [32m[1mLinking CXX executable cameraDesk2[0m
+[117.897s] [100%] Built target cameraStage3
+[118.844s] [100%] Built target cameraDesk2
+[118.947s] Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': AMENT_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble LD_LIBRARY_PATH=/home/fu941/TDK_ros/install/mainspace/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[118.968s] Invoking command in '/home/fu941/TDK_ros/build/camera': AMENT_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble LD_LIBRARY_PATH=/home/fu941/TDK_ros/install/mainspace/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera
+[119.037s] -- Install configuration: ""
+[119.039s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include/
+[119.040s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera
+[119.041s] -- Installing: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp
+[119.043s] -- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraCoffee2
+[119.073s] -- Set runtime path of "/home/fu941/TDK_ros/install/camera/lib/camera/cameraCoffee2" to ""
+[119.081s] -- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2
+[119.109s] -- Set runtime path of "/home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2" to ""
+[119.117s] -- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3
+[119.126s] -- Set runtime path of "/home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3" to ""
+[119.127s] -- Installing: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera
+[119.131s] -- Installing: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera
+[119.134s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh
+[119.135s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv
+[119.136s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh
+[119.137s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv
+[119.138s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash
+[119.138s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh
+[119.139s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh
+[119.140s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv
+[119.141s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv
+[119.141s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera
+[119.142s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake
+[119.142s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake
+[119.143s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.xml
+[119.151s] Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': AMENT_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble LD_LIBRARY_PATH=/home/fu941/TDK_ros/install/mainspace/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera

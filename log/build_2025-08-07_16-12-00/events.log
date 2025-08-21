@@ -1,0 +1,554 @@
+[0.000000] (-) TimerEvent: {}
+[0.001694] (-) JobUnselected: {'identifier': 'SerialTest'}
+[0.002196] (-) JobUnselected: {'identifier': 'mainspace'}
+[0.002287] (camera) JobQueued: {'identifier': 'camera', 'dependencies': OrderedDict()}
+[0.002374] (camera) JobStarted: {'identifier': 'camera'}
+[0.033057] (camera) JobProgress: {'identifier': 'camera', 'progress': 'cmake'}
+[0.034318] (camera) Command: {'cmd': ['/usr/bin/cmake', '/home/fu941/TDK_ros/src/camera', '-DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/camera'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('SSH_CONNECTION', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 fe80::e65f:1ff:fe56:bd46%wlan0 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099250] (-) TimerEvent: {}
+[0.200116] (-) TimerEvent: {}
+[0.288761] (camera) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.300300] (-) TimerEvent: {}
+[0.401152] (-) TimerEvent: {}
+[0.501995] (-) TimerEvent: {}
+[0.528719] (camera) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.560650] (camera) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.602197] (-) TimerEvent: {}
+[0.702928] (-) TimerEvent: {}
+[0.803843] (-) TimerEvent: {}
+[0.857598] (camera) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.883567] (camera) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.884322] (camera) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.885731] (camera) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.896079] (camera) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.903997] (-) TimerEvent: {}
+[1.004697] (-) TimerEvent: {}
+[1.105448] (-) TimerEvent: {}
+[1.206217] (-) TimerEvent: {}
+[1.223764] (camera) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.253381] (camera) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.254484] (camera) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.256032] (camera) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.279056] (camera) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.306358] (-) TimerEvent: {}
+[1.406963] (-) TimerEvent: {}
+[1.507576] (-) TimerEvent: {}
+[1.608322] (-) TimerEvent: {}
+[1.709054] (-) TimerEvent: {}
+[1.809679] (-) TimerEvent: {}
+[1.910270] (-) TimerEvent: {}
+[1.959276] (camera) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[2.010441] (-) TimerEvent: {}
+[2.111038] (-) TimerEvent: {}
+[2.211840] (-) TimerEvent: {}
+[2.312784] (-) TimerEvent: {}
+[2.413400] (-) TimerEvent: {}
+[2.508707] (camera) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[2.513578] (-) TimerEvent: {}
+[2.531238] (camera) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.613730] (-) TimerEvent: {}
+[2.714392] (-) TimerEvent: {}
+[2.815023] (-) TimerEvent: {}
+[2.915650] (-) TimerEvent: {}
+[2.929448] (camera) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.930207] (camera) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/fu941/TDK_ros/src/camera/include\n'}
+[2.930673] (camera) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.934420] (camera) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.942395] (camera) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.942943] (camera) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.944758] (camera) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.950634] (camera) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.003071] (camera) StdoutLine: {'line': b'-- Generating done\n'}
+[3.015832] (-) TimerEvent: {}
+[3.021402] (camera) StdoutLine: {'line': b'-- Build files have been written to: /home/fu941/TDK_ros/build/camera\n'}
+[3.038084] (camera) CommandEnded: {'returncode': 0}
+[3.039640] (camera) JobProgress: {'identifier': 'camera', 'progress': 'build'}
+[3.041831] (camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fu941/TDK_ros/build/camera', '--', '-j4', '-l4'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('SSH_CONNECTION', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 fe80::e65f:1ff:fe56:bd46%wlan0 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.116083] (-) TimerEvent: {}
+[3.216988] (-) TimerEvent: {}
+[3.277235] (camera) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage2.dir/src/cameraStage2.cpp.o\x1b[0m\n'}
+[3.278887] (camera) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraStage3.cpp.o\x1b[0m\n'}
+[3.283557] (camera) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage2.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[3.288123] (camera) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/cameraDesk2.dir/src/cameraDesk2.cpp.o\x1b[0m\n'}
+[3.317343] (-) TimerEvent: {}
+[3.420170] (-) TimerEvent: {}
+[3.522813] (-) TimerEvent: {}
+[3.625315] (-) TimerEvent: {}
+[3.727866] (-) TimerEvent: {}
+[3.830306] (-) TimerEvent: {}
+[3.932837] (-) TimerEvent: {}
+[4.035451] (-) TimerEvent: {}
+[4.138036] (-) TimerEvent: {}
+[4.240543] (-) TimerEvent: {}
+[4.343088] (-) TimerEvent: {}
+[4.445685] (-) TimerEvent: {}
+[4.548603] (-) TimerEvent: {}
+[4.650076] (-) TimerEvent: {}
+[4.778779] (-) TimerEvent: {}
+[4.882109] (-) TimerEvent: {}
+[4.983689] (-) TimerEvent: {}
+[5.085362] (-) TimerEvent: {}
+[5.187628] (-) TimerEvent: {}
+[5.289479] (-) TimerEvent: {}
+[5.391349] (-) TimerEvent: {}
+[5.493201] (-) TimerEvent: {}
+[5.595133] (-) TimerEvent: {}
+[5.696830] (-) TimerEvent: {}
+[5.799244] (-) TimerEvent: {}
+[5.901182] (-) TimerEvent: {}
+[6.002975] (-) TimerEvent: {}
+[6.104781] (-) TimerEvent: {}
+[6.206981] (-) TimerEvent: {}
+[6.309308] (-) TimerEvent: {}
+[6.411204] (-) TimerEvent: {}
+[6.513032] (-) TimerEvent: {}
+[6.614494] (-) TimerEvent: {}
+[6.716053] (-) TimerEvent: {}
+[6.818119] (-) TimerEvent: {}
+[6.920966] (-) TimerEvent: {}
+[7.023094] (-) TimerEvent: {}
+[7.125215] (-) TimerEvent: {}
+[7.226993] (-) TimerEvent: {}
+[7.328775] (-) TimerEvent: {}
+[7.434301] (-) TimerEvent: {}
+[7.536118] (-) TimerEvent: {}
+[7.637876] (-) TimerEvent: {}
+[7.739578] (-) TimerEvent: {}
+[7.841373] (-) TimerEvent: {}
+[7.943216] (-) TimerEvent: {}
+[8.044952] (-) TimerEvent: {}
+[8.146787] (-) TimerEvent: {}
+[8.248630] (-) TimerEvent: {}
+[8.350401] (-) TimerEvent: {}
+[8.452527] (-) TimerEvent: {}
+[8.554263] (-) TimerEvent: {}
+[8.655753] (-) TimerEvent: {}
+[8.758585] (-) TimerEvent: {}
+[8.861364] (-) TimerEvent: {}
+[8.964247] (-) TimerEvent: {}
+[9.067138] (-) TimerEvent: {}
+[9.170066] (-) TimerEvent: {}
+[9.273070] (-) TimerEvent: {}
+[9.375908] (-) TimerEvent: {}
+[9.478753] (-) TimerEvent: {}
+[9.581597] (-) TimerEvent: {}
+[9.684372] (-) TimerEvent: {}
+[9.787414] (-) TimerEvent: {}
+[9.898871] (-) TimerEvent: {}
+[10.000423] (-) TimerEvent: {}
+[10.101768] (-) TimerEvent: {}
+[10.203652] (-) TimerEvent: {}
+[10.305628] (-) TimerEvent: {}
+[10.407182] (-) TimerEvent: {}
+[10.509111] (-) TimerEvent: {}
+[10.610882] (-) TimerEvent: {}
+[10.712739] (-) TimerEvent: {}
+[10.814571] (-) TimerEvent: {}
+[10.916127] (-) TimerEvent: {}
+[11.017722] (-) TimerEvent: {}
+[11.119289] (-) TimerEvent: {}
+[11.220896] (-) TimerEvent: {}
+[11.322483] (-) TimerEvent: {}
+[11.424233] (-) TimerEvent: {}
+[11.525918] (-) TimerEvent: {}
+[11.627491] (-) TimerEvent: {}
+[11.729622] (-) TimerEvent: {}
+[11.831984] (-) TimerEvent: {}
+[11.933735] (-) TimerEvent: {}
+[12.035571] (-) TimerEvent: {}
+[12.138967] (-) TimerEvent: {}
+[12.242732] (-) TimerEvent: {}
+[12.346793] (-) TimerEvent: {}
+[12.450614] (-) TimerEvent: {}
+[12.554130] (-) TimerEvent: {}
+[12.657808] (-) TimerEvent: {}
+[12.759362] (-) TimerEvent: {}
+[12.861111] (-) TimerEvent: {}
+[12.965390] (-) TimerEvent: {}
+[13.068894] (-) TimerEvent: {}
+[13.170624] (-) TimerEvent: {}
+[13.272352] (-) TimerEvent: {}
+[13.375657] (-) TimerEvent: {}
+[13.479043] (-) TimerEvent: {}
+[13.581038] (-) TimerEvent: {}
+[13.684839] (-) TimerEvent: {}
+[13.789233] (-) TimerEvent: {}
+[13.893667] (-) TimerEvent: {}
+[13.997864] (-) TimerEvent: {}
+[14.101944] (-) TimerEvent: {}
+[14.205758] (-) TimerEvent: {}
+[14.309842] (-) TimerEvent: {}
+[14.414612] (-) TimerEvent: {}
+[14.519374] (-) TimerEvent: {}
+[14.624033] (-) TimerEvent: {}
+[14.725954] (-) TimerEvent: {}
+[14.827973] (-) TimerEvent: {}
+[14.937476] (-) TimerEvent: {}
+[15.039535] (-) TimerEvent: {}
+[15.141164] (-) TimerEvent: {}
+[15.242932] (-) TimerEvent: {}
+[15.344625] (-) TimerEvent: {}
+[15.446604] (-) TimerEvent: {}
+[15.548655] (-) TimerEvent: {}
+[15.650297] (-) TimerEvent: {}
+[15.752128] (-) TimerEvent: {}
+[15.855413] (-) TimerEvent: {}
+[15.958714] (-) TimerEvent: {}
+[16.062219] (-) TimerEvent: {}
+[16.165683] (-) TimerEvent: {}
+[16.269113] (-) TimerEvent: {}
+[16.372259] (-) TimerEvent: {}
+[16.475543] (-) TimerEvent: {}
+[16.579310] (-) TimerEvent: {}
+[16.683041] (-) TimerEvent: {}
+[16.784608] (-) TimerEvent: {}
+[16.886229] (-) TimerEvent: {}
+[16.987918] (-) TimerEvent: {}
+[17.089412] (-) TimerEvent: {}
+[17.191636] (-) TimerEvent: {}
+[17.293977] (-) TimerEvent: {}
+[17.395956] (-) TimerEvent: {}
+[17.497942] (-) TimerEvent: {}
+[17.601200] (-) TimerEvent: {}
+[17.704985] (-) TimerEvent: {}
+[17.808435] (-) TimerEvent: {}
+[17.912341] (-) TimerEvent: {}
+[18.015023] (-) TimerEvent: {}
+[18.116722] (-) TimerEvent: {}
+[18.218924] (-) TimerEvent: {}
+[18.320738] (-) TimerEvent: {}
+[18.422737] (-) TimerEvent: {}
+[18.524768] (-) TimerEvent: {}
+[18.626842] (-) TimerEvent: {}
+[18.728699] (-) TimerEvent: {}
+[18.830806] (-) TimerEvent: {}
+[18.932569] (-) TimerEvent: {}
+[19.034167] (-) TimerEvent: {}
+[19.135961] (-) TimerEvent: {}
+[19.238040] (-) TimerEvent: {}
+[19.339689] (-) TimerEvent: {}
+[19.441688] (-) TimerEvent: {}
+[19.543433] (-) TimerEvent: {}
+[19.645120] (-) TimerEvent: {}
+[19.746913] (-) TimerEvent: {}
+[19.848837] (-) TimerEvent: {}
+[19.956321] (-) TimerEvent: {}
+[20.057923] (-) TimerEvent: {}
+[20.159491] (-) TimerEvent: {}
+[20.262967] (-) TimerEvent: {}
+[20.366110] (-) TimerEvent: {}
+[20.468380] (-) TimerEvent: {}
+[20.571809] (-) TimerEvent: {}
+[20.675995] (-) TimerEvent: {}
+[20.786526] (-) TimerEvent: {}
+[20.905937] (-) TimerEvent: {}
+[21.009355] (-) TimerEvent: {}
+[21.112988] (-) TimerEvent: {}
+[21.216510] (-) TimerEvent: {}
+[21.319739] (-) TimerEvent: {}
+[21.422967] (-) TimerEvent: {}
+[21.526156] (-) TimerEvent: {}
+[21.633879] (-) TimerEvent: {}
+[21.737041] (-) TimerEvent: {}
+[21.856525] (-) TimerEvent: {}
+[21.959771] (-) TimerEvent: {}
+[22.063102] (-) TimerEvent: {}
+[22.166425] (-) TimerEvent: {}
+[22.269667] (-) TimerEvent: {}
+[22.372875] (-) TimerEvent: {}
+[22.476177] (-) TimerEvent: {}
+[22.579426] (-) TimerEvent: {}
+[22.685961] (-) TimerEvent: {}
+[22.793771] (-) TimerEvent: {}
+[22.896942] (-) TimerEvent: {}
+[23.000170] (-) TimerEvent: {}
+[23.103504] (-) TimerEvent: {}
+[23.206800] (-) TimerEvent: {}
+[23.309992] (-) TimerEvent: {}
+[23.413170] (-) TimerEvent: {}
+[23.517042] (-) TimerEvent: {}
+[23.625344] (-) TimerEvent: {}
+[23.741974] (-) TimerEvent: {}
+[23.845123] (-) TimerEvent: {}
+[23.947152] (-) TimerEvent: {}
+[24.050364] (-) TimerEvent: {}
+[24.153805] (-) TimerEvent: {}
+[24.257453] (-) TimerEvent: {}
+[24.361199] (-) TimerEvent: {}
+[24.465123] (-) TimerEvent: {}
+[24.569121] (-) TimerEvent: {}
+[24.673111] (-) TimerEvent: {}
+[24.777028] (-) TimerEvent: {}
+[24.881433] (-) TimerEvent: {}
+[24.990323] (-) TimerEvent: {}
+[25.093637] (-) TimerEvent: {}
+[25.196977] (-) TimerEvent: {}
+[25.300411] (-) TimerEvent: {}
+[25.404351] (-) TimerEvent: {}
+[25.507474] (-) TimerEvent: {}
+[25.610747] (-) TimerEvent: {}
+[25.713906] (-) TimerEvent: {}
+[25.817105] (-) TimerEvent: {}
+[25.920910] (-) TimerEvent: {}
+[26.024262] (-) TimerEvent: {}
+[26.128281] (-) TimerEvent: {}
+[26.231612] (-) TimerEvent: {}
+[26.334996] (-) TimerEvent: {}
+[26.437941] (-) TimerEvent: {}
+[26.540923] (-) TimerEvent: {}
+[26.644028] (-) TimerEvent: {}
+[26.746972] (-) TimerEvent: {}
+[26.849996] (-) TimerEvent: {}
+[26.953144] (-) TimerEvent: {}
+[27.056255] (-) TimerEvent: {}
+[27.159338] (-) TimerEvent: {}
+[27.262324] (-) TimerEvent: {}
+[27.363967] (-) TimerEvent: {}
+[27.376135] (camera) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/cameraDesk2.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[27.464414] (-) TimerEvent: {}
+[27.567181] (-) TimerEvent: {}
+[27.660768] (camera) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[27.667497] (-) TimerEvent: {}
+[27.770416] (-) TimerEvent: {}
+[27.873415] (-) TimerEvent: {}
+[27.977362] (-) TimerEvent: {}
+[28.080535] (-) TimerEvent: {}
+[28.183756] (-) TimerEvent: {}
+[28.286957] (-) TimerEvent: {}
+[28.390185] (-) TimerEvent: {}
+[28.493332] (-) TimerEvent: {}
+[28.596578] (-) TimerEvent: {}
+[28.699531] (-) TimerEvent: {}
+[28.801052] (-) TimerEvent: {}
+[28.903028] (-) TimerEvent: {}
+[29.004599] (-) TimerEvent: {}
+[29.029118] (camera) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable cameraStage2\x1b[0m\n'}
+[29.105037] (-) TimerEvent: {}
+[29.206837] (-) TimerEvent: {}
+[29.309714] (-) TimerEvent: {}
+[29.412562] (-) TimerEvent: {}
+[29.515697] (-) TimerEvent: {}
+[29.619021] (-) TimerEvent: {}
+[29.722763] (-) TimerEvent: {}
+[29.826166] (-) TimerEvent: {}
+[29.929411] (-) TimerEvent: {}
+[30.039421] (-) TimerEvent: {}
+[30.140814] (-) TimerEvent: {}
+[30.242362] (-) TimerEvent: {}
+[30.343951] (-) TimerEvent: {}
+[30.445647] (-) TimerEvent: {}
+[30.547237] (-) TimerEvent: {}
+[30.648884] (-) TimerEvent: {}
+[30.750570] (-) TimerEvent: {}
+[30.852075] (-) TimerEvent: {}
+[30.953132] (-) TimerEvent: {}
+[31.054918] (-) TimerEvent: {}
+[31.158450] (-) TimerEvent: {}
+[31.261941] (-) TimerEvent: {}
+[31.366561] (-) TimerEvent: {}
+[31.469785] (-) TimerEvent: {}
+[31.573103] (-) TimerEvent: {}
+[31.676965] (-) TimerEvent: {}
+[31.780781] (-) TimerEvent: {}
+[31.885175] (-) TimerEvent: {}
+[31.989243] (-) TimerEvent: {}
+[32.092902] (-) TimerEvent: {}
+[32.196779] (-) TimerEvent: {}
+[32.300644] (-) TimerEvent: {}
+[32.404301] (-) TimerEvent: {}
+[32.508044] (-) TimerEvent: {}
+[32.612126] (-) TimerEvent: {}
+[32.656569] (camera) StdoutLine: {'line': b'[ 77%] Built target cameraStage2\n'}
+[32.712497] (-) TimerEvent: {}
+[32.816243] (-) TimerEvent: {}
+[32.919798] (-) TimerEvent: {}
+[33.023200] (-) TimerEvent: {}
+[33.126705] (-) TimerEvent: {}
+[33.230067] (-) TimerEvent: {}
+[33.333669] (-) TimerEvent: {}
+[33.436853] (-) TimerEvent: {}
+[33.540015] (-) TimerEvent: {}
+[33.643663] (-) TimerEvent: {}
+[33.747026] (-) TimerEvent: {}
+[33.850137] (-) TimerEvent: {}
+[33.953441] (-) TimerEvent: {}
+[34.057041] (-) TimerEvent: {}
+[34.160506] (-) TimerEvent: {}
+[34.263468] (-) TimerEvent: {}
+[34.365271] (-) TimerEvent: {}
+[34.468810] (-) TimerEvent: {}
+[34.572422] (-) TimerEvent: {}
+[34.675848] (-) TimerEvent: {}
+[34.779386] (-) TimerEvent: {}
+[34.882815] (-) TimerEvent: {}
+[34.986490] (-) TimerEvent: {}
+[35.094993] (-) TimerEvent: {}
+[35.196697] (-) TimerEvent: {}
+[35.298315] (-) TimerEvent: {}
+[35.399855] (-) TimerEvent: {}
+[35.501478] (-) TimerEvent: {}
+[35.603094] (-) TimerEvent: {}
+[35.704732] (-) TimerEvent: {}
+[35.806490] (-) TimerEvent: {}
+[35.908143] (-) TimerEvent: {}
+[36.009739] (-) TimerEvent: {}
+[36.111288] (-) TimerEvent: {}
+[36.212954] (-) TimerEvent: {}
+[36.314595] (-) TimerEvent: {}
+[36.416115] (-) TimerEvent: {}
+[36.517737] (-) TimerEvent: {}
+[36.619537] (-) TimerEvent: {}
+[36.721071] (-) TimerEvent: {}
+[36.822775] (-) TimerEvent: {}
+[36.924566] (-) TimerEvent: {}
+[37.026628] (-) TimerEvent: {}
+[37.128363] (-) TimerEvent: {}
+[37.229940] (-) TimerEvent: {}
+[37.331301] (-) TimerEvent: {}
+[37.432874] (-) TimerEvent: {}
+[37.534740] (-) TimerEvent: {}
+[37.636331] (-) TimerEvent: {}
+[37.737400] (-) TimerEvent: {}
+[37.838287] (-) TimerEvent: {}
+[37.939076] (-) TimerEvent: {}
+[38.039871] (-) TimerEvent: {}
+[38.140730] (-) TimerEvent: {}
+[38.241614] (-) TimerEvent: {}
+[38.342367] (-) TimerEvent: {}
+[38.443113] (-) TimerEvent: {}
+[38.543872] (-) TimerEvent: {}
+[38.644712] (-) TimerEvent: {}
+[38.745647] (-) TimerEvent: {}
+[38.846559] (-) TimerEvent: {}
+[38.947372] (-) TimerEvent: {}
+[39.048248] (-) TimerEvent: {}
+[39.149347] (-) TimerEvent: {}
+[39.250834] (-) TimerEvent: {}
+[39.352418] (-) TimerEvent: {}
+[39.453926] (-) TimerEvent: {}
+[39.555617] (-) TimerEvent: {}
+[39.656993] (-) TimerEvent: {}
+[39.758456] (-) TimerEvent: {}
+[39.859956] (-) TimerEvent: {}
+[39.961431] (-) TimerEvent: {}
+[40.062898] (-) TimerEvent: {}
+[40.164374] (-) TimerEvent: {}
+[40.265838] (-) TimerEvent: {}
+[40.367210] (-) TimerEvent: {}
+[40.468739] (-) TimerEvent: {}
+[40.570264] (-) TimerEvent: {}
+[40.671829] (-) TimerEvent: {}
+[40.773367] (-) TimerEvent: {}
+[40.874953] (-) TimerEvent: {}
+[40.976486] (-) TimerEvent: {}
+[41.078122] (-) TimerEvent: {}
+[41.179899] (-) TimerEvent: {}
+[41.281269] (-) TimerEvent: {}
+[41.382684] (-) TimerEvent: {}
+[41.484216] (-) TimerEvent: {}
+[41.585667] (-) TimerEvent: {}
+[41.687013] (-) TimerEvent: {}
+[41.788428] (-) TimerEvent: {}
+[41.889821] (-) TimerEvent: {}
+[41.991192] (-) TimerEvent: {}
+[42.092507] (-) TimerEvent: {}
+[42.193939] (-) TimerEvent: {}
+[42.295396] (-) TimerEvent: {}
+[42.396794] (-) TimerEvent: {}
+[42.498265] (-) TimerEvent: {}
+[42.599039] (-) TimerEvent: {}
+[42.699855] (-) TimerEvent: {}
+[42.800635] (-) TimerEvent: {}
+[42.901427] (-) TimerEvent: {}
+[43.002250] (-) TimerEvent: {}
+[43.103042] (-) TimerEvent: {}
+[43.203850] (-) TimerEvent: {}
+[43.304801] (-) TimerEvent: {}
+[43.406249] (-) TimerEvent: {}
+[43.507656] (-) TimerEvent: {}
+[43.609119] (-) TimerEvent: {}
+[43.710604] (-) TimerEvent: {}
+[43.812158] (-) TimerEvent: {}
+[43.913846] (-) TimerEvent: {}
+[44.015286] (-) TimerEvent: {}
+[44.116766] (-) TimerEvent: {}
+[44.218300] (-) TimerEvent: {}
+[44.319756] (-) TimerEvent: {}
+[44.421089] (-) TimerEvent: {}
+[44.522648] (-) TimerEvent: {}
+[44.624058] (-) TimerEvent: {}
+[44.725408] (-) TimerEvent: {}
+[44.826818] (-) TimerEvent: {}
+[44.928214] (-) TimerEvent: {}
+[45.029713] (-) TimerEvent: {}
+[45.131200] (-) TimerEvent: {}
+[45.233399] (-) TimerEvent: {}
+[45.335017] (-) TimerEvent: {}
+[45.432121] (camera) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable cameraDesk2\x1b[0m\n'}
+[45.435336] (-) TimerEvent: {}
+[45.538498] (-) TimerEvent: {}
+[45.639987] (-) TimerEvent: {}
+[45.741625] (-) TimerEvent: {}
+[45.806649] (camera) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cameraStage3\x1b[0m\n'}
+[45.842020] (-) TimerEvent: {}
+[45.945004] (-) TimerEvent: {}
+[46.046674] (-) TimerEvent: {}
+[46.148164] (-) TimerEvent: {}
+[46.249669] (-) TimerEvent: {}
+[46.351102] (-) TimerEvent: {}
+[46.452602] (-) TimerEvent: {}
+[46.553987] (-) TimerEvent: {}
+[46.654956] (-) TimerEvent: {}
+[46.755759] (-) TimerEvent: {}
+[46.856584] (-) TimerEvent: {}
+[46.957388] (-) TimerEvent: {}
+[47.058401] (-) TimerEvent: {}
+[47.160136] (-) TimerEvent: {}
+[47.261620] (-) TimerEvent: {}
+[47.363107] (-) TimerEvent: {}
+[47.464711] (-) TimerEvent: {}
+[47.566526] (-) TimerEvent: {}
+[47.668135] (-) TimerEvent: {}
+[47.769808] (-) TimerEvent: {}
+[47.871502] (-) TimerEvent: {}
+[47.973177] (-) TimerEvent: {}
+[48.074930] (-) TimerEvent: {}
+[48.176496] (-) TimerEvent: {}
+[48.267994] (camera) StdoutLine: {'line': b'[100%] Built target cameraDesk2\n'}
+[48.276806] (-) TimerEvent: {}
+[48.378258] (-) TimerEvent: {}
+[48.479668] (-) TimerEvent: {}
+[48.580953] (-) TimerEvent: {}
+[48.638203] (camera) StdoutLine: {'line': b'[100%] Built target cameraStage3\n'}
+[48.681333] (-) TimerEvent: {}
+[48.731258] (camera) CommandEnded: {'returncode': 0}
+[48.735681] (camera) JobProgress: {'identifier': 'camera', 'progress': 'install'}
+[48.781737] (-) TimerEvent: {}
+[48.810053] (camera) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fu941/TDK_ros/build/camera'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('SSH_CONNECTION', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 fe80::e65f:1ff:fe56:bd46%wlan0 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[48.882028] (-) TimerEvent: {}
+[48.884138] (camera) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[48.885656] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/include/\n'}
+[48.886775] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/include//camera\n'}
+[48.887887] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp\n'}
+[48.891295] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage2\n'}
+[48.896275] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2\n'}
+[48.899937] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3\n'}
+[48.905705] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera\n'}
+[48.909378] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera\n'}
+[48.913138] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh\n'}
+[48.916019] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv\n'}
+[48.918775] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh\n'}
+[48.921473] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv\n'}
+[48.924132] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash\n'}
+[48.926772] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh\n'}
+[48.929340] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh\n'}
+[48.931966] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv\n'}
+[48.934526] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv\n'}
+[48.938247] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera\n'}
+[48.941202] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake\n'}
+[48.943635] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake\n'}
+[48.946284] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.xml\n'}
+[48.959384] (camera) CommandEnded: {'returncode': 0}
+[48.982176] (-) TimerEvent: {}
+[49.039673] (camera) JobEnded: {'identifier': 'camera', 'rc': 0}
+[49.042360] (-) EventReactorShutdown: {}

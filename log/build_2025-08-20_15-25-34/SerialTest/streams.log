@@ -1,0 +1,23 @@
+[6.726s] Invoking command in '/home/fu941/TDK_ros/src/SerialTest': AMENT_PREFIX_PATH=/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/mainspace:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/mainspace LD_LIBRARY_PATH=/home/fu941/TDK_ros/install/mainspace/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fu941/TDK_ros/build/SerialTest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/SerialTest build --build-base /home/fu941/TDK_ros/build/SerialTest/build install --record /home/fu941/TDK_ros/build/SerialTest/install.log --single-version-externally-managed install_data
+[9.678s] running egg_info
+[9.684s] writing ../../build/SerialTest/SerialTest.egg-info/PKG-INFO
+[9.687s] writing dependency_links to ../../build/SerialTest/SerialTest.egg-info/dependency_links.txt
+[9.690s] writing entry points to ../../build/SerialTest/SerialTest.egg-info/entry_points.txt
+[9.692s] writing requirements to ../../build/SerialTest/SerialTest.egg-info/requires.txt
+[9.694s] writing top-level names to ../../build/SerialTest/SerialTest.egg-info/top_level.txt
+[9.715s] reading manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+[9.726s] writing manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+[9.728s] running build
+[9.729s] running build_py
+[9.736s] running install
+[9.737s] running install_lib
+[9.754s] running install_data
+[9.755s] running install_egg_info
+[9.775s] removing '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info' (and everything under it)
+[9.779s] Copying ../../build/SerialTest/SerialTest.egg-info to /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info
+[9.795s] running install_scripts
+[9.943s] Installing control_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+[9.957s] Installing motor_serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+[9.958s] Installing other_serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+[9.959s] writing list of installed files to '/home/fu941/TDK_ros/build/SerialTest/install.log'
+[10.123s] Invoked command in '/home/fu941/TDK_ros/src/SerialTest' returned '0': AMENT_PREFIX_PATH=/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/mainspace:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/mainspace LD_LIBRARY_PATH=/home/fu941/TDK_ros/install/mainspace/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fu941/TDK_ros/build/SerialTest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/SerialTest build --build-base /home/fu941/TDK_ros/build/SerialTest/build install --record /home/fu941/TDK_ros/build/SerialTest/install.log --single-version-externally-managed install_data

@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/mainspace__cpp"
+  "rosidl_generator_cpp/mainspace/msg/coffee.hpp"
+  "rosidl_generator_cpp/mainspace/msg/command.hpp"
+  "rosidl_generator_cpp/mainspace/msg/csv_file.hpp"
+  "rosidl_generator_cpp/mainspace/msg/desk.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/coffee__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/coffee__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/coffee__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/coffee__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/command__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/command__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/command__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/command__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/csv_file__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/csv_file__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/csv_file__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/csv_file__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/desk__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/desk__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/desk__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/desk__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/pause__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/pause__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/pause__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/pause__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/position__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/position__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/position__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/position__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/to_stm_speed__builder.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/to_stm_speed__struct.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/to_stm_speed__traits.hpp"
+  "rosidl_generator_cpp/mainspace/msg/detail/to_stm_speed__type_support.hpp"
+  "rosidl_generator_cpp/mainspace/msg/pause.hpp"
+  "rosidl_generator_cpp/mainspace/msg/position.hpp"
+  "rosidl_generator_cpp/mainspace/msg/to_stm_speed.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/mainspace__cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -4,18 +4,6 @@
 using namespace cv;
 using namespace std;
 
-/*Camera port
-
-    usb-0000:00:14.0-?
-    ?: my computer: 1
-                    2               3
-
-    /dev/video6 (desk),  /dev/video12(coffee)
-
-
-
-
-*/
 Camera::Camera(bool init) 
 : Node("cameraBackground")
 {

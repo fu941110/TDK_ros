@@ -1,0 +1,5 @@
+  File "/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest/other_serial_node.py", line 53
+    elif line.startswith("ACK:"):
+    ^^^^
+SyntaxError: invalid syntax
+

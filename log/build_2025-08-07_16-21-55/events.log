@@ -1,0 +1,327 @@
+[0.000000] (-) TimerEvent: {}
+[0.001533] (-) JobUnselected: {'identifier': 'SerialTest'}
+[0.002048] (-) JobUnselected: {'identifier': 'mainspace'}
+[0.002138] (camera) JobQueued: {'identifier': 'camera', 'dependencies': OrderedDict()}
+[0.002224] (camera) JobStarted: {'identifier': 'camera'}
+[0.037430] (camera) JobProgress: {'identifier': 'camera', 'progress': 'cmake'}
+[0.040523] (camera) JobProgress: {'identifier': 'camera', 'progress': 'build'}
+[0.043851] (camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fu941/TDK_ros/build/camera', '--', '-j4', '-l4'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/fu941/TDK_ros/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('SSH_CONNECTION', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 fe80::e65f:1ff:fe56:bd46%wlan0 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/opt/ros/humble')]), 'shell': False}
+[0.099090] (-) TimerEvent: {}
+[0.199930] (-) TimerEvent: {}
+[0.206510] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraStage2\x1b[0m\n'}
+[0.209216] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraStage3\x1b[0m\n'}
+[0.209873] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraDesk2\x1b[0m\n'}
+[0.279417] (camera) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage2.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[0.280770] (camera) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraStage3.cpp.o\x1b[0m\n'}
+[0.285212] (camera) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/cameraDesk2.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[0.286594] (camera) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/cameraStage3.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[0.300214] (-) TimerEvent: {}
+[0.402059] (-) TimerEvent: {}
+[0.504646] (-) TimerEvent: {}
+[0.617241] (-) TimerEvent: {}
+[0.720140] (-) TimerEvent: {}
+[0.823075] (-) TimerEvent: {}
+[0.926260] (-) TimerEvent: {}
+[1.029065] (-) TimerEvent: {}
+[1.131582] (-) TimerEvent: {}
+[1.234153] (-) TimerEvent: {}
+[1.336794] (-) TimerEvent: {}
+[1.439336] (-) TimerEvent: {}
+[1.541947] (-) TimerEvent: {}
+[1.644563] (-) TimerEvent: {}
+[1.747680] (-) TimerEvent: {}
+[1.850464] (-) TimerEvent: {}
+[1.953388] (-) TimerEvent: {}
+[2.056303] (-) TimerEvent: {}
+[2.159342] (-) TimerEvent: {}
+[2.262483] (-) TimerEvent: {}
+[2.365496] (-) TimerEvent: {}
+[2.468482] (-) TimerEvent: {}
+[2.571417] (-) TimerEvent: {}
+[2.674350] (-) TimerEvent: {}
+[2.777164] (-) TimerEvent: {}
+[2.880124] (-) TimerEvent: {}
+[2.983155] (-) TimerEvent: {}
+[3.086339] (-) TimerEvent: {}
+[3.189421] (-) TimerEvent: {}
+[3.292605] (-) TimerEvent: {}
+[3.396194] (-) TimerEvent: {}
+[3.499064] (-) TimerEvent: {}
+[3.601902] (-) TimerEvent: {}
+[3.704799] (-) TimerEvent: {}
+[3.806697] (-) TimerEvent: {}
+[3.909642] (-) TimerEvent: {}
+[4.012594] (-) TimerEvent: {}
+[4.115562] (-) TimerEvent: {}
+[4.218429] (-) TimerEvent: {}
+[4.321238] (-) TimerEvent: {}
+[4.423989] (-) TimerEvent: {}
+[4.526987] (-) TimerEvent: {}
+[4.630033] (-) TimerEvent: {}
+[4.735372] (-) TimerEvent: {}
+[4.838309] (-) TimerEvent: {}
+[4.941390] (-) TimerEvent: {}
+[5.044412] (-) TimerEvent: {}
+[5.147327] (-) TimerEvent: {}
+[5.250498] (-) TimerEvent: {}
+[5.353698] (-) TimerEvent: {}
+[5.457135] (-) TimerEvent: {}
+[5.560112] (-) TimerEvent: {}
+[5.663273] (-) TimerEvent: {}
+[5.766557] (-) TimerEvent: {}
+[5.869697] (-) TimerEvent: {}
+[5.972917] (-) TimerEvent: {}
+[6.075981] (-) TimerEvent: {}
+[6.178906] (-) TimerEvent: {}
+[6.282031] (-) TimerEvent: {}
+[6.385126] (-) TimerEvent: {}
+[6.488298] (-) TimerEvent: {}
+[6.593241] (-) TimerEvent: {}
+[6.696795] (-) TimerEvent: {}
+[6.800578] (-) TimerEvent: {}
+[6.904478] (-) TimerEvent: {}
+[7.008313] (-) TimerEvent: {}
+[7.111740] (-) TimerEvent: {}
+[7.214085] (-) TimerEvent: {}
+[7.317282] (-) TimerEvent: {}
+[7.420670] (-) TimerEvent: {}
+[7.523980] (-) TimerEvent: {}
+[7.626975] (-) TimerEvent: {}
+[7.730619] (-) TimerEvent: {}
+[7.834006] (-) TimerEvent: {}
+[7.937559] (-) TimerEvent: {}
+[8.041618] (-) TimerEvent: {}
+[8.145485] (-) TimerEvent: {}
+[8.249192] (-) TimerEvent: {}
+[8.352747] (-) TimerEvent: {}
+[8.455685] (-) TimerEvent: {}
+[8.559009] (-) TimerEvent: {}
+[8.662589] (-) TimerEvent: {}
+[8.765559] (-) TimerEvent: {}
+[8.868614] (-) TimerEvent: {}
+[8.971728] (-) TimerEvent: {}
+[9.075095] (-) TimerEvent: {}
+[9.178080] (-) TimerEvent: {}
+[9.281171] (-) TimerEvent: {}
+[9.384285] (-) TimerEvent: {}
+[9.487368] (-) TimerEvent: {}
+[9.590442] (-) TimerEvent: {}
+[9.693483] (-) TimerEvent: {}
+[9.796531] (-) TimerEvent: {}
+[9.899619] (-) TimerEvent: {}
+[10.002641] (-) TimerEvent: {}
+[10.105516] (-) TimerEvent: {}
+[10.208610] (-) TimerEvent: {}
+[10.312077] (-) TimerEvent: {}
+[10.415503] (-) TimerEvent: {}
+[10.518943] (-) TimerEvent: {}
+[10.621159] (-) TimerEvent: {}
+[10.724879] (-) TimerEvent: {}
+[10.829426] (-) TimerEvent: {}
+[10.932669] (-) TimerEvent: {}
+[11.039258] (-) TimerEvent: {}
+[11.141310] (-) TimerEvent: {}
+[11.245169] (-) TimerEvent: {}
+[11.348120] (-) TimerEvent: {}
+[11.451376] (-) TimerEvent: {}
+[11.554948] (-) TimerEvent: {}
+[11.657136] (-) TimerEvent: {}
+[11.759508] (-) TimerEvent: {}
+[11.861699] (-) TimerEvent: {}
+[11.963823] (-) TimerEvent: {}
+[12.066174] (-) TimerEvent: {}
+[12.168184] (-) TimerEvent: {}
+[12.269974] (-) TimerEvent: {}
+[12.371885] (-) TimerEvent: {}
+[12.473813] (-) TimerEvent: {}
+[12.576151] (-) TimerEvent: {}
+[12.678107] (-) TimerEvent: {}
+[12.780046] (-) TimerEvent: {}
+[12.881926] (-) TimerEvent: {}
+[12.983953] (-) TimerEvent: {}
+[13.086544] (-) TimerEvent: {}
+[13.188413] (-) TimerEvent: {}
+[13.290262] (-) TimerEvent: {}
+[13.392265] (-) TimerEvent: {}
+[13.494336] (-) TimerEvent: {}
+[13.596257] (-) TimerEvent: {}
+[13.698028] (-) TimerEvent: {}
+[13.799818] (-) TimerEvent: {}
+[13.901487] (-) TimerEvent: {}
+[14.002696] (-) TimerEvent: {}
+[14.104594] (-) TimerEvent: {}
+[14.206568] (-) TimerEvent: {}
+[14.308416] (-) TimerEvent: {}
+[14.410532] (-) TimerEvent: {}
+[14.512880] (-) TimerEvent: {}
+[14.615376] (-) TimerEvent: {}
+[14.717462] (-) TimerEvent: {}
+[14.819515] (-) TimerEvent: {}
+[14.922737] (-) TimerEvent: {}
+[15.025914] (-) TimerEvent: {}
+[15.127513] (-) TimerEvent: {}
+[15.229168] (-) TimerEvent: {}
+[15.330769] (-) TimerEvent: {}
+[15.432372] (-) TimerEvent: {}
+[15.534347] (-) TimerEvent: {}
+[15.636373] (-) TimerEvent: {}
+[15.738286] (-) TimerEvent: {}
+[15.840298] (-) TimerEvent: {}
+[15.942179] (-) TimerEvent: {}
+[16.049390] (-) TimerEvent: {}
+[16.151349] (-) TimerEvent: {}
+[16.253255] (-) TimerEvent: {}
+[16.355181] (-) TimerEvent: {}
+[16.457190] (-) TimerEvent: {}
+[16.559086] (-) TimerEvent: {}
+[16.661322] (-) TimerEvent: {}
+[16.763172] (-) TimerEvent: {}
+[16.865078] (-) TimerEvent: {}
+[16.966964] (-) TimerEvent: {}
+[17.069099] (-) TimerEvent: {}
+[17.171234] (-) TimerEvent: {}
+[17.273737] (-) TimerEvent: {}
+[17.374981] (-) TimerEvent: {}
+[17.477205] (-) TimerEvent: {}
+[17.580754] (-) TimerEvent: {}
+[17.683996] (-) TimerEvent: {}
+[17.786115] (-) TimerEvent: {}
+[17.888424] (-) TimerEvent: {}
+[17.991912] (-) TimerEvent: {}
+[18.095112] (-) TimerEvent: {}
+[18.158653] (camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat CameraStage3::FindOrange(cv::Mat)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[18.162248] (camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/camera/src/cameraStage3.cpp:42:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KPointColor\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[18.164038] (camera) StderrLine: {'line': b'   42 |             Scalar \x1b[01;35m\x1b[KPointColor\x1b[m\x1b[K = (abs(orange_center_x) + abs(orange_center_y) > 50) ? Scalar(0, 0, 255) : Scalar(0, 255, 0);\n'}
+[18.165633] (camera) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[18.195615] (-) TimerEvent: {}
+[18.297979] (-) TimerEvent: {}
+[18.399827] (-) TimerEvent: {}
+[18.501407] (-) TimerEvent: {}
+[18.602992] (-) TimerEvent: {}
+[18.704738] (-) TimerEvent: {}
+[18.807888] (-) TimerEvent: {}
+[18.910921] (-) TimerEvent: {}
+[19.014020] (-) TimerEvent: {}
+[19.117315] (-) TimerEvent: {}
+[19.220533] (-) TimerEvent: {}
+[19.323571] (-) TimerEvent: {}
+[19.426387] (-) TimerEvent: {}
+[19.529355] (-) TimerEvent: {}
+[19.632456] (-) TimerEvent: {}
+[19.734133] (-) TimerEvent: {}
+[19.835823] (-) TimerEvent: {}
+[19.938501] (-) TimerEvent: {}
+[20.040915] (-) TimerEvent: {}
+[20.142712] (-) TimerEvent: {}
+[20.244600] (-) TimerEvent: {}
+[20.346535] (-) TimerEvent: {}
+[20.448400] (-) TimerEvent: {}
+[20.550280] (-) TimerEvent: {}
+[20.652196] (-) TimerEvent: {}
+[20.753499] (-) TimerEvent: {}
+[20.855516] (-) TimerEvent: {}
+[20.957318] (-) TimerEvent: {}
+[21.064089] (-) TimerEvent: {}
+[21.165916] (-) TimerEvent: {}
+[21.267694] (-) TimerEvent: {}
+[21.369482] (-) TimerEvent: {}
+[21.471687] (-) TimerEvent: {}
+[21.573502] (-) TimerEvent: {}
+[21.676748] (-) TimerEvent: {}
+[21.780026] (-) TimerEvent: {}
+[21.883834] (-) TimerEvent: {}
+[21.987072] (-) TimerEvent: {}
+[22.090531] (-) TimerEvent: {}
+[22.193618] (-) TimerEvent: {}
+[22.296801] (-) TimerEvent: {}
+[22.400091] (-) TimerEvent: {}
+[22.504350] (-) TimerEvent: {}
+[22.607851] (-) TimerEvent: {}
+[22.711171] (-) TimerEvent: {}
+[22.815024] (-) TimerEvent: {}
+[22.918481] (-) TimerEvent: {}
+[23.021694] (-) TimerEvent: {}
+[23.125861] (-) TimerEvent: {}
+[23.228990] (-) TimerEvent: {}
+[23.332008] (-) TimerEvent: {}
+[23.434973] (-) TimerEvent: {}
+[23.538173] (-) TimerEvent: {}
+[23.641883] (-) TimerEvent: {}
+[23.745004] (-) TimerEvent: {}
+[23.848365] (-) TimerEvent: {}
+[23.952216] (-) TimerEvent: {}
+[24.055173] (-) TimerEvent: {}
+[24.157279] (-) TimerEvent: {}
+[24.260445] (-) TimerEvent: {}
+[24.265184] (camera) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX executable cameraStage2\x1b[0m\n'}
+[24.360975] (-) TimerEvent: {}
+[24.463669] (-) TimerEvent: {}
+[24.566637] (-) TimerEvent: {}
+[24.602860] (camera) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable cameraDesk2\x1b[0m\n'}
+[24.662970] (camera) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable cameraStage3\x1b[0m\n'}
+[24.666993] (-) TimerEvent: {}
+[24.769881] (-) TimerEvent: {}
+[24.872680] (-) TimerEvent: {}
+[24.975365] (-) TimerEvent: {}
+[25.078681] (-) TimerEvent: {}
+[25.182218] (-) TimerEvent: {}
+[25.285908] (-) TimerEvent: {}
+[25.389762] (-) TimerEvent: {}
+[25.493069] (-) TimerEvent: {}
+[25.596384] (-) TimerEvent: {}
+[25.700094] (-) TimerEvent: {}
+[25.803881] (-) TimerEvent: {}
+[25.907232] (-) TimerEvent: {}
+[26.010685] (-) TimerEvent: {}
+[26.121986] (-) TimerEvent: {}
+[26.224937] (-) TimerEvent: {}
+[26.327702] (-) TimerEvent: {}
+[26.430818] (-) TimerEvent: {}
+[26.534159] (-) TimerEvent: {}
+[26.637471] (-) TimerEvent: {}
+[26.741183] (-) TimerEvent: {}
+[26.845049] (-) TimerEvent: {}
+[26.949151] (-) TimerEvent: {}
+[27.053540] (-) TimerEvent: {}
+[27.158234] (-) TimerEvent: {}
+[27.262740] (-) TimerEvent: {}
+[27.367298] (-) TimerEvent: {}
+[27.471914] (-) TimerEvent: {}
+[27.574712] (-) TimerEvent: {}
+[27.677406] (-) TimerEvent: {}
+[27.779870] (-) TimerEvent: {}
+[27.811992] (camera) StdoutLine: {'line': b'[ 88%] Built target cameraStage2\n'}
+[27.880169] (-) TimerEvent: {}
+[27.933185] (camera) StdoutLine: {'line': b'[100%] Built target cameraDesk2\n'}
+[27.980389] (-) TimerEvent: {}
+[27.983756] (camera) StdoutLine: {'line': b'[100%] Built target cameraStage3\n'}
+[28.024264] (camera) CommandEnded: {'returncode': 0}
+[28.026099] (camera) JobProgress: {'identifier': 'camera', 'progress': 'install'}
+[28.057672] (camera) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fu941/TDK_ros/build/camera'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('OLDPWD', '/home/fu941'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/fu941/TDK_ros/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('SSH_CONNECTION', 'fe80::6ec8:535a:bb6f:1fe1%wlan0 49732 fe80::e65f:1ff:fe56:bd46%wlan0 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/camera:/opt/ros/humble')]), 'shell': False}
+[28.080589] (-) TimerEvent: {}
+[28.090878] (camera) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.091516] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include/\n'}
+[28.091967] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera\n'}
+[28.092252] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp\n'}
+[28.092850] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage2\n'}
+[28.095655] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2\n'}
+[28.098085] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3\n'}
+[28.099804] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera\n'}
+[28.100291] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera\n'}
+[28.100657] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh\n'}
+[28.101159] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv\n'}
+[28.101557] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh\n'}
+[28.101938] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv\n'}
+[28.102774] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash\n'}
+[28.103209] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh\n'}
+[28.103511] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh\n'}
+[28.103791] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv\n'}
+[28.104079] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv\n'}
+[28.104527] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera\n'}
+[28.105004] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake\n'}
+[28.105399] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake\n'}
+[28.105808] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/package.xml\n'}
+[28.110079] (camera) CommandEnded: {'returncode': 0}
+[28.180730] (-) TimerEvent: {}
+[28.182900] (camera) JobEnded: {'identifier': 'camera', 'rc': 0}
+[28.185799] (-) EventReactorShutdown: {}

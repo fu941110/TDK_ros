@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/SerialTest/SerialTest.egg-info
+writing ../../build/SerialTest/SerialTest.egg-info/PKG-INFO
+writing dependency_links to ../../build/SerialTest/SerialTest.egg-info/dependency_links.txt
+writing entry points to ../../build/SerialTest/SerialTest.egg-info/entry_points.txt
+writing requirements to ../../build/SerialTest/SerialTest.egg-info/requires.txt
+writing top-level names to ../../build/SerialTest/SerialTest.egg-info/top_level.txt
+writing manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+reading manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+writing manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/fu941/TDK_ros/build/SerialTest/build
+creating /home/fu941/TDK_ros/build/SerialTest/build/lib
+creating /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest
+copying SerialTest/__init__.py -> /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest
+copying SerialTest/serial_node.py -> /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest
+running install
+running install_lib
+creating /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest
+copying /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest/__init__.py -> /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest
+copying /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest/serial_node.py -> /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest
+byte-compiling /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest/serial_node.py to serial_node.cpython-310.pyc
+running install_data
+creating /home/fu941/TDK_ros/install/SerialTest/share/ament_index
+creating /home/fu941/TDK_ros/install/SerialTest/share/ament_index/resource_index
+creating /home/fu941/TDK_ros/install/SerialTest/share/ament_index/resource_index/packages
+copying resource/SerialTest -> /home/fu941/TDK_ros/install/SerialTest/share/ament_index/resource_index/packages
+copying package.xml -> /home/fu941/TDK_ros/install/SerialTest/share/SerialTest
+running install_egg_info
+Copying ../../build/SerialTest/SerialTest.egg-info to /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info
+running install_scripts
+Installing serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest
+writing list of installed files to '/home/fu941/TDK_ros/build/SerialTest/install.log'

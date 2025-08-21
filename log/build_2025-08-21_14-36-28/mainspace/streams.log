@@ -1,0 +1,315 @@
+[0.138s] Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
+[0.910s] [ 10%] Built target mainspace__rosidl_generator_c
+[0.913s] [ 10%] Built target mainspace__cpp
+[1.103s] [ 10%] Built target ament_cmake_python_copy_mainspace
+[1.356s] [ 28%] Built target mainspace__rosidl_typesupport_fastrtps_c
+[1.362s] [ 30%] Built target mainspace__rosidl_typesupport_fastrtps_cpp
+[1.374s] [ 40%] Built target mainspace__rosidl_typesupport_cpp
+[1.477s] [ 50%] Built target mainspace__rosidl_typesupport_introspection_c
+[1.803s] [ 60%] Built target mainspace__rosidl_typesupport_c
+[1.834s] [ 70%] Built target mainspace__rosidl_typesupport_introspection_cpp
+[2.022s] [ 72%] Built target navigator_lib
+[2.297s] [ 72%] Built target mainspace
+[2.667s] [ 74%] Built target navigator_main
+[2.682s] [ 76%] Built target Stage2
+[2.817s] [ 79%] Built target Stage3
+[3.125s] [ 80%] Built target mainspace__py
+[3.167s] [ 82%] Built target StageManager
+[3.192s] [ 84%] Built target Stage4
+[3.438s] [ 93%] Built target mainspace__rosidl_generator_py
+[3.743s] [ 95%] Built target mainspace__rosidl_typesupport_introspection_c__pyext
+[3.756s] [ 97%] Built target mainspace__rosidl_typesupport_c__pyext
+[3.780s] [100%] Built target mainspace__rosidl_typesupport_fastrtps_c__pyext
+[5.239s] running egg_info
+[5.245s] writing mainspace.egg-info/PKG-INFO
+[5.250s] writing dependency_links to mainspace.egg-info/dependency_links.txt
+[5.253s] writing top-level names to mainspace.egg-info/top_level.txt
+[5.278s] reading manifest file 'mainspace.egg-info/SOURCES.txt'
+[5.285s] writing manifest file 'mainspace.egg-info/SOURCES.txt'
+[5.548s] [100%] Built target ament_cmake_python_build_mainspace_egg
+[5.681s] Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
+[5.745s] Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/mainspace
+[5.813s] -- Install configuration: ""
+[5.815s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/rosidl_interfaces/mainspace
+[5.818s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace
+[5.820s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg
+[5.821s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/position.h
+[5.822s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/encoder_speed.h
+[5.823s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/command.h
+[5.824s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/pause.h
+[5.825s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/desk.h
+[5.827s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/csv_file.h
+[5.828s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/to_stm_speed.h
+[5.829s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_generator_c__visibility_control.h
+[5.830s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail
+[5.831s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__functions.c
+[5.854s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__functions.c
+[5.856s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__functions.h
+[5.857s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__functions.h
+[5.859s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__functions.c
+[5.859s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__functions.h
+[5.860s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.h
+[5.862s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.h
+[5.863s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__functions.h
+[5.864s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.h
+[5.866s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__struct.h
+[5.867s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__functions.c
+[5.868s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__functions.c
+[5.870s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__struct.h
+[5.871s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.h
+[5.872s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.h
+[5.874s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__struct.h
+[5.875s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__functions.h
+[5.878s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.h
+[5.880s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__functions.h
+[5.882s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__struct.h
+[5.884s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__functions.c
+[5.887s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__struct.h
+[5.889s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__functions.h
+[5.891s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.h
+[5.894s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__functions.h
+[5.896s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__struct.h
+[5.897s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__functions.c
+[5.899s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__functions.c
+[5.901s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__struct.h
+[5.904s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__struct.h
+[5.906s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.h
+[5.908s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/coffee.h
+[5.909s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/library_path.sh
+[5.910s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/library_path.dsv
+[5.912s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_generator_c.so
+[5.913s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace
+[5.915s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg
+[5.916s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.918s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail
+[5.920s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_fastrtps_c.h
+[5.922s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_fastrtps_c.h
+[5.923s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_fastrtps_c.h
+[5.923s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_fastrtps_c.h
+[5.925s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_fastrtps_c.h
+[5.926s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_fastrtps_c.h
+[5.927s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_fastrtps_c.h
+[5.928s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_fastrtps_c.h
+[5.930s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_fastrtps_c.so
+[5.932s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace
+[5.934s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg
+[5.948s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/csv_file.hpp
+[5.949s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/command.hpp
+[5.957s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/coffee.hpp
+[5.959s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/to_stm_speed.hpp
+[5.960s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/pause.hpp
+[5.963s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/encoder_speed.hpp
+[5.967s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/position.hpp
+[5.974s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail
+[5.982s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__struct.hpp
+[5.989s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__builder.hpp
+[5.991s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__builder.hpp
+[5.992s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__builder.hpp
+[5.994s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__traits.hpp
+[5.996s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.hpp
+[5.998s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__struct.hpp
+[5.999s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__builder.hpp
+[6.000s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__struct.hpp
+[6.002s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__struct.hpp
+[6.004s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__traits.hpp
+[6.005s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__struct.hpp
+[6.006s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__traits.hpp
+[6.008s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__traits.hpp
+[6.009s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__traits.hpp
+[6.010s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.hpp
+[6.011s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__traits.hpp
+[6.012s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.hpp
+[6.014s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__struct.hpp
+[6.015s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.hpp
+[6.017s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__builder.hpp
+[6.018s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__struct.hpp
+[6.019s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.hpp
+[6.020s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__builder.hpp
+[6.021s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__struct.hpp
+[6.023s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.hpp
+[6.024s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__builder.hpp
+[6.026s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.hpp
+[6.027s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__traits.hpp
+[6.028s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.hpp
+[6.030s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__traits.hpp
+[6.031s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__builder.hpp
+[6.032s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.034s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/desk.hpp
+[6.037s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace
+[6.041s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg
+[6.044s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.048s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail
+[6.051s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_fastrtps_cpp.hpp
+[6.055s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_fastrtps_cpp.hpp
+[6.058s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/dds_fastrtps
+[6.059s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_fastrtps_cpp.hpp
+[6.060s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_fastrtps_cpp.hpp
+[6.062s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_fastrtps_cpp.hpp
+[6.063s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_fastrtps_cpp.hpp
+[6.064s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_fastrtps_cpp.hpp
+[6.065s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_fastrtps_cpp.hpp
+[6.066s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_fastrtps_cpp.so
+[6.067s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace
+[6.068s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg
+[6.073s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail
+[6.075s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_introspection_c.h
+[6.076s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.c
+[6.081s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_introspection_c.h
+[6.082s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.c
+[6.086s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_introspection_c.h
+[6.089s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_introspection_c.h
+[6.090s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.c
+[6.091s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.c
+[6.094s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.c
+[6.095s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_introspection_c.h
+[6.097s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_introspection_c.h
+[6.098s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.c
+[6.100s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_introspection_c.h
+[6.101s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.c
+[6.103s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_introspection_c.h
+[6.104s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.c
+[6.105s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.106s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_introspection_c.so
+[6.107s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_c.so
+[6.108s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace
+[6.109s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg
+[6.110s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail
+[6.111s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.cpp
+[6.112s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.cpp
+[6.113s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_introspection_cpp.hpp
+[6.114s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.cpp
+[6.115s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_introspection_cpp.hpp
+[6.116s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_introspection_cpp.hpp
+[6.118s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.cpp
+[6.119s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_introspection_cpp.hpp
+[6.120s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.cpp
+[6.122s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_introspection_cpp.hpp
+[6.123s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_introspection_cpp.hpp
+[6.125s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_introspection_cpp.hpp
+[6.126s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.cpp
+[6.127s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.cpp
+[6.128s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.cpp
+[6.129s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_introspection_cpp.hpp
+[6.130s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_introspection_cpp.so
+[6.131s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_cpp.so
+[6.132s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/pythonpath.sh
+[6.133s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/pythonpath.dsv
+[6.134s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info
+[6.135s] -- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/PKG-INFO
+[6.136s] -- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/top_level.txt
+[6.137s] -- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/SOURCES.txt
+[6.138s] -- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/dependency_links.txt
+[6.139s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace
+[6.140s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/__init__.py
+[6.141s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[6.141s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/_mainspace_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.142s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/_mainspace_s.ep.rosidl_typesupport_c.c
+[6.143s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/_mainspace_s.ep.rosidl_typesupport_introspection_c.c
+[6.144s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/libmainspace__rosidl_generator_py.so
+[6.145s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg
+[6.146s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_coffee.py
+[6.147s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/__init__.py
+[6.148s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_command_s.c
+[6.149s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_csv_file_s.c
+[6.150s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_encoder_speed.py
+[6.151s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_desk.py
+[6.152s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_pause.py
+[6.152s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_to_stm_speed.py
+[6.153s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_command.py
+[6.154s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_desk_s.c
+[6.155s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_pause_s.c
+[6.156s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_csv_file.py
+[6.157s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_position_s.c
+[6.158s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_coffee_s.c
+[6.159s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_encoder_speed_s.c
+[6.160s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_to_stm_speed_s.c
+[6.161s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_position.py
+[6.162s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[6.163s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[6.452s] Listing '/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace'...
+[6.454s] Listing '/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg'...
+[6.502s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[6.509s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[6.518s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[6.525s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_generator_py.so
+[6.530s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/ToStmSpeed.idl
+[6.533s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Position.idl
+[6.535s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Desk.idl
+[6.538s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Coffee.idl
+[6.540s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/CsvFile.idl
+[6.543s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Command.idl
+[6.545s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Pause.idl
+[6.547s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/ToStmSpeed.msg
+[6.548s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Position.msg
+[6.549s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Desk.msg
+[6.550s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Coffee.msg
+[6.552s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/CsvFile.msg
+[6.554s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Command.msg
+[6.555s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Pause.msg
+[6.556s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/
+[6.557s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include//mainspace
+[6.559s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include//mainspace/navigator.hpp
+[6.560s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libnavigator_lib.so
+[6.561s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/navigator_main
+[6.564s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/Stage2
+[6.571s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/Stage3
+[6.579s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/Stage4
+[6.585s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/StageManager
+[6.589s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv
+[6.593s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv/Stage3.csv
+[6.598s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv/Stage4.csv
+[6.600s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv/Stage2.csv
+[6.601s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv
+[6.603s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk4.csv
+[6.605s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee1.csv
+[6.607s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee2.csv
+[6.609s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee4.csv
+[6.611s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk2.csv
+[6.612s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk3.csv
+[6.614s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk1.csv
+[6.616s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee3.csv
+[6.617s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/launch
+[6.618s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/launch/rviz.launch.py
+[6.620s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/launch/mainNodes.launch.py
+[6.621s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/rviz
+[6.622s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/rviz/BasePosition.rviz
+[6.624s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/package_run_dependencies/mainspace
+[6.625s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/parent_prefix_path/mainspace
+[6.627s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/ament_prefix_path.sh
+[6.628s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/ament_prefix_path.dsv
+[6.630s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/path.sh
+[6.631s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/path.dsv
+[6.632s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.bash
+[6.634s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.sh
+[6.636s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.zsh
+[6.637s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.dsv
+[6.645s] -- Installing: /home/fu941/TDK_ros/install/mainspace/share/mainspace/package.dsv
+[6.646s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/packages/mainspace
+[6.649s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_cExport.cmake
+[6.651s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_cExport-noconfig.cmake
+[6.652s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cExport.cmake
+[6.654s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.656s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_cppExport.cmake
+[6.657s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.659s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.660s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cExport.cmake
+[6.662s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.663s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cExport.cmake
+[6.665s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cExport-noconfig.cmake
+[6.666s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cppExport.cmake
+[6.668s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.670s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cppExport.cmake
+[6.671s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cppExport-noconfig.cmake
+[6.672s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_pyExport.cmake
+[6.677s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_pyExport-noconfig.cmake
+[6.678s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/rosidl_cmake-extras.cmake
+[6.679s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.681s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.682s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_libraries-extras.cmake
+[6.685s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_targets-extras.cmake
+[6.688s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.692s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.697s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspaceConfig.cmake
+[6.699s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspaceConfig-version.cmake
+[6.701s] -- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/package.xml
+[6.704s] Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/mainspace

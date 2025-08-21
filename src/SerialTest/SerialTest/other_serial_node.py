@@ -14,7 +14,7 @@ class OtherSerialNode(Node):
         self.lock = threading.Lock()
         self.ack_queue = queue.Queue()
 
-        self.command_publisher = self.create_publisher(Command, 'commandToRos', 10)
+        self.command_publisher = self.create_publisher(Command, 'commandToROS', 10)
 
         self.subscription = self.create_subscription(
             Command,
@@ -27,9 +27,9 @@ class OtherSerialNode(Node):
 
         # 開啟串列埠
         try:
-            # port既得改
-            self.ser = serial.Serial('/dev/ttyACM0', 115200, timeout=0.1)
-            self.get_logger().info('Serial port opened: /dev/ttyACM0')
+            #　port: 上,ACM1 for 機構
+            self.ser = serial.Serial('/dev/ttyACM1', 115200, timeout=0.1)
+            self.get_logger().info('Serial port opened: /dev/ttyACM1')
             self.running = True
             self.reader_thread = threading.Thread(target=self.uart_reader_thread, daemon=True)
             self.reader_thread.start()
@@ -50,7 +50,7 @@ class OtherSerialNode(Node):
 
                 # if line == "ACK":
                 #     self.ack_queue.put(True)
-                elif line.startswith("ACK:"):
+                if line.startswith("ACK:"):
                     self.ack_queue.put(True)
                     try:
                         cmd_str = line.replace("ACK:", "").strip()
@@ -64,7 +64,7 @@ class OtherSerialNode(Node):
             except Exception as e:
                 self.get_logger().error(f"UART read exception: {e}")
                 
-    def wait_for_ack(self, timeout=10.0):
+    def wait_for_ack(self, timeout=0.3):
         try:
             return self.ack_queue.get(timeout=timeout)
         except queue.Empty:

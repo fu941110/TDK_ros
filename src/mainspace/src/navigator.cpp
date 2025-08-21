@@ -143,7 +143,7 @@ bool NavigatorNode::ArriveAtWaypoint()
     mainspace::msg::Position last_pos;
     last_pos.x = last_waypoint_.x;
     last_pos.y = last_waypoint_.y;
-    last_pos.theta = waypoints_.empty();
+    last_pos.theta = last_waypoint_.theta;
     last_waypoint_pub_->publish(last_pos);
     return false;
 }

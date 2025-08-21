@@ -1,0 +1,1227 @@
+[0.000000] (-) TimerEvent: {}
+[0.001939] (mainspace) JobQueued: {'identifier': 'mainspace', 'dependencies': OrderedDict()}
+[0.003195] (camera) JobQueued: {'identifier': 'camera', 'dependencies': OrderedDict([('mainspace', '/home/fu941/TDK_ros/install/mainspace')])}
+[0.003727] (SerialTest) JobQueued: {'identifier': 'SerialTest', 'dependencies': OrderedDict([('mainspace', '/home/fu941/TDK_ros/install/mainspace'), ('camera', '/home/fu941/TDK_ros/install/camera')])}
+[0.004478] (mainspace) JobStarted: {'identifier': 'mainspace'}
+[0.095461] (-) TimerEvent: {}
+[0.113697] (mainspace) JobProgress: {'identifier': 'mainspace', 'progress': 'cmake'}
+[0.120525] (mainspace) JobProgress: {'identifier': 'mainspace', 'progress': 'build'}
+[0.123562] (mainspace) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fu941/TDK_ros/build/mainspace', '--', '-j4', '-l4'], 'cwd': '/home/fu941/TDK_ros/build/mainspace', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.84.158.195 41490 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('TERM_PROGRAM_VERSION', '1.102.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ea938f10-c9e6-4d44-a20f-3e4ad9550b0a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fu941/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-2f5d20b195.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/fu941/TDK_ros/build/mainspace'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.84.158.195 41490 10.84.158.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.195768] (-) TimerEvent: {}
+[0.297217] (-) TimerEvent: {}
+[0.398776] (-) TimerEvent: {}
+[0.501483] (-) TimerEvent: {}
+[0.602905] (-) TimerEvent: {}
+[0.705193] (-) TimerEvent: {}
+[0.808807] (-) TimerEvent: {}
+[0.869987] (mainspace) StdoutLine: {'line': b'[  1%] Built target mainspace__cpp\n'}
+[0.909392] (-) TimerEvent: {}
+[0.925028] (mainspace) StdoutLine: {'line': b'[ 10%] Built target mainspace__rosidl_generator_c\n'}
+[1.009755] (-) TimerEvent: {}
+[1.031327] (mainspace) StdoutLine: {'line': b'[ 10%] Built target ament_cmake_python_copy_mainspace\n'}
+[1.110066] (-) TimerEvent: {}
+[1.213453] (-) TimerEvent: {}
+[1.263983] (mainspace) StdoutLine: {'line': b'[ 20%] Built target mainspace__rosidl_typesupport_cpp\n'}
+[1.314595] (-) TimerEvent: {}
+[1.334046] (mainspace) StdoutLine: {'line': b'[ 30%] Built target mainspace__rosidl_typesupport_fastrtps_cpp\n'}
+[1.398012] (mainspace) StdoutLine: {'line': b'[ 40%] Built target mainspace__rosidl_typesupport_introspection_cpp\n'}
+[1.415698] (-) TimerEvent: {}
+[1.483590] (mainspace) StdoutLine: {'line': b'[ 50%] Built target mainspace__rosidl_typesupport_fastrtps_c\n'}
+[1.516054] (-) TimerEvent: {}
+[1.620558] (-) TimerEvent: {}
+[1.685290] (mainspace) StdoutLine: {'line': b'[ 60%] Built target mainspace__rosidl_typesupport_introspection_c\n'}
+[1.720928] (-) TimerEvent: {}
+[1.740898] (mainspace) StdoutLine: {'line': b'[ 70%] Built target mainspace__rosidl_typesupport_c\n'}
+[1.821233] (-) TimerEvent: {}
+[1.923711] (-) TimerEvent: {}
+[2.028078] (-) TimerEvent: {}
+[2.066732] (mainspace) StdoutLine: {'line': b'[ 70%] Built target mainspace\n'}
+[2.128448] (-) TimerEvent: {}
+[2.158131] (mainspace) StdoutLine: {'line': b'[ 72%] Built target navigator_lib\n'}
+[2.228858] (-) TimerEvent: {}
+[2.334006] (-) TimerEvent: {}
+[2.404312] (mainspace) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Stage2\x1b[0m\n'}
+[2.434311] (-) TimerEvent: {}
+[2.460234] (mainspace) StdoutLine: {'line': b'[ 73%] Built target mainspace__py\n'}
+[2.534667] (-) TimerEvent: {}
+[2.601230] (mainspace) StdoutLine: {'line': b'[ 75%] Built target navigator_main\n'}
+[2.636087] (-) TimerEvent: {}
+[2.741216] (-) TimerEvent: {}
+[2.845054] (-) TimerEvent: {}
+[2.857705] (mainspace) StdoutLine: {'line': b'[ 78%] Built target Stage2\n'}
+[2.943153] (mainspace) StdoutLine: {'line': b'[ 80%] Built target Stage3\n'}
+[2.945297] (-) TimerEvent: {}
+[3.039228] (mainspace) StdoutLine: {'line': b'[ 82%] Built target Stage4\n'}
+[3.046162] (-) TimerEvent: {}
+[3.149053] (-) TimerEvent: {}
+[3.251278] (-) TimerEvent: {}
+[3.282345] (mainspace) StdoutLine: {'line': b'[ 84%] Built target StageManager\n'}
+[3.321195] (mainspace) StdoutLine: {'line': b'[ 93%] Built target mainspace__rosidl_generator_py\n'}
+[3.351581] (-) TimerEvent: {}
+[3.456198] (-) TimerEvent: {}
+[3.561556] (-) TimerEvent: {}
+[3.665953] (-) TimerEvent: {}
+[3.717669] (mainspace) StdoutLine: {'line': b'[ 95%] Built target mainspace__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.730601] (mainspace) StdoutLine: {'line': b'[ 97%] Built target mainspace__rosidl_typesupport_introspection_c__pyext\n'}
+[3.759743] (mainspace) StdoutLine: {'line': b'[100%] Built target mainspace__rosidl_typesupport_c__pyext\n'}
+[3.766390] (-) TimerEvent: {}
+[3.867667] (-) TimerEvent: {}
+[3.969128] (-) TimerEvent: {}
+[4.070701] (-) TimerEvent: {}
+[4.172093] (-) TimerEvent: {}
+[4.273611] (-) TimerEvent: {}
+[4.375197] (-) TimerEvent: {}
+[4.476430] (-) TimerEvent: {}
+[4.577740] (-) TimerEvent: {}
+[4.679083] (-) TimerEvent: {}
+[4.780261] (-) TimerEvent: {}
+[4.881092] (-) TimerEvent: {}
+[4.960334] (mainspace) StdoutLine: {'line': b'running egg_info\n'}
+[4.966521] (mainspace) StdoutLine: {'line': b'writing mainspace.egg-info/PKG-INFO\n'}
+[4.968940] (mainspace) StdoutLine: {'line': b'writing dependency_links to mainspace.egg-info/dependency_links.txt\n'}
+[4.972442] (mainspace) StdoutLine: {'line': b'writing top-level names to mainspace.egg-info/top_level.txt\n'}
+[4.981344] (-) TimerEvent: {}
+[5.000368] (mainspace) StdoutLine: {'line': b"reading manifest file 'mainspace.egg-info/SOURCES.txt'\n"}
+[5.008316] (mainspace) StdoutLine: {'line': b"writing manifest file 'mainspace.egg-info/SOURCES.txt'\n"}
+[5.081721] (-) TimerEvent: {}
+[5.183423] (-) TimerEvent: {}
+[5.260908] (mainspace) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_mainspace_egg\n'}
+[5.283735] (-) TimerEvent: {}
+[5.379470] (mainspace) CommandEnded: {'returncode': 0}
+[5.384043] (-) TimerEvent: {}
+[5.386309] (mainspace) JobProgress: {'identifier': 'mainspace', 'progress': 'install'}
+[5.469878] (mainspace) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fu941/TDK_ros/build/mainspace'], 'cwd': '/home/fu941/TDK_ros/build/mainspace', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.84.158.195 41490 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('TERM_PROGRAM_VERSION', '1.102.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ea938f10-c9e6-4d44-a20f-3e4ad9550b0a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fu941/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-2f5d20b195.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/fu941/TDK_ros/build/mainspace'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.84.158.195 41490 10.84.158.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.484291] (-) TimerEvent: {}
+[5.551780] (mainspace) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.554664] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/rosidl_interfaces/mainspace\n'}
+[5.555979] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace\n'}
+[5.558463] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg\n'}
+[5.562324] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/position.h\n'}
+[5.566728] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/encoder_speed.h\n'}
+[5.570670] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/command.h\n'}
+[5.572976] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/pause.h\n'}
+[5.575588] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/desk.h\n'}
+[5.577546] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/csv_file.h\n'}
+[5.580133] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/to_stm_speed.h\n'}
+[5.582228] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.584372] (-) TimerEvent: {}
+[5.586310] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail\n'}
+[5.587641] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__functions.c\n'}
+[5.589559] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__functions.c\n'}
+[5.591413] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__functions.h\n'}
+[5.597327] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__functions.h\n'}
+[5.600123] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__functions.c\n'}
+[5.602126] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__functions.h\n'}
+[5.603232] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.h\n'}
+[5.608464] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.h\n'}
+[5.610386] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__functions.h\n'}
+[5.627307] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.h\n'}
+[5.628574] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__struct.h\n'}
+[5.631345] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__functions.c\n'}
+[5.634957] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__functions.c\n'}
+[5.638263] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__struct.h\n'}
+[5.639901] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.h\n'}
+[5.641594] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.h\n'}
+[5.643113] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__struct.h\n'}
+[5.644239] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__functions.h\n'}
+[5.645769] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.h\n'}
+[5.647348] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__functions.h\n'}
+[5.648771] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__struct.h\n'}
+[5.650210] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__functions.c\n'}
+[5.651599] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__struct.h\n'}
+[5.653004] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__functions.h\n'}
+[5.654381] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.h\n'}
+[5.655734] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__functions.h\n'}
+[5.657262] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__struct.h\n'}
+[5.658911] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__functions.c\n'}
+[5.660388] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__functions.c\n'}
+[5.662336] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__struct.h\n'}
+[5.663974] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__struct.h\n'}
+[5.674877] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.h\n'}
+[5.676391] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/coffee.h\n'}
+[5.689755] (-) TimerEvent: {}
+[5.691051] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/library_path.sh\n'}
+[5.692541] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/library_path.dsv\n'}
+[5.694283] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_generator_c.so\n'}
+[5.696103] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace\n'}
+[5.697842] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg\n'}
+[5.699267] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.701765] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail\n'}
+[5.713222] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_fastrtps_c.h\n'}
+[5.714611] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_fastrtps_c.h\n'}
+[5.716346] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_fastrtps_c.h\n'}
+[5.718480] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_fastrtps_c.h\n'}
+[5.719720] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_fastrtps_c.h\n'}
+[5.722001] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_fastrtps_c.h\n'}
+[5.724343] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_fastrtps_c.h\n'}
+[5.726646] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_fastrtps_c.h\n'}
+[5.728971] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_fastrtps_c.so\n'}
+[5.731924] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace\n'}
+[5.734563] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg\n'}
+[5.736585] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/csv_file.hpp\n'}
+[5.737963] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/command.hpp\n'}
+[5.739040] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/coffee.hpp\n'}
+[5.740937] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/to_stm_speed.hpp\n'}
+[5.742111] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/pause.hpp\n'}
+[5.743166] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/encoder_speed.hpp\n'}
+[5.744230] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/position.hpp\n'}
+[5.745461] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail\n'}
+[5.747236] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__struct.hpp\n'}
+[5.748315] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__builder.hpp\n'}
+[5.750099] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__builder.hpp\n'}
+[5.751690] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__builder.hpp\n'}
+[5.753649] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__traits.hpp\n'}
+[5.756048] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.hpp\n'}
+[5.760022] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__struct.hpp\n'}
+[5.761573] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__builder.hpp\n'}
+[5.762864] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__struct.hpp\n'}
+[5.764235] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__struct.hpp\n'}
+[5.765745] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__traits.hpp\n'}
+[5.767097] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__struct.hpp\n'}
+[5.768450] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__traits.hpp\n'}
+[5.779322] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__traits.hpp\n'}
+[5.780700] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__traits.hpp\n'}
+[5.781891] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.hpp\n'}
+[5.782956] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__traits.hpp\n'}
+[5.784032] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.hpp\n'}
+[5.785704] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__struct.hpp\n'}
+[5.786915] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.hpp\n'}
+[5.787943] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__builder.hpp\n'}
+[5.789429] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__struct.hpp\n'}
+[5.790572] (-) TimerEvent: {}
+[5.793062] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.hpp\n'}
+[5.795037] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__builder.hpp\n'}
+[5.796301] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__struct.hpp\n'}
+[5.803051] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.hpp\n'}
+[5.804271] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__builder.hpp\n'}
+[5.805654] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.hpp\n'}
+[5.807150] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__traits.hpp\n'}
+[5.808300] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.hpp\n'}
+[5.809519] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__traits.hpp\n'}
+[5.810595] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__builder.hpp\n'}
+[5.813403] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[5.814914] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/desk.hpp\n'}
+[5.817482] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace\n'}
+[5.818860] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg\n'}
+[5.820196] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.821665] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail\n'}
+[5.823075] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.824153] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.825952] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/dds_fastrtps\n'}
+[5.827306] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.828586] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.830223] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.831581] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.833029] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.834575] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.835994] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.837612] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace\n'}
+[5.838961] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg\n'}
+[5.840325] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail\n'}
+[5.841835] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_introspection_c.h\n'}
+[5.843384] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.c\n'}
+[5.844769] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_introspection_c.h\n'}
+[5.846115] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.c\n'}
+[5.847182] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_introspection_c.h\n'}
+[5.848711] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_introspection_c.h\n'}
+[5.850005] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.c\n'}
+[5.851179] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.c\n'}
+[5.852445] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.c\n'}
+[5.853736] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_introspection_c.h\n'}
+[5.854734] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_introspection_c.h\n'}
+[5.855904] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.c\n'}
+[5.858615] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_introspection_c.h\n'}
+[5.859764] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.c\n'}
+[5.861010] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_introspection_c.h\n'}
+[5.863372] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.c\n'}
+[5.865536] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.868575] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_introspection_c.so\n'}
+[5.870036] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_c.so\n'}
+[5.871675] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace\n'}
+[5.873378] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg\n'}
+[5.875156] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail\n'}
+[5.876957] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__type_support.cpp\n'}
+[5.878691] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__type_support.cpp\n'}
+[5.880382] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.882194] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__type_support.cpp\n'}
+[5.883734] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.885536] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.887413] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__type_support.cpp\n'}
+[5.888770] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/pause__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.890057] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__type_support.cpp\n'}
+[5.891242] (-) TimerEvent: {}
+[5.894524] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/to_stm_speed__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.896020] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/coffee__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.900278] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/encoder_speed__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.902667] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/csv_file__type_support.cpp\n'}
+[5.903917] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/position__type_support.cpp\n'}
+[5.905266] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/command__type_support.cpp\n'}
+[5.906298] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/mainspace/mainspace/msg/detail/desk__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.907325] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_introspection_cpp.so\n'}
+[5.908473] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_typesupport_cpp.so\n'}
+[5.910855] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/pythonpath.sh\n'}
+[5.911845] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/pythonpath.dsv\n'}
+[5.913068] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info\n'}
+[5.914150] (mainspace) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[5.915156] (mainspace) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[5.916371] (mainspace) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[5.917655] (mainspace) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[5.918850] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace\n'}
+[5.920009] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/__init__.py\n'}
+[5.921631] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.923010] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/_mainspace_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[5.935282] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/_mainspace_s.ep.rosidl_typesupport_c.c\n'}
+[5.936903] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/_mainspace_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[5.938062] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/libmainspace__rosidl_generator_py.so\n'}
+[5.939205] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg\n'}
+[5.940283] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_coffee.py\n'}
+[5.941591] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/__init__.py\n'}
+[5.942716] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_command_s.c\n'}
+[5.943891] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_csv_file_s.c\n'}
+[5.945126] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_encoder_speed.py\n'}
+[5.946332] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_desk.py\n'}
+[5.947412] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_pause.py\n'}
+[5.948583] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_to_stm_speed.py\n'}
+[5.950150] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_command.py\n'}
+[5.951313] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_desk_s.c\n'}
+[5.952391] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_pause_s.c\n'}
+[5.953618] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_csv_file.py\n'}
+[5.954779] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_position_s.c\n'}
+[5.956092] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_coffee_s.c\n'}
+[5.957465] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_encoder_speed_s.c\n'}
+[5.958725] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_to_stm_speed_s.c\n'}
+[5.959943] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg/_position.py\n'}
+[5.961368] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.962493] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[5.991686] (-) TimerEvent: {}
+[6.095559] (-) TimerEvent: {}
+[6.197979] (-) TimerEvent: {}
+[6.237917] (mainspace) StdoutLine: {'line': b"Listing '/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace'...\n"}
+[6.240453] (mainspace) StdoutLine: {'line': b"Listing '/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/msg'...\n"}
+[6.281688] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[6.284206] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[6.286517] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages/mainspace/mainspace_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[6.288671] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libmainspace__rosidl_generator_py.so\n'}
+[6.291837] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/ToStmSpeed.idl\n'}
+[6.293180] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Position.idl\n'}
+[6.294424] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Desk.idl\n'}
+[6.295556] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Coffee.idl\n'}
+[6.297154] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/CsvFile.idl\n'}
+[6.298318] (-) TimerEvent: {}
+[6.299375] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Command.idl\n'}
+[6.301767] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Pause.idl\n'}
+[6.303244] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/ToStmSpeed.msg\n'}
+[6.304511] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Position.msg\n'}
+[6.309303] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Desk.msg\n'}
+[6.311976] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Coffee.msg\n'}
+[6.313730] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/CsvFile.msg\n'}
+[6.314909] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Command.msg\n'}
+[6.316803] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/msg/Pause.msg\n'}
+[6.318009] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include/\n'}
+[6.319052] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include//mainspace\n'}
+[6.320129] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/include//mainspace/navigator.hpp\n'}
+[6.321308] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/libnavigator_lib.so\n'}
+[6.323150] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/navigator_main\n'}
+[6.329429] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/Stage2\n'}
+[6.336009] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/Stage3\n'}
+[6.342548] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/Stage4\n'}
+[6.349114] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/lib/mainspace/StageManager\n'}
+[6.353817] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv\n'}
+[6.355944] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv/Stage3.csv\n'}
+[6.357851] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv/Stage4.csv\n'}
+[6.359813] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/MainPath_csv/Stage2.csv\n'}
+[6.362102] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv\n'}
+[6.364256] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk4.csv\n'}
+[6.366309] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee1.csv\n'}
+[6.367512] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee2.csv\n'}
+[6.369081] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee4.csv\n'}
+[6.370880] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk2.csv\n'}
+[6.372523] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk3.csv\n'}
+[6.374593] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/desk1.csv\n'}
+[6.376458] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/Stage2Path_csv/coffee3.csv\n'}
+[6.378353] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/launch\n'}
+[6.380111] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/launch/rviz.launch.py\n'}
+[6.382393] (mainspace) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/mainspace/share/mainspace/launch/mainNodes.launch.py\n'}
+[6.384159] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/rviz\n'}
+[6.385411] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/rviz/BasePosition.rviz\n'}
+[6.386526] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/package_run_dependencies/mainspace\n'}
+[6.388187] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/parent_prefix_path/mainspace\n'}
+[6.390163] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/ament_prefix_path.sh\n'}
+[6.391836] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/ament_prefix_path.dsv\n'}
+[6.393853] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/path.sh\n'}
+[6.395560] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/environment/path.dsv\n'}
+[6.397959] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.bash\n'}
+[6.399678] (-) TimerEvent: {}
+[6.403274] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.sh\n'}
+[6.405071] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.zsh\n'}
+[6.406365] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/local_setup.dsv\n'}
+[6.409993] (mainspace) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/mainspace/share/mainspace/package.dsv\n'}
+[6.411646] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/ament_index/resource_index/packages/mainspace\n'}
+[6.413397] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_cExport.cmake\n'}
+[6.414857] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.417388] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.418760] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.419919] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_cppExport.cmake\n'}
+[6.421206] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.422583] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.424046] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.425651] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.426852] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cExport.cmake\n'}
+[6.428202] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.429622] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.430822] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.431965] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cppExport.cmake\n'}
+[6.433193] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspace__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.434443] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_pyExport.cmake\n'}
+[6.435711] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/export_mainspace__rosidl_generator_pyExport-noconfig.cmake\n'}
+[6.436952] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/rosidl_cmake-extras.cmake\n'}
+[6.438483] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.439813] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.454084] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.455591] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.457058] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.458360] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.459641] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspaceConfig.cmake\n'}
+[6.461398] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake/mainspaceConfig-version.cmake\n'}
+[6.466660] (mainspace) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/mainspace/share/mainspace/package.xml\n'}
+[6.488995] (mainspace) CommandEnded: {'returncode': 0}
+[6.501817] (-) TimerEvent: {}
+[6.603866] (-) TimerEvent: {}
+[6.706020] (-) TimerEvent: {}
+[6.807742] (-) TimerEvent: {}
+[6.843838] (mainspace) JobEnded: {'identifier': 'mainspace', 'rc': 0}
+[6.859529] (camera) JobStarted: {'identifier': 'camera'}
+[6.908188] (-) TimerEvent: {}
+[6.964127] (camera) JobProgress: {'identifier': 'camera', 'progress': 'cmake'}
+[6.974968] (camera) JobProgress: {'identifier': 'camera', 'progress': 'build'}
+[6.979530] (camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fu941/TDK_ros/build/camera', '--', '-j4', '-l4'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.84.158.195 41490 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fu941/TDK_ros/install/mainspace/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('TERM_PROGRAM_VERSION', '1.102.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ea938f10-c9e6-4d44-a20f-3e4ad9550b0a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fu941/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-2f5d20b195.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.84.158.195 41490 10.84.158.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble')]), 'shell': False}
+[7.008552] (-) TimerEvent: {}
+[7.110863] (-) TimerEvent: {}
+[7.212305] (-) TimerEvent: {}
+[7.313640] (-) TimerEvent: {}
+[7.315976] (camera) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[7.413960] (-) TimerEvent: {}
+[7.517818] (-) TimerEvent: {}
+[7.632556] (-) TimerEvent: {}
+[7.735032] (-) TimerEvent: {}
+[7.836528] (-) TimerEvent: {}
+[7.938131] (-) TimerEvent: {}
+[8.039721] (-) TimerEvent: {}
+[8.141656] (-) TimerEvent: {}
+[8.243122] (-) TimerEvent: {}
+[8.344890] (-) TimerEvent: {}
+[8.446324] (-) TimerEvent: {}
+[8.547559] (-) TimerEvent: {}
+[8.648854] (-) TimerEvent: {}
+[8.750327] (-) TimerEvent: {}
+[8.851729] (-) TimerEvent: {}
+[8.953213] (-) TimerEvent: {}
+[8.983559] (camera) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[9.053509] (-) TimerEvent: {}
+[9.154935] (-) TimerEvent: {}
+[9.256346] (-) TimerEvent: {}
+[9.357687] (-) TimerEvent: {}
+[9.458992] (-) TimerEvent: {}
+[9.527819] (camera) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[9.559294] (-) TimerEvent: {}
+[9.566589] (camera) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[9.656931] (camera) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[9.659510] (-) TimerEvent: {}
+[9.748012] (camera) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[9.759677] (-) TimerEvent: {}
+[9.826043] (camera) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.859928] (-) TimerEvent: {}
+[9.960698] (-) TimerEvent: {}
+[10.023468] (camera) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[10.034154] (camera) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[10.060876] (-) TimerEvent: {}
+[10.161813] (-) TimerEvent: {}
+[10.263328] (-) TimerEvent: {}
+[10.364679] (-) TimerEvent: {}
+[10.465982] (-) TimerEvent: {}
+[10.567299] (-) TimerEvent: {}
+[10.668743] (-) TimerEvent: {}
+[10.770051] (-) TimerEvent: {}
+[10.871357] (-) TimerEvent: {}
+[10.972897] (-) TimerEvent: {}
+[11.074311] (-) TimerEvent: {}
+[11.175609] (-) TimerEvent: {}
+[11.277048] (-) TimerEvent: {}
+[11.378386] (-) TimerEvent: {}
+[11.479684] (-) TimerEvent: {}
+[11.581116] (-) TimerEvent: {}
+[11.682392] (-) TimerEvent: {}
+[11.783818] (-) TimerEvent: {}
+[11.885465] (-) TimerEvent: {}
+[11.986892] (-) TimerEvent: {}
+[12.088189] (-) TimerEvent: {}
+[12.189638] (-) TimerEvent: {}
+[12.291035] (-) TimerEvent: {}
+[12.313247] (camera) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[12.391336] (-) TimerEvent: {}
+[12.492787] (-) TimerEvent: {}
+[12.594192] (-) TimerEvent: {}
+[12.695554] (-) TimerEvent: {}
+[12.770364] (camera) StdoutLine: {'line': b'-- Found mainspace: 0.0.0 (/home/fu941/TDK_ros/install/mainspace/share/mainspace/cmake)\n'}
+[12.795858] (-) TimerEvent: {}
+[12.897316] (-) TimerEvent: {}
+[12.901561] (camera) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[12.997615] (-) TimerEvent: {}
+[13.055553] (camera) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[13.097976] (-) TimerEvent: {}
+[13.199409] (-) TimerEvent: {}
+[13.300921] (-) TimerEvent: {}
+[13.402360] (-) TimerEvent: {}
+[13.503643] (-) TimerEvent: {}
+[13.604953] (-) TimerEvent: {}
+[13.706296] (-) TimerEvent: {}
+[13.807958] (-) TimerEvent: {}
+[13.868014] (camera) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[13.871383] (camera) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/fu941/TDK_ros/src/camera/include\n'}
+[13.873058] (camera) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[13.886695] (camera) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[13.908221] (-) TimerEvent: {}
+[13.914546] (camera) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[13.915975] (camera) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[13.922786] (camera) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[13.935677] (camera) StdoutLine: {'line': b'-- Configuring done\n'}
+[14.008410] (-) TimerEvent: {}
+[14.109442] (-) TimerEvent: {}
+[14.210715] (-) TimerEvent: {}
+[14.269695] (camera) StdoutLine: {'line': b'-- Generating done\n'}
+[14.310996] (-) TimerEvent: {}
+[14.387276] (camera) StdoutLine: {'line': b'-- Build files have been written to: /home/fu941/TDK_ros/build/camera\n'}
+[14.411573] (-) TimerEvent: {}
+[14.516992] (-) TimerEvent: {}
+[14.618593] (-) TimerEvent: {}
+[14.703621] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraCoffee2\x1b[0m\n'}
+[14.719141] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraStage3\x1b[0m\n'}
+[14.720963] (-) TimerEvent: {}
+[14.729827] (camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target cameraDesk2\x1b[0m\n'}
+[14.821268] (-) TimerEvent: {}
+[14.924220] (-) TimerEvent: {}
+[14.977625] (camera) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/cameraDesk2_test.dir/src/cameraDesk2_test.cpp.o\x1b[0m\n'}
+[15.024523] (-) TimerEvent: {}
+[15.127601] (-) TimerEvent: {}
+[15.135185] (camera) StdoutLine: {'line': b'[ 33%] Built target cameraStage3\n'}
+[15.168163] (camera) StdoutLine: {'line': b'[ 58%] Built target cameraCoffee2\n'}
+[15.222091] (camera) StdoutLine: {'line': b'[ 83%] Built target cameraDesk2\n'}
+[15.227913] (-) TimerEvent: {}
+[15.237284] (camera) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object CMakeFiles/cameraDesk2_test.dir/src/cameraBackground.cpp.o\x1b[0m\n'}
+[15.328252] (-) TimerEvent: {}
+[15.430747] (-) TimerEvent: {}
+[15.532327] (-) TimerEvent: {}
+[15.633808] (-) TimerEvent: {}
+[15.735228] (-) TimerEvent: {}
+[15.836761] (-) TimerEvent: {}
+[15.938383] (-) TimerEvent: {}
+[16.041569] (-) TimerEvent: {}
+[16.144517] (-) TimerEvent: {}
+[16.247545] (-) TimerEvent: {}
+[16.350518] (-) TimerEvent: {}
+[16.453774] (-) TimerEvent: {}
+[16.556868] (-) TimerEvent: {}
+[16.659649] (-) TimerEvent: {}
+[16.766467] (-) TimerEvent: {}
+[16.867912] (-) TimerEvent: {}
+[16.969313] (-) TimerEvent: {}
+[17.070271] (-) TimerEvent: {}
+[17.171906] (-) TimerEvent: {}
+[17.275136] (-) TimerEvent: {}
+[17.378208] (-) TimerEvent: {}
+[17.481267] (-) TimerEvent: {}
+[17.584570] (-) TimerEvent: {}
+[17.687981] (-) TimerEvent: {}
+[17.791246] (-) TimerEvent: {}
+[17.908874] (-) TimerEvent: {}
+[18.011273] (-) TimerEvent: {}
+[18.114549] (-) TimerEvent: {}
+[18.217937] (-) TimerEvent: {}
+[18.321646] (-) TimerEvent: {}
+[18.424926] (-) TimerEvent: {}
+[18.527843] (-) TimerEvent: {}
+[18.629409] (-) TimerEvent: {}
+[18.731037] (-) TimerEvent: {}
+[18.834358] (-) TimerEvent: {}
+[18.937583] (-) TimerEvent: {}
+[19.040817] (-) TimerEvent: {}
+[19.143978] (-) TimerEvent: {}
+[19.247128] (-) TimerEvent: {}
+[19.349972] (-) TimerEvent: {}
+[19.451662] (-) TimerEvent: {}
+[19.555217] (-) TimerEvent: {}
+[19.659199] (-) TimerEvent: {}
+[19.763164] (-) TimerEvent: {}
+[19.865930] (-) TimerEvent: {}
+[19.967565] (-) TimerEvent: {}
+[20.069326] (-) TimerEvent: {}
+[20.170939] (-) TimerEvent: {}
+[20.272252] (-) TimerEvent: {}
+[20.373772] (-) TimerEvent: {}
+[20.478245] (-) TimerEvent: {}
+[20.581109] (-) TimerEvent: {}
+[20.682445] (-) TimerEvent: {}
+[20.784055] (-) TimerEvent: {}
+[20.886535] (-) TimerEvent: {}
+[20.988052] (-) TimerEvent: {}
+[21.089656] (-) TimerEvent: {}
+[21.191363] (-) TimerEvent: {}
+[21.294131] (-) TimerEvent: {}
+[21.395608] (-) TimerEvent: {}
+[21.497082] (-) TimerEvent: {}
+[21.598560] (-) TimerEvent: {}
+[21.700021] (-) TimerEvent: {}
+[21.802350] (-) TimerEvent: {}
+[21.903964] (-) TimerEvent: {}
+[22.005756] (-) TimerEvent: {}
+[22.108483] (-) TimerEvent: {}
+[22.210166] (-) TimerEvent: {}
+[22.313323] (-) TimerEvent: {}
+[22.414639] (-) TimerEvent: {}
+[22.516601] (-) TimerEvent: {}
+[22.618007] (-) TimerEvent: {}
+[22.719124] (-) TimerEvent: {}
+[22.822471] (-) TimerEvent: {}
+[22.925474] (-) TimerEvent: {}
+[23.026783] (-) TimerEvent: {}
+[23.128188] (-) TimerEvent: {}
+[23.229732] (-) TimerEvent: {}
+[23.331680] (-) TimerEvent: {}
+[23.433512] (-) TimerEvent: {}
+[23.535200] (-) TimerEvent: {}
+[23.636967] (-) TimerEvent: {}
+[23.738671] (-) TimerEvent: {}
+[23.841302] (-) TimerEvent: {}
+[23.942796] (-) TimerEvent: {}
+[24.044302] (-) TimerEvent: {}
+[24.145830] (-) TimerEvent: {}
+[24.247320] (-) TimerEvent: {}
+[24.348910] (-) TimerEvent: {}
+[24.450362] (-) TimerEvent: {}
+[24.551880] (-) TimerEvent: {}
+[24.656963] (-) TimerEvent: {}
+[24.760461] (-) TimerEvent: {}
+[24.865007] (-) TimerEvent: {}
+[24.968517] (-) TimerEvent: {}
+[25.072832] (-) TimerEvent: {}
+[25.175214] (-) TimerEvent: {}
+[25.279272] (-) TimerEvent: {}
+[25.381836] (-) TimerEvent: {}
+[25.486563] (-) TimerEvent: {}
+[25.588132] (-) TimerEvent: {}
+[25.689699] (-) TimerEvent: {}
+[25.791182] (-) TimerEvent: {}
+[25.892876] (-) TimerEvent: {}
+[25.994469] (-) TimerEvent: {}
+[26.096375] (-) TimerEvent: {}
+[26.198350] (-) TimerEvent: {}
+[26.299996] (-) TimerEvent: {}
+[26.401724] (-) TimerEvent: {}
+[26.503802] (-) TimerEvent: {}
+[26.605435] (-) TimerEvent: {}
+[26.707395] (-) TimerEvent: {}
+[26.808875] (-) TimerEvent: {}
+[26.910475] (-) TimerEvent: {}
+[27.012138] (-) TimerEvent: {}
+[27.113713] (-) TimerEvent: {}
+[27.218414] (-) TimerEvent: {}
+[27.322671] (-) TimerEvent: {}
+[27.425788] (-) TimerEvent: {}
+[27.528243] (-) TimerEvent: {}
+[27.632811] (-) TimerEvent: {}
+[27.734693] (-) TimerEvent: {}
+[27.836329] (-) TimerEvent: {}
+[27.938034] (-) TimerEvent: {}
+[28.039864] (-) TimerEvent: {}
+[28.145136] (-) TimerEvent: {}
+[28.264551] (-) TimerEvent: {}
+[28.373681] (-) TimerEvent: {}
+[28.481634] (-) TimerEvent: {}
+[28.584246] (-) TimerEvent: {}
+[28.687078] (-) TimerEvent: {}
+[28.790254] (-) TimerEvent: {}
+[28.892867] (-) TimerEvent: {}
+[28.995505] (-) TimerEvent: {}
+[29.098248] (-) TimerEvent: {}
+[29.200914] (-) TimerEvent: {}
+[29.303480] (-) TimerEvent: {}
+[29.407125] (-) TimerEvent: {}
+[29.509767] (-) TimerEvent: {}
+[29.612576] (-) TimerEvent: {}
+[29.715537] (-) TimerEvent: {}
+[29.817085] (-) TimerEvent: {}
+[29.918770] (-) TimerEvent: {}
+[30.020422] (-) TimerEvent: {}
+[30.122279] (-) TimerEvent: {}
+[30.224115] (-) TimerEvent: {}
+[30.325362] (-) TimerEvent: {}
+[30.427505] (-) TimerEvent: {}
+[30.529794] (-) TimerEvent: {}
+[30.631489] (-) TimerEvent: {}
+[30.733415] (-) TimerEvent: {}
+[30.836409] (-) TimerEvent: {}
+[30.940373] (-) TimerEvent: {}
+[31.043371] (-) TimerEvent: {}
+[31.146537] (-) TimerEvent: {}
+[31.249857] (-) TimerEvent: {}
+[31.353631] (-) TimerEvent: {}
+[31.455206] (-) TimerEvent: {}
+[31.558068] (-) TimerEvent: {}
+[31.661570] (-) TimerEvent: {}
+[31.763643] (-) TimerEvent: {}
+[31.865568] (-) TimerEvent: {}
+[31.970502] (-) TimerEvent: {}
+[32.073026] (-) TimerEvent: {}
+[32.174649] (-) TimerEvent: {}
+[32.276278] (-) TimerEvent: {}
+[32.379067] (-) TimerEvent: {}
+[32.480578] (-) TimerEvent: {}
+[32.584294] (-) TimerEvent: {}
+[32.688076] (-) TimerEvent: {}
+[32.790017] (-) TimerEvent: {}
+[32.893405] (-) TimerEvent: {}
+[32.996172] (-) TimerEvent: {}
+[33.097190] (-) TimerEvent: {}
+[33.198935] (-) TimerEvent: {}
+[33.302645] (-) TimerEvent: {}
+[33.407254] (-) TimerEvent: {}
+[33.509031] (-) TimerEvent: {}
+[33.611378] (-) TimerEvent: {}
+[33.713643] (-) TimerEvent: {}
+[33.817507] (-) TimerEvent: {}
+[33.921584] (-) TimerEvent: {}
+[34.024238] (-) TimerEvent: {}
+[34.128920] (-) TimerEvent: {}
+[34.233269] (-) TimerEvent: {}
+[34.337334] (-) TimerEvent: {}
+[34.441360] (-) TimerEvent: {}
+[34.545880] (-) TimerEvent: {}
+[34.650944] (-) TimerEvent: {}
+[34.753829] (-) TimerEvent: {}
+[34.856572] (-) TimerEvent: {}
+[34.959193] (-) TimerEvent: {}
+[35.061915] (-) TimerEvent: {}
+[35.167070] (-) TimerEvent: {}
+[35.271937] (-) TimerEvent: {}
+[35.377012] (-) TimerEvent: {}
+[35.481740] (-) TimerEvent: {}
+[35.586518] (-) TimerEvent: {}
+[35.691056] (-) TimerEvent: {}
+[35.795865] (-) TimerEvent: {}
+[35.901252] (-) TimerEvent: {}
+[36.005507] (-) TimerEvent: {}
+[36.109088] (-) TimerEvent: {}
+[36.212370] (-) TimerEvent: {}
+[36.315040] (-) TimerEvent: {}
+[36.417822] (-) TimerEvent: {}
+[36.519766] (-) TimerEvent: {}
+[36.622515] (-) TimerEvent: {}
+[36.727035] (-) TimerEvent: {}
+[36.829596] (-) TimerEvent: {}
+[36.934253] (-) TimerEvent: {}
+[37.035817] (-) TimerEvent: {}
+[37.138359] (-) TimerEvent: {}
+[37.242681] (-) TimerEvent: {}
+[37.347347] (-) TimerEvent: {}
+[37.449327] (-) TimerEvent: {}
+[37.552111] (-) TimerEvent: {}
+[37.661150] (-) TimerEvent: {}
+[37.763933] (-) TimerEvent: {}
+[37.865800] (-) TimerEvent: {}
+[37.968599] (-) TimerEvent: {}
+[38.071843] (-) TimerEvent: {}
+[38.174497] (-) TimerEvent: {}
+[38.276703] (-) TimerEvent: {}
+[38.382441] (-) TimerEvent: {}
+[38.488554] (-) TimerEvent: {}
+[38.590844] (-) TimerEvent: {}
+[38.693070] (-) TimerEvent: {}
+[38.794965] (-) TimerEvent: {}
+[38.896725] (-) TimerEvent: {}
+[38.998557] (-) TimerEvent: {}
+[39.100317] (-) TimerEvent: {}
+[39.201967] (-) TimerEvent: {}
+[39.304774] (-) TimerEvent: {}
+[39.407467] (-) TimerEvent: {}
+[39.510218] (-) TimerEvent: {}
+[39.613822] (-) TimerEvent: {}
+[39.718372] (-) TimerEvent: {}
+[39.820548] (-) TimerEvent: {}
+[39.921922] (-) TimerEvent: {}
+[40.025315] (-) TimerEvent: {}
+[40.127955] (-) TimerEvent: {}
+[40.230737] (-) TimerEvent: {}
+[40.333421] (-) TimerEvent: {}
+[40.435040] (-) TimerEvent: {}
+[40.536978] (-) TimerEvent: {}
+[40.638763] (-) TimerEvent: {}
+[40.740374] (-) TimerEvent: {}
+[40.843195] (-) TimerEvent: {}
+[40.944883] (-) TimerEvent: {}
+[41.046415] (-) TimerEvent: {}
+[41.149106] (-) TimerEvent: {}
+[41.250689] (-) TimerEvent: {}
+[41.352428] (-) TimerEvent: {}
+[41.455111] (-) TimerEvent: {}
+[41.556743] (-) TimerEvent: {}
+[41.660309] (-) TimerEvent: {}
+[41.764692] (-) TimerEvent: {}
+[41.867529] (-) TimerEvent: {}
+[41.969985] (-) TimerEvent: {}
+[42.071749] (-) TimerEvent: {}
+[42.173459] (-) TimerEvent: {}
+[42.275196] (-) TimerEvent: {}
+[42.376869] (-) TimerEvent: {}
+[42.478395] (-) TimerEvent: {}
+[42.580119] (-) TimerEvent: {}
+[42.681852] (-) TimerEvent: {}
+[42.783386] (-) TimerEvent: {}
+[42.884946] (-) TimerEvent: {}
+[42.987750] (-) TimerEvent: {}
+[43.089470] (-) TimerEvent: {}
+[43.192008] (-) TimerEvent: {}
+[43.293113] (-) TimerEvent: {}
+[43.394667] (-) TimerEvent: {}
+[43.496230] (-) TimerEvent: {}
+[43.597925] (-) TimerEvent: {}
+[43.699618] (-) TimerEvent: {}
+[43.801459] (-) TimerEvent: {}
+[43.903239] (-) TimerEvent: {}
+[44.005037] (-) TimerEvent: {}
+[44.106759] (-) TimerEvent: {}
+[44.209458] (-) TimerEvent: {}
+[44.311122] (-) TimerEvent: {}
+[44.413969] (-) TimerEvent: {}
+[44.515633] (-) TimerEvent: {}
+[44.620441] (-) TimerEvent: {}
+[44.725759] (-) TimerEvent: {}
+[44.831260] (-) TimerEvent: {}
+[44.936977] (-) TimerEvent: {}
+[45.042135] (-) TimerEvent: {}
+[45.157916] (-) TimerEvent: {}
+[45.263277] (-) TimerEvent: {}
+[45.366092] (-) TimerEvent: {}
+[45.468579] (-) TimerEvent: {}
+[45.570077] (-) TimerEvent: {}
+[45.671488] (-) TimerEvent: {}
+[45.772974] (-) TimerEvent: {}
+[45.874546] (-) TimerEvent: {}
+[45.976108] (-) TimerEvent: {}
+[46.077726] (-) TimerEvent: {}
+[46.179374] (-) TimerEvent: {}
+[46.280921] (-) TimerEvent: {}
+[46.382378] (-) TimerEvent: {}
+[46.484042] (-) TimerEvent: {}
+[46.585846] (-) TimerEvent: {}
+[46.687322] (-) TimerEvent: {}
+[46.788417] (-) TimerEvent: {}
+[46.890197] (-) TimerEvent: {}
+[46.991819] (-) TimerEvent: {}
+[47.098923] (-) TimerEvent: {}
+[47.205137] (-) TimerEvent: {}
+[47.309833] (-) TimerEvent: {}
+[47.413574] (-) TimerEvent: {}
+[47.516816] (-) TimerEvent: {}
+[47.619890] (-) TimerEvent: {}
+[47.722893] (-) TimerEvent: {}
+[47.826182] (-) TimerEvent: {}
+[47.931095] (-) TimerEvent: {}
+[48.035018] (-) TimerEvent: {}
+[48.139629] (-) TimerEvent: {}
+[48.243726] (-) TimerEvent: {}
+[48.347492] (-) TimerEvent: {}
+[48.453243] (-) TimerEvent: {}
+[48.554923] (-) TimerEvent: {}
+[48.657690] (-) TimerEvent: {}
+[48.759199] (-) TimerEvent: {}
+[48.861033] (-) TimerEvent: {}
+[48.965872] (-) TimerEvent: {}
+[49.068793] (-) TimerEvent: {}
+[49.176117] (-) TimerEvent: {}
+[49.279105] (-) TimerEvent: {}
+[49.381396] (-) TimerEvent: {}
+[49.485189] (-) TimerEvent: {}
+[49.590415] (-) TimerEvent: {}
+[49.695392] (-) TimerEvent: {}
+[49.805030] (-) TimerEvent: {}
+[49.911112] (-) TimerEvent: {}
+[50.016419] (-) TimerEvent: {}
+[50.121604] (-) TimerEvent: {}
+[50.225577] (-) TimerEvent: {}
+[50.329898] (-) TimerEvent: {}
+[50.434148] (-) TimerEvent: {}
+[50.538414] (-) TimerEvent: {}
+[50.642461] (-) TimerEvent: {}
+[50.746689] (-) TimerEvent: {}
+[50.853334] (-) TimerEvent: {}
+[50.959085] (-) TimerEvent: {}
+[51.063413] (-) TimerEvent: {}
+[51.168029] (-) TimerEvent: {}
+[51.272413] (-) TimerEvent: {}
+[51.377280] (-) TimerEvent: {}
+[51.482576] (-) TimerEvent: {}
+[51.588117] (-) TimerEvent: {}
+[51.692305] (-) TimerEvent: {}
+[51.798384] (-) TimerEvent: {}
+[51.904427] (-) TimerEvent: {}
+[52.010483] (-) TimerEvent: {}
+[52.113484] (-) TimerEvent: {}
+[52.219511] (-) TimerEvent: {}
+[52.324543] (-) TimerEvent: {}
+[52.428968] (-) TimerEvent: {}
+[52.533790] (-) TimerEvent: {}
+[52.640234] (-) TimerEvent: {}
+[52.744434] (-) TimerEvent: {}
+[52.849507] (-) TimerEvent: {}
+[52.952524] (-) TimerEvent: {}
+[53.055680] (-) TimerEvent: {}
+[53.158930] (-) TimerEvent: {}
+[53.261844] (-) TimerEvent: {}
+[53.366505] (-) TimerEvent: {}
+[53.471726] (-) TimerEvent: {}
+[53.576879] (-) TimerEvent: {}
+[53.682144] (-) TimerEvent: {}
+[53.784440] (-) TimerEvent: {}
+[53.887914] (-) TimerEvent: {}
+[53.991296] (-) TimerEvent: {}
+[54.096017] (-) TimerEvent: {}
+[54.197790] (-) TimerEvent: {}
+[54.300942] (-) TimerEvent: {}
+[54.403702] (-) TimerEvent: {}
+[54.508997] (-) TimerEvent: {}
+[54.613970] (-) TimerEvent: {}
+[54.718941] (-) TimerEvent: {}
+[54.824187] (-) TimerEvent: {}
+[54.926894] (-) TimerEvent: {}
+[55.031365] (-) TimerEvent: {}
+[55.137034] (-) TimerEvent: {}
+[55.243386] (-) TimerEvent: {}
+[55.346054] (-) TimerEvent: {}
+[55.447679] (-) TimerEvent: {}
+[55.549402] (-) TimerEvent: {}
+[55.651080] (-) TimerEvent: {}
+[55.752771] (-) TimerEvent: {}
+[55.854412] (-) TimerEvent: {}
+[55.956329] (-) TimerEvent: {}
+[56.058739] (-) TimerEvent: {}
+[56.161594] (-) TimerEvent: {}
+[56.263560] (-) TimerEvent: {}
+[56.365611] (-) TimerEvent: {}
+[56.468300] (-) TimerEvent: {}
+[56.569928] (-) TimerEvent: {}
+[56.671576] (-) TimerEvent: {}
+[56.773208] (-) TimerEvent: {}
+[56.874924] (-) TimerEvent: {}
+[56.945259] (camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/camera/src/cameraDesk2_test.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[56.947163] (camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/camera/src/cameraDesk2_test.cpp:158:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kargc\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[56.948529] (camera) StderrLine: {'line': b'  158 | int main(\x1b[01;35m\x1b[Kint argc\x1b[m\x1b[K, char **argv)\n'}
+[56.949938] (camera) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~~~^~~~\x1b[m\x1b[K\n'}
+[56.951223] (camera) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fu941/TDK_ros/src/camera/src/cameraDesk2_test.cpp:158:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kargv\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[56.953364] (camera) StderrLine: {'line': b'  158 | int main(int argc, \x1b[01;35m\x1b[Kchar **argv\x1b[m\x1b[K)\n'}
+[56.954721] (camera) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[56.975355] (-) TimerEvent: {}
+[57.077094] (-) TimerEvent: {}
+[57.178754] (-) TimerEvent: {}
+[57.279894] (-) TimerEvent: {}
+[57.381685] (-) TimerEvent: {}
+[57.484339] (-) TimerEvent: {}
+[57.586172] (-) TimerEvent: {}
+[57.689684] (-) TimerEvent: {}
+[57.792333] (-) TimerEvent: {}
+[57.894343] (-) TimerEvent: {}
+[57.996174] (-) TimerEvent: {}
+[58.098073] (-) TimerEvent: {}
+[58.199992] (-) TimerEvent: {}
+[58.302826] (-) TimerEvent: {}
+[58.410094] (-) TimerEvent: {}
+[58.512889] (-) TimerEvent: {}
+[58.615674] (-) TimerEvent: {}
+[58.718401] (-) TimerEvent: {}
+[58.821039] (-) TimerEvent: {}
+[58.923631] (-) TimerEvent: {}
+[59.026238] (-) TimerEvent: {}
+[59.129189] (-) TimerEvent: {}
+[59.232271] (-) TimerEvent: {}
+[59.336745] (-) TimerEvent: {}
+[59.440852] (-) TimerEvent: {}
+[59.545177] (-) TimerEvent: {}
+[59.649587] (-) TimerEvent: {}
+[59.753968] (-) TimerEvent: {}
+[59.858275] (-) TimerEvent: {}
+[59.962714] (-) TimerEvent: {}
+[60.067075] (-) TimerEvent: {}
+[60.171292] (-) TimerEvent: {}
+[60.275598] (-) TimerEvent: {}
+[60.379913] (-) TimerEvent: {}
+[60.484165] (-) TimerEvent: {}
+[60.588238] (-) TimerEvent: {}
+[60.690776] (-) TimerEvent: {}
+[60.795090] (-) TimerEvent: {}
+[60.899381] (-) TimerEvent: {}
+[61.003659] (-) TimerEvent: {}
+[61.107852] (-) TimerEvent: {}
+[61.212694] (-) TimerEvent: {}
+[61.316927] (-) TimerEvent: {}
+[61.421317] (-) TimerEvent: {}
+[61.525760] (-) TimerEvent: {}
+[61.629311] (-) TimerEvent: {}
+[61.733619] (-) TimerEvent: {}
+[61.837829] (-) TimerEvent: {}
+[61.942484] (-) TimerEvent: {}
+[62.045984] (-) TimerEvent: {}
+[62.147726] (-) TimerEvent: {}
+[62.249347] (-) TimerEvent: {}
+[62.351325] (-) TimerEvent: {}
+[62.454343] (-) TimerEvent: {}
+[62.556069] (-) TimerEvent: {}
+[62.658831] (-) TimerEvent: {}
+[62.760498] (-) TimerEvent: {}
+[62.865201] (-) TimerEvent: {}
+[62.967988] (-) TimerEvent: {}
+[63.070630] (-) TimerEvent: {}
+[63.172245] (-) TimerEvent: {}
+[63.277353] (-) TimerEvent: {}
+[63.385770] (-) TimerEvent: {}
+[63.490342] (-) TimerEvent: {}
+[63.592025] (-) TimerEvent: {}
+[63.694001] (-) TimerEvent: {}
+[63.796198] (-) TimerEvent: {}
+[63.898738] (-) TimerEvent: {}
+[64.000799] (-) TimerEvent: {}
+[64.102592] (-) TimerEvent: {}
+[64.205161] (-) TimerEvent: {}
+[64.307782] (-) TimerEvent: {}
+[64.410614] (-) TimerEvent: {}
+[64.514295] (-) TimerEvent: {}
+[64.617027] (-) TimerEvent: {}
+[64.718666] (-) TimerEvent: {}
+[64.820267] (-) TimerEvent: {}
+[64.922012] (-) TimerEvent: {}
+[65.023958] (-) TimerEvent: {}
+[65.125829] (-) TimerEvent: {}
+[65.227718] (-) TimerEvent: {}
+[65.329306] (-) TimerEvent: {}
+[65.430856] (-) TimerEvent: {}
+[65.532228] (-) TimerEvent: {}
+[65.633748] (-) TimerEvent: {}
+[65.635864] (camera) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cameraDesk2_test\x1b[0m\n'}
+[65.734149] (-) TimerEvent: {}
+[65.835447] (-) TimerEvent: {}
+[65.936443] (-) TimerEvent: {}
+[66.038455] (-) TimerEvent: {}
+[66.140046] (-) TimerEvent: {}
+[66.241922] (-) TimerEvent: {}
+[66.342909] (-) TimerEvent: {}
+[66.443934] (-) TimerEvent: {}
+[66.545179] (-) TimerEvent: {}
+[66.646188] (-) TimerEvent: {}
+[66.747073] (-) TimerEvent: {}
+[66.848123] (-) TimerEvent: {}
+[66.949796] (-) TimerEvent: {}
+[67.051198] (-) TimerEvent: {}
+[67.152848] (-) TimerEvent: {}
+[67.255301] (-) TimerEvent: {}
+[67.356682] (-) TimerEvent: {}
+[67.457795] (-) TimerEvent: {}
+[67.559153] (-) TimerEvent: {}
+[67.660671] (-) TimerEvent: {}
+[67.762379] (-) TimerEvent: {}
+[67.863743] (-) TimerEvent: {}
+[67.965519] (-) TimerEvent: {}
+[68.066801] (-) TimerEvent: {}
+[68.168328] (-) TimerEvent: {}
+[68.269700] (-) TimerEvent: {}
+[68.370648] (-) TimerEvent: {}
+[68.471550] (-) TimerEvent: {}
+[68.572742] (-) TimerEvent: {}
+[68.673722] (-) TimerEvent: {}
+[68.774598] (-) TimerEvent: {}
+[68.875502] (-) TimerEvent: {}
+[68.976652] (-) TimerEvent: {}
+[69.077553] (-) TimerEvent: {}
+[69.178326] (-) TimerEvent: {}
+[69.279209] (-) TimerEvent: {}
+[69.380503] (-) TimerEvent: {}
+[69.482177] (-) TimerEvent: {}
+[69.583739] (-) TimerEvent: {}
+[69.685433] (-) TimerEvent: {}
+[69.787078] (-) TimerEvent: {}
+[69.888699] (-) TimerEvent: {}
+[69.990381] (-) TimerEvent: {}
+[70.091681] (-) TimerEvent: {}
+[70.193206] (-) TimerEvent: {}
+[70.294578] (-) TimerEvent: {}
+[70.310571] (camera) StdoutLine: {'line': b'[100%] Built target cameraDesk2_test\n'}
+[70.394902] (-) TimerEvent: {}
+[70.412515] (camera) CommandEnded: {'returncode': 0}
+[70.418709] (camera) JobProgress: {'identifier': 'camera', 'progress': 'install'}
+[70.421565] (camera) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fu941/TDK_ros/build/camera'], 'cwd': '/home/fu941/TDK_ros/build/camera', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'fu941'), ('SSH_CLIENT', '10.84.158.195 41490 22'), ('LC_TIME', 'zh_TW.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fu941/TDK_ros/install/mainspace/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/fu941'), ('TERM_PROGRAM_VERSION', '1.102.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-ea938f10-c9e6-4d44-a20f-3e4ad9550b0a.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fu941'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fu941/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('LC_ADDRESS', 'zh_TW.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_TW.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-2f5d20b195.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_TW.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_TW.UTF-8'), ('LC_IDENTIFICATION', 'zh_TW.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/fu941/TDK_ros/build/camera'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.84.158.195 41490 10.84.158.157 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_TW.UTF-8'), ('LC_PAPER', 'zh_TW.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble')]), 'shell': False}
+[70.495224] (-) TimerEvent: {}
+[70.505768] (camera) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[70.507386] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include/\n'}
+[70.508584] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera\n'}
+[70.509665] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp\n'}
+[70.511738] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraCoffee2\n'}
+[70.517872] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2\n'}
+[70.521685] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2_test\n'}
+[70.530728] (camera) StdoutLine: {'line': b'-- Set runtime path of "/home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2_test" to ""\n'}
+[70.533898] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3\n'}
+[70.537607] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera\n'}
+[70.538926] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera\n'}
+[70.540008] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh\n'}
+[70.541141] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv\n'}
+[70.544147] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh\n'}
+[70.545467] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv\n'}
+[70.548079] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash\n'}
+[70.549339] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh\n'}
+[70.550449] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh\n'}
+[70.551535] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv\n'}
+[70.553766] (camera) StdoutLine: {'line': b'-- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv\n'}
+[70.556861] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera\n'}
+[70.558068] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake\n'}
+[70.559375] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake\n'}
+[70.560441] (camera) StdoutLine: {'line': b'-- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/package.xml\n'}
+[70.578929] (camera) CommandEnded: {'returncode': 0}
+[70.596065] (-) TimerEvent: {}
+[70.700029] (-) TimerEvent: {}
+[70.727861] (camera) JobEnded: {'identifier': 'camera', 'rc': 0}
+[70.737615] (SerialTest) JobStarted: {'identifier': 'SerialTest'}
+[70.802233] (-) TimerEvent: {}
+[70.903345] (-) TimerEvent: {}
+[71.004409] (-) TimerEvent: {}
+[71.106193] (-) TimerEvent: {}
+[71.207555] (-) TimerEvent: {}
+[71.309093] (-) TimerEvent: {}
+[71.410413] (-) TimerEvent: {}
+[71.511688] (-) TimerEvent: {}
+[71.612958] (-) TimerEvent: {}
+[71.714312] (-) TimerEvent: {}
+[71.815590] (-) TimerEvent: {}
+[71.916956] (-) TimerEvent: {}
+[72.018370] (-) TimerEvent: {}
+[72.119630] (-) TimerEvent: {}
+[72.220989] (-) TimerEvent: {}
+[72.322222] (-) TimerEvent: {}
+[72.423526] (-) TimerEvent: {}
+[72.524781] (-) TimerEvent: {}
+[72.626010] (-) TimerEvent: {}
+[72.727328] (-) TimerEvent: {}
+[72.828598] (-) TimerEvent: {}
+[72.929869] (-) TimerEvent: {}
+[73.031211] (-) TimerEvent: {}
+[73.132670] (-) TimerEvent: {}
+[73.233899] (-) TimerEvent: {}
+[73.335265] (-) TimerEvent: {}
+[73.436607] (-) TimerEvent: {}
+[73.538079] (-) TimerEvent: {}
+[73.639336] (-) TimerEvent: {}
+[73.740812] (-) TimerEvent: {}
+[73.841969] (-) TimerEvent: {}
+[73.943406] (-) TimerEvent: {}
+[74.045125] (-) TimerEvent: {}
+[74.155949] (-) TimerEvent: {}
+[74.257313] (-) TimerEvent: {}
+[74.358618] (-) TimerEvent: {}
+[74.459887] (-) TimerEvent: {}
+[74.561195] (-) TimerEvent: {}
+[74.662422] (-) TimerEvent: {}
+[74.763892] (-) TimerEvent: {}
+[74.865396] (-) TimerEvent: {}
+[74.966837] (-) TimerEvent: {}
+[75.068115] (-) TimerEvent: {}
+[75.169441] (-) TimerEvent: {}
+[75.270722] (-) TimerEvent: {}
+[75.372234] (-) TimerEvent: {}
+[75.473722] (-) TimerEvent: {}
+[75.575075] (-) TimerEvent: {}
+[75.676391] (-) TimerEvent: {}
+[75.777618] (-) TimerEvent: {}
+[75.878380] (-) TimerEvent: {}
+[75.979669] (-) TimerEvent: {}
+[76.080971] (-) TimerEvent: {}
+[76.182280] (-) TimerEvent: {}
+[76.283492] (-) TimerEvent: {}
+[76.384922] (-) TimerEvent: {}
+[76.486219] (-) TimerEvent: {}
+[76.587455] (-) TimerEvent: {}
+[76.688832] (-) TimerEvent: {}
+[76.790215] (-) TimerEvent: {}
+[76.891739] (-) TimerEvent: {}
+[76.993252] (-) TimerEvent: {}
+[77.095408] (-) TimerEvent: {}
+[77.196148] (-) TimerEvent: {}
+[77.297012] (-) TimerEvent: {}
+[77.397807] (-) TimerEvent: {}
+[77.498642] (-) TimerEvent: {}
+[77.599517] (-) TimerEvent: {}
+[77.700368] (-) TimerEvent: {}
+[77.801367] (-) TimerEvent: {}
+[77.903415] (-) TimerEvent: {}
+[77.985085] (SerialTest) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/SerialTest', 'build', '--build-base', '/home/fu941/TDK_ros/build/SerialTest/build', 'install', '--record', '/home/fu941/TDK_ros/build/SerialTest/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/fu941/TDK_ros/src/SerialTest', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'fu941', 'SSH_CLIENT': '10.84.158.195 41490 22', 'LC_TIME': 'zh_TW.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/fu941/TDK_ros/install/mainspace/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/fu941', 'TERM_PROGRAM_VERSION': '1.102.0', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-ea938f10-c9e6-4d44-a20f-3e4ad9550b0a.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'zh_TW.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'fu941', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/fu941/.vscode-server/cli/servers/Stable-cb0c47c0cfaad0757385834bd89d410c78a856c0/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fu941/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'LC_ADDRESS': 'zh_TW.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'zh_TW.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-2f5d20b195.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/mainspace:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_TW.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_TW.UTF-8', 'LC_IDENTIFICATION': 'zh_TW.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/fu941/TDK_ros/build/SerialTest', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.84.158.195 41490 10.84.158.157 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fu941/TDK_ros/build/SerialTest/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages:/home/fu941/TDK_ros/install/mainspace/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'zh_TW.UTF-8', 'LC_PAPER': 'zh_TW.UTF-8', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/mainspace'}, 'shell': False}
+[78.008241] (-) TimerEvent: {}
+[78.109695] (-) TimerEvent: {}
+[78.210996] (-) TimerEvent: {}
+[78.312283] (-) TimerEvent: {}
+[78.413599] (-) TimerEvent: {}
+[78.514921] (-) TimerEvent: {}
+[78.616244] (-) TimerEvent: {}
+[78.717751] (-) TimerEvent: {}
+[78.819012] (-) TimerEvent: {}
+[78.920402] (-) TimerEvent: {}
+[79.022220] (-) TimerEvent: {}
+[79.123494] (-) TimerEvent: {}
+[79.225114] (-) TimerEvent: {}
+[79.326374] (-) TimerEvent: {}
+[79.427559] (-) TimerEvent: {}
+[79.528842] (-) TimerEvent: {}
+[79.630138] (-) TimerEvent: {}
+[79.731379] (-) TimerEvent: {}
+[79.832691] (-) TimerEvent: {}
+[79.933905] (-) TimerEvent: {}
+[80.035108] (-) TimerEvent: {}
+[80.137436] (-) TimerEvent: {}
+[80.238703] (-) TimerEvent: {}
+[80.340120] (-) TimerEvent: {}
+[80.441337] (-) TimerEvent: {}
+[80.542129] (-) TimerEvent: {}
+[80.643714] (-) TimerEvent: {}
+[80.745046] (-) TimerEvent: {}
+[80.846273] (-) TimerEvent: {}
+[80.860173] (SerialTest) StdoutLine: {'line': b'running egg_info\n'}
+[80.866426] (SerialTest) StdoutLine: {'line': b'writing ../../build/SerialTest/SerialTest.egg-info/PKG-INFO\n'}
+[80.868917] (SerialTest) StdoutLine: {'line': b'writing dependency_links to ../../build/SerialTest/SerialTest.egg-info/dependency_links.txt\n'}
+[80.871308] (SerialTest) StdoutLine: {'line': b'writing entry points to ../../build/SerialTest/SerialTest.egg-info/entry_points.txt\n'}
+[80.873978] (SerialTest) StdoutLine: {'line': b'writing requirements to ../../build/SerialTest/SerialTest.egg-info/requires.txt\n'}
+[80.876380] (SerialTest) StdoutLine: {'line': b'writing top-level names to ../../build/SerialTest/SerialTest.egg-info/top_level.txt\n'}
+[80.898444] (SerialTest) StdoutLine: {'line': b"reading manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'\n"}
+[80.908467] (SerialTest) StdoutLine: {'line': b"writing manifest file '../../build/SerialTest/SerialTest.egg-info/SOURCES.txt'\n"}
+[80.910091] (SerialTest) StdoutLine: {'line': b'running build\n'}
+[80.911097] (SerialTest) StdoutLine: {'line': b'running build_py\n'}
+[80.913220] (SerialTest) StdoutLine: {'line': b'copying SerialTest/other_serial_node.py -> /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest\n'}
+[80.917771] (SerialTest) StdoutLine: {'line': b'running install\n'}
+[80.920716] (SerialTest) StdoutLine: {'line': b'running install_lib\n'}
+[80.928974] (SerialTest) StdoutLine: {'line': b'copying /home/fu941/TDK_ros/build/SerialTest/build/lib/SerialTest/other_serial_node.py -> /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest\n'}
+[80.938481] (SerialTest) StdoutLine: {'line': b'byte-compiling /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest/other_serial_node.py to other_serial_node.cpython-310.pyc\n'}
+[80.944286] (SerialTest) StderrLine: {'line': b'  File "/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest/other_serial_node.py", line 53\n'}
+[80.945666] (SerialTest) StderrLine: {'line': b'    elif line.startswith("ACK:"):\n'}
+[80.946843] (-) TimerEvent: {}
+[80.947643] (SerialTest) StderrLine: {'line': b'    ^^^^\n'}
+[80.949183] (SerialTest) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[80.950156] (SerialTest) StderrLine: {'line': b'\n'}
+[80.951040] (SerialTest) StdoutLine: {'line': b'running install_data\n'}
+[80.951958] (SerialTest) StdoutLine: {'line': b'running install_egg_info\n'}
+[80.965889] (SerialTest) StdoutLine: {'line': b"removing '/home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[80.970557] (SerialTest) StdoutLine: {'line': b'Copying ../../build/SerialTest/SerialTest.egg-info to /home/fu941/TDK_ros/install/SerialTest/lib/python3.10/site-packages/SerialTest-0.0.0-py3.10.egg-info\n'}
+[80.985390] (SerialTest) StdoutLine: {'line': b'running install_scripts\n'}
+[81.047127] (-) TimerEvent: {}
+[81.148515] (-) TimerEvent: {}
+[81.194719] (SerialTest) StdoutLine: {'line': b'Installing control_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest\n'}
+[81.197117] (SerialTest) StdoutLine: {'line': b'Installing motor_serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest\n'}
+[81.202966] (SerialTest) StdoutLine: {'line': b'Installing other_serial_node script to /home/fu941/TDK_ros/install/SerialTest/lib/SerialTest\n'}
+[81.204954] (SerialTest) StdoutLine: {'line': b"writing list of installed files to '/home/fu941/TDK_ros/build/SerialTest/install.log'\n"}
+[81.249043] (-) TimerEvent: {}
+[81.350991] (-) TimerEvent: {}
+[81.426864] (SerialTest) CommandEnded: {'returncode': 0}
+[81.453080] (-) TimerEvent: {}
+[81.502968] (SerialTest) JobEnded: {'identifier': 'SerialTest', 'rc': 0}
+[81.509827] (-) EventReactorShutdown: {}

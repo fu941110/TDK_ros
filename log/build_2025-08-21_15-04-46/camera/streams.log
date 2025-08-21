@@ -1,0 +1,31 @@
+[0.141s] Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[0.943s] [ 25%] Built target cameraDesk2
+[0.967s] [ 50%] Built target cameraStage3
+[1.003s] [ 75%] Built target cameraCoffee2
+[1.034s] [100%] Built target cameraDesk2_test
+[1.145s] Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
+[1.169s] Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera
+[1.243s] -- Install configuration: ""
+[1.246s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include/
+[1.247s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera
+[1.250s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/include//camera/cameraBackground.hpp
+[1.251s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraCoffee2
+[1.257s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2
+[1.262s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraDesk2_test
+[1.268s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/lib/camera/cameraStage3
+[1.273s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/package_run_dependencies/camera
+[1.280s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/parent_prefix_path/camera
+[1.284s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.sh
+[1.286s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/ament_prefix_path.dsv
+[1.288s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.sh
+[1.292s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/environment/path.dsv
+[1.294s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.bash
+[1.296s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.sh
+[1.298s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.zsh
+[1.299s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/local_setup.dsv
+[1.304s] -- Installing: /home/fu941/TDK_ros/install/camera/share/camera/package.dsv
+[1.308s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/ament_index/resource_index/packages/camera
+[1.313s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig.cmake
+[1.324s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/cmake/cameraConfig-version.cmake
+[1.327s] -- Up-to-date: /home/fu941/TDK_ros/install/camera/share/camera/package.xml
+[1.342s] Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=/home/fu941/TDK_ros/install/mainspace:/home/fu941/TDK_ros/install/camera:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera

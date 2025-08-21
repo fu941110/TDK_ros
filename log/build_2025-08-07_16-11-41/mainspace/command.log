@@ -1,0 +1,2 @@
+Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/mainspace -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace
+Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '-2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/mainspace -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/mainspace

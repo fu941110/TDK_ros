@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mainspace/msg/Coffee.msg
+// generated code does not contain a copyright notice
+
+
+module mainspace {
+  module msg {
+    struct Coffee {
+      string type;
+
+      int32 number;
+    };
+  };
+};

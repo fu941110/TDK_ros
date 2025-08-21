@@ -1,0 +1,7 @@
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:[m[K In member function ‘[01m[Kbool NavigatorNode::ArriveAtWaypoint()[m[K’:
+[01m[K/home/fu941/TDK_ros/src/mainspace/src/navigator.cpp:146:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<WayPoint>[m[K’ has no member named ‘[01m[Ktheta[m[K’
+  146 |     last_pos.theta = waypoints_.[01;31m[Ktheta[m[K;
+      |                                 [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/navigator_lib.dir/build.make:76: CMakeFiles/navigator_lib.dir/src/navigator.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:603: CMakeFiles/navigator_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
