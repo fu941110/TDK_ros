@@ -24,24 +24,4 @@ public:
 private:
     void TrackerBar();
     void updateTrackbarValues();
-
-protected:
-/*Camera port
-
-    usb-0000:00:14.0-?
-    ?: my computer: 1
-                    2               3
-
-    /dev/video6 (desk),  /dev/video12(coffee)
-
-    usb-0000:01:00.0-?
-    ?: pi:   3       1
-             4       2
-
-    /dev/video4 (desk),  /dev/video17 (coffee)        
-*/
-
-    int coffee_port_ = 17;
-    int desk_port_ = 4;
 };
-

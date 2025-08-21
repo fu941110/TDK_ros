@@ -1,6 +1,0 @@
-Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/camera -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/camera
-Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fu941/TDK_ros/src/camera -DCMAKE_INSTALL_PREFIX=/home/fu941/TDK_ros/install/camera
-Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
-Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/camera -- -j4 -l4
-Invoking command in '/home/fu941/TDK_ros/build/camera': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera
-Invoked command in '/home/fu941/TDK_ros/build/camera' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/camera

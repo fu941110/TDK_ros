@@ -1,4 +1,0 @@
-Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
-Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --build /home/fu941/TDK_ros/build/mainspace -- -j4 -l4
-Invoking command in '/home/fu941/TDK_ros/build/mainspace': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/mainspace
-Invoked command in '/home/fu941/TDK_ros/build/mainspace' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fu941/TDK_ros/install/SerialTest:/opt/ros/humble /usr/bin/cmake --install /home/fu941/TDK_ros/build/mainspace

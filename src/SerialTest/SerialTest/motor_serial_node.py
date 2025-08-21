@@ -30,7 +30,6 @@ class MotorSerialNode(Node):
 
         # 開啟串列埠
         try:
-            #　port: 下,ACM0 for 底盤
             self.ser = serial.Serial('/dev/ttyACM0', 115200, timeout=0.1)
             self.get_logger().info('Serial port opened: /dev/ttyACM0')
             self.running = True
@@ -49,7 +48,7 @@ class MotorSerialNode(Node):
                 line = self.ser.readline().decode('utf-8').strip()
                 if not line:
                     continue
-                # self.get_logger().debug(f"[UART READ] {line}")
+                self.get_logger().debug(f"[UART READ] {line}")
 
                 if line == "ACK":
                     self.ack_queue.put(True)
@@ -60,7 +59,7 @@ class MotorSerialNode(Node):
                             x, y, theta = map(float, parts)
                             msg = Position(x=x, y=y, theta=theta)
                             self.position_publisher.publish(msg)
-                            # self.get_logger().info(f"[ROS2 ⇐ STM32] {msg}")
+                            self.get_logger().info(f"[ROS2 ⇐ STM32] {msg}")
                     except ValueError:
                         self.get_logger().warn(f"[PARSE ERROR] {line}")
                 else:
