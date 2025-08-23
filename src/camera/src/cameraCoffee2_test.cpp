@@ -1,22 +1,22 @@
 #include "camera/cameraBackground.hpp"
 #include <iostream>
-#include "mainspace/msg/coffee.hpp"
-#include "mainspace/msg/command.hpp"
+// #include "mainspace/msg/coffee.hpp"
+// #include "mainspace/msg/command.hpp"
 #include <chrono>
 
 using namespace cv;
 using namespace std;
 
-class CameraCoffee2 : public Camera {
+class CameraCoffee2{
 public:
-    CameraCoffee2() : Camera(false)
+    CameraCoffee2()
     {
         using namespace std::chrono_literals;
 
-        coffee_pub_ = this->create_publisher<mainspace::msg::Coffee>("/coffee", 10);
+        // coffee_pub_ = this->create_publisher<mainspace::msg::Coffee>("/coffee", 10);
 
-        timer_ = this->create_wall_timer(
-            100ms, std::bind(&CameraCoffee2::timerCallback, this));
+        // timer_ = this->create_wall_timer(
+        //     100ms, std::bind(&CameraCoffee2::timerCallback, this));
 
         //test, 刪///////////////////////////////////////////////////////////////////////
         // mainspace::msg::Coffee coffee_msg;
@@ -30,30 +30,30 @@ public:
     }
 
     //while loop for camera
-    void timerCallback() 
-    {
-        //find camera
-        if (!cap.isOpened()) {
-            cap.open(6, CAP_V4L2);
-            if(!cap.isOpened()) return;
-        }
-        bool ret = cap.read(img);
-        if (!ret) {
-             // std::cout << "can't receive frame\n";
-            return;
-        }
+    // void timerCallback() 
+    // {
+    //     //find camera
+    //     if (!cap.isOpened()) {
+    //         cap.open(6, CAP_V4L2);
+    //         if(!cap.isOpened()) return;
+    //     }
+    //     bool ret = cap.read(img);
+    //     if (!ret) {
+    //          // std::cout << "can't receive frame\n";
+    //         return;
+    //     }
 
-        // imshow("image", img); //初始
+    //     // imshow("image", img); //初始
 
-        edge = EdgeDetect(img);
-        // imshow("Edge Detection", edge);  // 邊緣檢測結果
+    //     edge = EdgeDetect(img);
+    //     // imshow("Edge Detection", edge);  // 邊緣檢測結果
 
-        masked = layerMask(img);
-        // imshow("Masked Result", masked);　　// 層遮罩結果
+    //     masked = layerMask(img);
+    //     // imshow("Masked Result", masked);　　// 層遮罩結果
 
-        end = findFourSquare(masked);
-        // imshow("Four Square Detection", end);  // 四方形檢測結果
-    }
+    //     end = findFourSquare(masked);
+    //     // imshow("Four Square Detection", end);  // 四方形檢測結果
+    // }
 
     // LayerMask for black big rectangle
     Mat layerMask(Mat img)
@@ -102,6 +102,21 @@ public:
         }
 
         return masked;
+    }
+
+    Mat EdgeDetect(Mat img) {
+        Mat gray, edge;
+
+        cvtColor(img, gray, COLOR_BGR2GRAY);
+
+        Canny(gray, edge, 80, 150);
+
+        dilate(edge, edge, getStructuringElement(MORPH_RECT, Size(5, 5)));
+        morphologyEx(edge, edge, MORPH_OPEN, getStructuringElement(MORPH_RECT, Size(5, 5)));
+        erode(edge, edge, getStructuringElement(MORPH_RECT, Size(5, 5)));
+        adaptiveThreshold(gray, gray, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY_INV, 15, 10);
+        medianBlur(gray, gray, 5);
+        return edge;
     }
 
     //find and distinguish four square inside the rectangle
@@ -174,10 +189,10 @@ public:
                     } else {
                         coffee_type = "black";
                     }
-                    mainspace::msg::Coffee coffee_msg;
-                    coffee_msg.type = coffee_type;
-                    coffee_msg.number = coffee_number;
-                    coffee_pub_->publish(coffee_msg);
+                    // mainspace::msg::Coffee coffee_msg;
+                    // coffee_msg.type = coffee_type;
+                    // coffee_msg.number = coffee_number;
+                    // coffee_pub_->publish(coffee_msg);
 
                     printf("Coffee number: %d, Type: %s\n", coffee_number, coffee_type.c_str());
                 }
@@ -197,44 +212,44 @@ private:
     int coffee_number = 0;
     std::string coffee_type = "Unknown";
 
-    rclcpp::Publisher<mainspace::msg::Coffee>::SharedPtr coffee_pub_;
-    rclcpp::TimerBase::SharedPtr timer_;
+    // rclcpp::Publisher<mainspace::msg::Coffee>::SharedPtr coffee_pub_;
+    // rclcpp::TimerBase::SharedPtr timer_;
 
-    VideoCapture cap;
-    Mat img, edge, masked, end; 
+    // VideoCapture cap;
+    // Mat img, edge, masked, end; 
 };
 
 
 
 int main(int argc, char **argv)
 {
-    rclcpp::init(argc, argv);
-    auto camera2 = std::make_shared<CameraCoffee2>();
-    rclcpp::spin(camera2);
-    rclcpp::shutdown();
-    // CameraCoffee2 camera2;
-    // Mat img, edge, masked, end; 
-    // VideoCapture cap(6, CAP_V4L2);
-    // while (true) {
-    //     bool ret = cap.read(img);
-    //     if (!ret) {
-    //          // std::cout << "can't receive frame\n";
-    //         break;
-    //     }
-    //     imshow("image", img); //初始
+    // rclcpp::init(argc, argv);
+    // auto camera2 = std::make_shared<CameraCoffee2>();
+    // rclcpp::spin(camera2);
+    // rclcpp::shutdown();
+    CameraCoffee2 camera2;
+    Mat img, edge, masked, end; 
+    VideoCapture cap(6, CAP_V4L2);
+    while (true) {
+        bool ret = cap.read(img);
+        if (!ret) {
+             // std::cout << "can't receive frame\n";
+            break;
+        }
+        imshow("image", img); //初始
 
-    //     edge = camera2.EdgeDetect(img);
-    //     // imshow("Edge Detection", edge);  // 邊緣檢測結果
+        edge = camera2.EdgeDetect(img);
+        // imshow("Edge Detection", edge);  // 邊緣檢測結果
 
-    //     masked = camera2.layerMask(img);
-    //     // imshow("Masked Result", masked);　　// 層遮罩結果
+        masked = camera2.layerMask(img);
+        // imshow("Masked Result", masked);　　// 層遮罩結果
 
-    //     end = camera2.findFourSquare(masked);
-    //     imshow("Four Square Detection", end);  // 四方形檢測結果
+        end = camera2.findFourSquare(masked);
+        imshow("Four Square Detection", end);  // 四方形檢測結果
 
-    //     waitKey(1);
-    //     if (waitKey(1) == 27) break; // 按下 ESC
-    // }
+        waitKey(1);
+        if (waitKey(1) == 27) break; // 按下 ESC
+    }
 
 
     return 0;

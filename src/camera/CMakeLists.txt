@@ -39,6 +39,9 @@ ament_target_dependencies(cameraDesk2 OpenCV rclcpp mainspace)
 add_executable(cameraDesk2_test src/cameraDesk2_test.cpp src/cameraBackground.cpp)
 ament_target_dependencies(cameraDesk2_test OpenCV rclcpp mainspace)
 
+add_executable(cameraCoffee2_test src/cameraCoffee2_test.cpp src/cameraBackground.cpp)
+ament_target_dependencies(cameraCoffee2_test OpenCV rclcpp mainspace)
+
 install(DIRECTORY include/
   DESTINATION include/
 )
@@ -47,6 +50,7 @@ install(TARGETS
   # cameraBackground
   # cameraTest
   cameraCoffee2
+  cameraCoffee2_test
   cameraDesk2
   cameraDesk2_test
   cameraStage3

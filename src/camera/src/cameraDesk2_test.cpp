@@ -157,7 +157,7 @@ private:
 
 int main(int argc, char **argv) 
 {
-    VideoCapture cap(4, CAP_V4L2);
+    VideoCapture cap(6, CAP_V4L2);
     Mat img, edge, findout; 
     CameraDesk2 camera2;
 
