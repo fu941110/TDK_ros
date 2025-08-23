@@ -231,10 +231,10 @@ void NavigatorNode::controlLoop()
     speed_pub_->publish(cmd);
 
     // //test/////////////////////////////////////////////////////////////////////////////
-    last_position_.x += (cos(last_position_.theta)*vx - sin(last_position_.theta)*vy) * 0.1; 
-    last_position_.y += (sin(last_position_.theta)*vx + cos(last_position_.theta)*vy) * 0.1;
-    last_position_.theta += w * 0.1;
-    last_position_.theta = std::atan2(std::sin(last_position_.theta), std::cos(last_position_.theta));
+    // last_position_.x += (cos(last_position_.theta)*vx - sin(last_position_.theta)*vy) * 0.1; 
+    // last_position_.y += (sin(last_position_.theta)*vx + cos(last_position_.theta)*vy) * 0.1;
+    // last_position_.theta += w * 0.1;
+    // last_position_.theta = std::atan2(std::sin(last_position_.theta), std::cos(last_position_.theta));
     // // RCLCPP_INFO(this->get_logger(), "Current position: (%f, %f, %f)", 
     // //             last_position_.x, last_position_.y, last_position_.theta);
                 
