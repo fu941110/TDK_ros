@@ -88,14 +88,20 @@ class OtherSerialNode(Node):
         self.waiting_final_ack = False  # 重置狀態
 
         with self.lock:
+            max_retry = 10
+            retry = 0
             while not self.wait_for_ack(timeout=0.2):
                 now = time.time()
+                if retry > max_retry:
+                    self.get_logger().info(f"max retry times")
+                    return
                 if now - self.last_sent_time > self.send_interval:
                     try:
                         data = f"CMD:{msg.info}\n"
                         self.ser.write(data.encode('utf-8'))
                         self.last_sent_time = now
                         self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
+                        retry += 1
                     except Exception as e:
                         self.get_logger().error(f"Serial write error: {e}")
                         return
