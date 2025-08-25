@@ -14,7 +14,7 @@ class OtherSerialNode(Node):
         self.lock = threading.Lock()
         self.ack_queue = queue.Queue()
 
-        self.command_publisher = self.create_publisher(Command, 'commandToRos', 10)
+        self.command_publisher = self.create_publisher(Command, 'commandToROS', 10)
 
         self.subscription = self.create_subscription(
             Command,
@@ -56,15 +56,12 @@ class OtherSerialNode(Node):
                     continue
                 self.get_logger().debug(f"[UART READ] {line}")
 
-                if line == "ACK":
-                    self.ack_queue.put(True)
-                    self.waiting_final_ack = True
-                    self.final_ack_timer_start = time.time()
                 if line.startswith("ACK:"):
                     try:
                         cmd_str = line.replace("ACK:", "").strip()
                         msg = Command()
                         msg.info = cmd_str
+                        self.get_logger().info(f"[Receive info] {msg.info}")
                         self.command_publisher.publish(msg)
 
                         self.waiting_final_ack = False
@@ -72,6 +69,11 @@ class OtherSerialNode(Node):
 
                     except ValueError:
                         self.get_logger().warn(f"[PARSE ERROR] {line}")
+                elif line == "ACK":
+                    self.get_logger().info(f"Got ACK")
+                    self.ack_queue.put(True)
+                    self.waiting_final_ack = True
+                    self.final_ack_timer_start = time.time()
                 else:
                     self.get_logger().warn(f"[UNKNOWN LINE] {line}")
             except Exception as e:

@@ -70,4 +70,3 @@ cv::Mat Camera::EdgeDetect(Mat img) {
     medianBlur(gray, gray, 5);
     return edge;
 }
-

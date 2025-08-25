@@ -48,7 +48,7 @@ class MotorSerialNode(Node):
                 line = self.ser.readline().decode('utf-8').strip()
                 if not line:
                     continue
-                self.get_logger().debug(f"[UART READ] {line}")
+                # self.get_logger().debug(f"[UART READ] {line}")
 
                 if line == "ACK":
                     self.ack_queue.put(True)
@@ -59,7 +59,7 @@ class MotorSerialNode(Node):
                             x, y, theta = map(float, parts)
                             msg = Position(x=x, y=y, theta=theta)
                             self.position_publisher.publish(msg)
-                            self.get_logger().info(f"[ROS2 ⇐ STM32] {msg}")
+                            # self.get_logger().info(f"[ROS2 ⇐ STM32] {msg}")
                     except ValueError:
                         self.get_logger().warn(f"[PARSE ERROR] {line}")
                 else:
@@ -80,7 +80,7 @@ class MotorSerialNode(Node):
 
         with self.lock:  # 保護 serial.write
             try:
-                data = f"Speed:{msg.vx},{msg.vy},{msg.w}\n"
+                data = f"Speed:{msg.vx:.4f},{msg.vy:.4f},{msg.w:.4f}\n"
                 self.ser.write(data.encode('utf-8'))
                 # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
             except Exception as e:

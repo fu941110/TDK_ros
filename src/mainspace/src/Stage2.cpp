@@ -39,7 +39,7 @@ public:
 
     //command ROS -> STM
     //test  改爲“/commandToSTM“
-    command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToROS", 10);
+    command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToSTM", 10);
 
     //test, 刪///////////////////////////////////////////////////////////////
     // mainspace::msg::CsvFile csv_path;
@@ -118,7 +118,7 @@ private:
     command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
 
     //test, 寫在STM，/////////////////////////////////////////////////////////////////
-    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee_OK"));
+    // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee_OK"));
 
     //destory cameraCoffee2 node
     cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
@@ -130,7 +130,7 @@ private:
     double y = msg->y;
 
     //can put down coffee
-    if(x < -99 && x > -141 && y < -19 && y > -61) 
+    if(x < 21 && x > -21 && y < 21 && y > -21) 
     {
       //stop robot
       pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
@@ -161,7 +161,7 @@ private:
       command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
 
       //test, 寫在STM，/////////////////////////////////////////////////////////////////
-      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
+      // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
 
       //destory cameraDesk2 node
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));

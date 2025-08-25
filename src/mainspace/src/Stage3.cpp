@@ -19,7 +19,11 @@ public:
     mainspace::msg::CsvFile csv_path;
     csv_path.file = "/MainPath_csv/Stage3.csv";
       
-    csvfile_pub_->publish(csv_path);
+    for(int i=0; i<10; i++) 
+    {
+      rclcpp::sleep_for(50ms);
+      csvfile_pub_->publish(csv_path);
+    }
   }
 
 private:

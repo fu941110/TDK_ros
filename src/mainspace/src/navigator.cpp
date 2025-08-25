@@ -225,9 +225,9 @@ void NavigatorNode::controlLoop()
     w = std::clamp(w, -1.0, 1.0);
 
     mainspace::msg::ToStmSpeed cmd;
-    cmd.vx = vx;
-    cmd.vy = vy;
-    cmd.w  = w;
+    cmd.vx = vx * 0.5;
+    cmd.vy = vy * 0.5;
+    cmd.w  = w * 0.5;
     speed_pub_->publish(cmd);
 
     // //test/////////////////////////////////////////////////////////////////////////////
