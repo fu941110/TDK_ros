@@ -186,7 +186,7 @@ private:
       position_msg.x = dx;
       position_msg.y = dy;
       position_msg.theta = 9999;
-      // position_pub_->publish(position_msg);
+      position_pub_->publish(position_msg);
     }
   }
 
