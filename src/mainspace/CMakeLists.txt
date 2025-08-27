@@ -102,6 +102,10 @@ install(DIRECTORY Stage2Path_csv/
   DESTINATION share/${PROJECT_NAME}/Stage2Path_csv
 )
 
+install(DIRECTORY Stage2Path_easy_csv/
+  DESTINATION share/${PROJECT_NAME}/Stage2Path_easy_csv
+)
+
 install(DIRECTORY launch rviz
   DESTINATION share/${PROJECT_NAME}
 )

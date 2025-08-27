@@ -44,7 +44,7 @@ public:
     //test, 刪///////////////////////////////////////////////////////////////
     // mainspace::msg::CsvFile csv_path;
     // // csv_path.file = "/MainPath_csv/Stage2.csv";
-    // csv_path.file = "/Stage2Path_csv/coffee1.csv";
+    // csv_path.file = "/Stage2Path_easy_csv/coffee1.csv";
     // csvfile_pub_->publish(csv_path);
   }
 
@@ -68,19 +68,19 @@ private:
     mainspace::msg::CsvFile csv_path;
     if(number == 1)
     {
-      csv_path.file = "/Stage2Path_csv/coffee1.csv";
+      csv_path.file = "/Stage2Path_easy_csv/coffee1.csv";
     }
     else if(number == 2)
     {
-      csv_path.file = "/Stage2Path_csv/coffee2.csv";
+      csv_path.file = "/Stage2Path_easy_csv/coffee2.csv";
     }
     else if(number == 3)
     {
-      csv_path.file = "/Stage2Path_csv/coffee3.csv";
+      csv_path.file = "/Stage2Path_easy_csv/coffee3.csv";
     }  
     else if(number == 4)
     {
-      csv_path.file = "/Stage2Path_csv/coffee4.csv";
+      csv_path.file = "/Stage2Path_easy_csv/coffee4.csv";
     }
 
     csvfile_pub_->publish(csv_path);
@@ -138,22 +138,22 @@ private:
       mainspace::msg::CsvFile csv_path;
       if(number == 1)
       {
-        csv_path.file = "/Stage2Path_csv/desk1.csv";
+        csv_path.file = "/Stage2Path_easy_csv/desk1.csv";
         csvfile_pub_->publish(csv_path);
       }
       else if(number == 2)
       {
-        csv_path.file = "/Stage2Path_csv/desk2.csv";
+        csv_path.file = "/Stage2Path_easy_csv/desk2.csv";
         csvfile_pub_->publish(csv_path);
       }
       else if(number == 3)
       {
-        csv_path.file = "/Stage2Path_csv/desk3.csv";
+        csv_path.file = "/Stage2Path_easy_csv/desk3.csv";
         csvfile_pub_->publish(csv_path);
       }
       else if(number == 4)
       {
-        csv_path.file = "/Stage2Path_csv/desk4.csv";
+        csv_path.file = "/Stage2Path_easy_csv/desk4.csv";
         csvfile_pub_->publish(csv_path);
       }
 
@@ -172,7 +172,7 @@ private:
       double px = 0.0005;
       double py = 0.0005;
 
-      double dx = -(y+100)*py;
+      double dx = -y*py;
       double dy = -x*px;
 
       if(number == 2 || number == 4)

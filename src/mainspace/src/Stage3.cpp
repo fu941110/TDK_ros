@@ -21,7 +21,7 @@ public:
       
     for(int i=0; i<10; i++) 
     {
-      rclcpp::sleep_for(50ms);
+      rclcpp::sleep_for(30ms);
       csvfile_pub_->publish(csv_path);
     }
   }

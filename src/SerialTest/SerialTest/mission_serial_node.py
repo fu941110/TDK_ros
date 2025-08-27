@@ -8,9 +8,9 @@ import time
 import threading
 import queue
 
-class OtherSerialNode(Node):
+class MissionSerialNode(Node):
     def __init__(self):
-        super().__init__('other_serial_node')
+        super().__init__('mission_serial_node')
         self.lock = threading.Lock()
         self.ack_queue = queue.Queue()
 
@@ -131,7 +131,7 @@ class OtherSerialNode(Node):
 def main(args=None):
     print("[other_serial_node] Starting node...")
     rclpy.init(args=args)
-    node = OtherSerialNode()
+    node = MissionSerialNode()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

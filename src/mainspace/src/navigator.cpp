@@ -174,8 +174,8 @@ void NavigatorNode::controlLoop()
 
     double d_forward = std::cos(last_position_.theta) * dx + std::sin(last_position_.theta) * dy;
     double d_shift = -std::sin(last_position_.theta) * dx + std::cos(last_position_.theta) * dy;
-    vx = SpeedPercent(d_forward, 1, 0.4, 0.1, 1.0);
-    vy = SpeedPercent(d_shift, 1, 0.4, 0.1, 1.0);
+    vx = SpeedPercent(d_forward, 1, 0.4, 0.07, 1.0);
+    vy = SpeedPercent(d_shift, 1, 0.4, 0.07, 1.0);
     w = SpeedPercent(angle_error, 3, 1.0, 0.05, 1.0);
 
     switch (target.mode) {
@@ -224,6 +224,8 @@ void NavigatorNode::controlLoop()
     vy = std::clamp(vy, -1.0, 1.0);
     w = std::clamp(w, -1.0, 1.0);
 
+
+    
     mainspace::msg::ToStmSpeed cmd;
     cmd.vx = vx * 0.5;
     cmd.vy = vy * 0.5;
@@ -238,7 +240,7 @@ void NavigatorNode::controlLoop()
     // // RCLCPP_INFO(this->get_logger(), "Current position: (%f, %f, %f)", 
     // //             last_position_.x, last_position_.y, last_position_.theta);
                 
-    RvizShow();
+    // RvizShow();
 }
 
 void NavigatorNode::RvizShow()

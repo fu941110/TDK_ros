@@ -2,7 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
-from mainspace.msg import Position, ToStmSpeed
+from mainspace.msg import Position, ToStmSpeed, Coffee, Pause
 import serial
 import time
 import threading
@@ -17,15 +17,28 @@ class MotorSerialNode(Node):
         # Position publisher（STM32 ⇒ ROS2）
         self.position_publisher = self.create_publisher(Position, 'stm_position', 10)
 
-        # EncoderSpeed subscriber（ROS2 ⇒ STM32）
-        self.subscription = self.create_subscription(
+        self.speed_subscription = self.create_subscription(
             ToStmSpeed,
             'motor_speed',
             self.speed_callback,
             10
         )
+        self.coffee_subscription = self.create_subscription(
+            Coffee,
+            'coffee',
+            self.coffee_callback,
+            10
+        )
+        self.pause_subscription = self.create_subscription(
+            Pause,
+            'pause',
+            self.pause_callback,
+            10
+        )
         self.last_sent_time = 0.0
         self.send_interval = 0.05
+
+        self.stop_speed = 0
         
 
         # 開啟串列埠
@@ -74,6 +87,9 @@ class MotorSerialNode(Node):
             return False
 
     def speed_callback(self, msg):
+        if self.stop_speed:  # 暫停時直接略過
+            stop_speed -= 1
+            return
         now = time.time()
         if now - self.last_sent_time < self.send_interval:
             return
@@ -91,6 +107,33 @@ class MotorSerialNode(Node):
             self.last_sent_time = now
         else:
             self.get_logger().warn("Timeout waiting for ACK")
+
+    def coffee_callback(self, msg):
+        self.stop_speed = 10
+        with self.lock:  # 保護 serial.write
+            try:
+                data = f"Coffee:{msg.type},{msg.number}\n"
+                for i in range(10): 
+                    self.ser.write(data.encode('utf-8'))
+                    time.sleep(0.01)
+                # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
+            except Exception as e:
+                self.get_logger().error(f"Serial write error: {e}")
+                return
+
+    def pause_callback(self, msg):
+        self.stop_speed = 10
+        with self.lock:  # 保護 serial.write
+            try:
+                data = f"Pause:{msg.pause}\n"
+                for i in range(10): 
+                    self.ser.write(data.encode('utf-8'))
+                    time.sleep(0.01)
+                # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
+            except Exception as e:
+                self.get_logger().error(f"Serial write error: {e}")
+                return
+
             
     def destroy_node(self):
         self.running = False
