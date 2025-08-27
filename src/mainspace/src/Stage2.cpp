@@ -112,7 +112,8 @@ private:
     {
       return;
     }
-    position_pub_->publish(position_msg);
+    // now, I don't need to do this
+    // position_pub_->publish(position_msg);
     
     //to STM, take coffee
     command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
