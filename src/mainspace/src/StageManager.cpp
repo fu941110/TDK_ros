@@ -60,16 +60,25 @@ private:
     CheckPoint now_position = {message.x, message.y};
     if(isClose(now_position, Stage2_reset) && now_stage != 2) 
     {
+      Stage1_->publish(std_msgs::msg::Bool().set__data(false));
+      Stage3_->publish(std_msgs::msg::Bool().set__data(false));
+      Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 2 reset");
       now_stage = 2; 
     }
     else if(isClose(now_position, Stage3_reset) && now_stage != 3) 
     {
+      Stage1_->publish(std_msgs::msg::Bool().set__data(false));
+      Stage2_->publish(std_msgs::msg::Bool().set__data(false));
+      Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 3 reset");
       now_stage = 3; 
     }
     else if(isClose(now_position, Stage4_reset) && now_stage != 4) 
     {
+      Stage1_->publish(std_msgs::msg::Bool().set__data(false));
+      Stage2_->publish(std_msgs::msg::Bool().set__data(false));
+      Stage3_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 4 reset");
       now_stage = 4; 
     }
