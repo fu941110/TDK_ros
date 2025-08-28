@@ -131,7 +131,7 @@ private:
     double y = msg->y;
 
     //can put down coffee
-    if(x < 21 && x > -21 && y < 21 && y > -21) 
+    if(x < 101 && x > 59 && y < 21 && y > -21) 
     {
       //stop robot
       pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
@@ -174,7 +174,7 @@ private:
       double py = 0.0005;
 
       double dx = -y*py;
-      double dy = -x*px;
+      double dy = -(x-80)*px;
 
       if(number == 2 || number == 4)
       {
