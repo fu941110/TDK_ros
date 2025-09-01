@@ -55,7 +55,7 @@ private:
     //receive takecoffee OK, push new route to navigator and run
     if(msg->info == "Stage2_takecoffee_OK")
     {
-      SendRoute();
+      // SendRoute();
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
     if(msg->info == "Stage2_putdowncoffee_OK")
@@ -96,13 +96,13 @@ private:
     {
       return;
     }
-    else if(type == "black")
+    else if(type == 0)
     {
       position_msg.x = 0.0;
       position_msg.y = -0.1;
       position_msg.theta = 9999;
     } 
-    else if(type == "white")
+    else if(type == 1)
     {
       position_msg.x = 0.0;
       position_msg.y = 0.1;
@@ -159,7 +159,7 @@ private:
       }
 
       //to STM, put down coffee
-      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+      // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
 
       //test, 寫在STM，/////////////////////////////////////////////////////////////////
       // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
@@ -202,8 +202,8 @@ protected:
     rclcpp::Publisher<mainspace::msg::Pause>::SharedPtr pause_pub_;
 
     //coffee and desk info
-    std::string type;
-    int number = 1;
+    int type;
+    int number;
 };
 
 int main(int argc, char **argv)

@@ -1,6 +1,7 @@
 #include "mainspace/navigator.hpp"
 #include "mainspace/msg/coffee.hpp"
 #include "mainspace/msg/desk.hpp"
+#include "mainspace/msg/command.hpp"
 #include "std_msgs/msg/bool.hpp"
 
 //be used to change stage
@@ -29,6 +30,8 @@ public:
     //mainLoop
     control_timer_manager_ = this->create_wall_timer(
       100ms, std::bind(&StageManager::ManagerLoop, this));
+
+    command_pub_ = this->create_publisher<mainspace::msg::Command>("/command", 10);  
 
     //send Bool to control_node, then decide which node will be open or closed
     Stage2_ = this->create_publisher<std_msgs::msg::Bool>("/Stage2_start", 10);
@@ -60,7 +63,6 @@ private:
     CheckPoint now_position = {message.x, message.y};
     if(isClose(now_position, Stage2_reset) && now_stage != 2) 
     {
-      Stage1_->publish(std_msgs::msg::Bool().set__data(false));
       Stage3_->publish(std_msgs::msg::Bool().set__data(false));
       Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 2 reset");
@@ -68,7 +70,6 @@ private:
     }
     else if(isClose(now_position, Stage3_reset) && now_stage != 3) 
     {
-      Stage1_->publish(std_msgs::msg::Bool().set__data(false));
       Stage2_->publish(std_msgs::msg::Bool().set__data(false));
       Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 3 reset");
@@ -76,7 +77,6 @@ private:
     }
     else if(isClose(now_position, Stage4_reset) && now_stage != 4) 
     {
-      Stage1_->publish(std_msgs::msg::Bool().set__data(false));
       Stage2_->publish(std_msgs::msg::Bool().set__data(false));
       Stage3_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 4 reset");
@@ -97,10 +97,16 @@ private:
         Stage2_->publish(std_msgs::msg::Bool().set__data(true));
 
         //open front camera
-        if(isClose(last_position_, Stage2_coffee) && first_time_coffee) 
+        if(isClose(last_position_, Stage2_reset) && first_time_coffee) 
         {
             first_time_coffee = false;
             cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
+        }
+        if(isClose(last_position_, Stage2_coffee_2) && first_time_coffee_2) 
+        {
+            first_time_coffee_2 = false;
+            // 等等再改
+            command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
         }
         //open down camera
         else if((isClose(last_position_, Stage2_desk1) ||
@@ -151,12 +157,15 @@ protected:
 
     rclcpp::Subscription<mainspace::msg::Position>::SharedPtr last_waypoint_sub_;
 
+    rclcpp::Publisher<mainspace::msg::Command>::SharedPtr command_pub_;
+
     CheckPoint last_position_ = {0.0, 0.0};
     //set checkpoint for each
     CheckPoint Stage1_end = {6.71,1.28}; 
     CheckPoint Stage2_reset = {6.71, 0.45};
 
-    CheckPoint Stage2_coffee = {7.03, 0.45};
+    // CheckPoint Stage2_coffee = {7.03, 0.45};
+    CheckPoint Stage2_coffee_2 = {7.03, 0.6};
     CheckPoint Stage2_desk1 = {6.46, 2.09};
     CheckPoint Stage2_desk2 = {6.96, 2.09}; 
     CheckPoint Stage2_desk3 = {6.46, 2.79};
@@ -172,6 +181,7 @@ protected:
     int now_stage = 1;
     //run only once
     bool first_time_coffee = true; 
+    bool first_time_coffee_2 = true;
     bool first_time_desk = true; 
 };
 

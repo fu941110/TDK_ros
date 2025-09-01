@@ -170,16 +170,16 @@ public:
                     }
                     
                     if(color == Scalar(0, 255, 0)) {
-                        coffee_type = "white";
+                        coffee_type = 1;
                     } else {
-                        coffee_type = "black";
+                        coffee_type = 0;
                     }
                     mainspace::msg::Coffee coffee_msg;
                     coffee_msg.type = coffee_type;
                     coffee_msg.number = coffee_number;
                     coffee_pub_->publish(coffee_msg);
 
-                    printf("Coffee number: %d, Type: %s\n", coffee_number, coffee_type.c_str());
+                    // printf("Coffee number: %d, Type: %s\n", coffee_number, coffee_type);
                 }
                 polylines(output, approx, true, color, 2);
             }
@@ -195,7 +195,7 @@ private:
 
     // coffee info
     int coffee_number = 0;
-    std::string coffee_type = "Unknown";
+    int coffee_type = 0;
 
     rclcpp::Publisher<mainspace::msg::Coffee>::SharedPtr coffee_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
