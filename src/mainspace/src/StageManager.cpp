@@ -31,7 +31,7 @@ public:
     control_timer_manager_ = this->create_wall_timer(
       100ms, std::bind(&StageManager::ManagerLoop, this));
 
-    command_pub_ = this->create_publisher<mainspace::msg::Command>("/command", 10);  
+    command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToSTM", 10);  
 
     //send Bool to control_node, then decide which node will be open or closed
     Stage2_ = this->create_publisher<std_msgs::msg::Bool>("/Stage2_start", 10);
