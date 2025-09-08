@@ -13,6 +13,13 @@ class MotorSerialNode(Node):
         super().__init__('motor_serial_node')
         self.lock = threading.Lock()
         self.ack_queue = queue.Queue()
+        self.tx_queue = queue.PriorityQueue()
+
+        self.pending_cmd = None       
+        self.pending_time = 0.0       
+        self.ack_timeout = 0.3
+
+        self.timer = self.create_timer(0.05, self.timer_callback)
 
         # Position publisher（STM32 ⇒ ROS2）
         self.position_publisher = self.create_publisher(Position, 'stm_position', 10)
@@ -35,10 +42,6 @@ class MotorSerialNode(Node):
             self.pause_callback,
             10
         )
-        self.last_sent_time = 0.0
-        self.send_interval = 0.05
-
-        self.stop_speed = 0
         
 
         # 開啟串列埠
@@ -79,60 +82,49 @@ class MotorSerialNode(Node):
                     self.get_logger().warn(f"[UNKNOWN LINE] {line}")
             except Exception as e:
                 self.get_logger().error(f"UART read exception: {e}")
-                
-    def wait_for_ack(self, timeout=0.3):
-        try:
-            return self.ack_queue.get(timeout=timeout)
-        except queue.Empty:
-            return False
 
     def speed_callback(self, msg):
-        if self.stop_speed:  # 暫停時直接略過
-            stop_speed -= 1
-            return
-        now = time.time()
-        if now - self.last_sent_time < self.send_interval:
-            return
-
-        with self.lock:  # 保護 serial.write
-            try:
-                data = f"Speed:{msg.vx:.4f},{msg.vy:.4f},{msg.w:.4f}\n"
-                self.ser.write(data.encode('utf-8'))
-                # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
-            except Exception as e:
-                self.get_logger().error(f"Serial write error: {e}")
-                return
-
-        if self.wait_for_ack():
-            self.last_sent_time = now
-        else:
-            self.get_logger().warn("Timeout waiting for ACK")
+        data = f"Speed:{msg.vx:.4f},{msg.vy:.4f},{msg.w:.4f}\n"
+        self.tx_queue.put((3, data))
 
     def coffee_callback(self, msg):
-        self.stop_speed = 10
-        with self.lock:  # 保護 serial.write
-            try:
-                data = f"Coffee:{msg.type},{msg.number}\n"
-                for i in range(10): 
-                    self.ser.write(data.encode('utf-8'))
-                    time.sleep(0.01)
-                # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
-            except Exception as e:
-                self.get_logger().error(f"Serial write error: {e}")
-                return
+        data = f"Coffee:{msg.type},{msg.number}\n"
+        self.tx_queue.put((1, data))
 
     def pause_callback(self, msg):
-        self.stop_speed = 10
-        with self.lock:  # 保護 serial.write
-            try:
-                data = f"Pause:{msg.pause}\n"
-                for i in range(10): 
-                    self.ser.write(data.encode('utf-8'))
-                    time.sleep(0.01)
-                # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
-            except Exception as e:
-                self.get_logger().error(f"Serial write error: {e}")
-                return
+        data = f"Pause:{msg.pause}\n"
+        self.tx_queue.put((0, data)) 
+
+    # ----------- Timer 統一處理 UART ----------
+    def timer_callback(self):
+        now = time.time()
+        try:
+            with self.lock:
+                # --- 如果有 pending CMD，先檢查 ACK ---
+                if self.pending_cmd:
+                    if not self.ack_queue.empty():
+                        self.ack_queue.get_nowait()   
+                        self.get_logger().info("ACK received, CMD done")
+                        self.pending_cmd = None       
+                    elif now - self.pending_time > self.ack_timeout:
+                        self.ser.write(self.pending_cmd.encode('utf-8'))
+                        self.pending_time = now
+                        self.get_logger().warn(f"Resent CMD: {self.pending_cmd.strip()}")
+                    return
+
+                if not self.tx_queue.empty():
+                    priority, data = self.tx_queue.get_nowait()
+                    if data.startswith("Coffee:") or data.startswith("Pause:"):
+                        self.ser.write(data.encode('utf-8'))
+                        self.pending_cmd = data
+                        self.pending_time = now
+                        self.get_logger().info(f"Sent CMD: {data.strip()} (waiting for ACK)")
+                    else:
+                        # POS → 直接送，不等 ACK
+                        self.ser.write(data.encode('utf-8'))
+
+        except Exception as e:
+            self.get_logger().error(f"Serial write error: {e}")
 
             
     def destroy_node(self):
