@@ -163,7 +163,7 @@ protected:
 
     // CheckPoint Stage2_coffee = {7.03, 0.45};
     CheckPoint Stage2_coffee_2 = {7.03, 0.6};
-    CheckPoint Stage2_desk1 = {6.46, 2.09};
+    CheckPoint Stage2_desk = {6.46, 2.09};
     CheckPoint Stage2_end = {6.71,3.95};
     CheckPoint Stage3_reset = {6.71, 3.95};
 

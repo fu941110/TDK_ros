@@ -165,11 +165,14 @@ void NavigatorNode::controlLoop()
 
     if (waypoints_.empty() || is_paused_) 
     {
-      mainspace::msg::ToStmSpeed stop_cmd;
-      stop_cmd.vx = 0.0;
-      stop_cmd.vy = 0.0;
-      stop_cmd.w  = 0.0;
-      speed_pub_->publish(stop_cmd);
+      if(waypoints_.empty() && is_paused_)
+      {
+        mainspace::msg::ToStmSpeed stop_cmd;
+        stop_cmd.vx = 0.0;
+        stop_cmd.vy = 0.0;
+        stop_cmd.w  = 0.0;
+        speed_pub_->publish(stop_cmd);
+      }
       // RCLCPP_WARN(this->get_logger(), "No position data or waypoints available.");
       return;
     }

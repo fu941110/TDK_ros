@@ -34,7 +34,7 @@ public:
     {
         //find camera
         if (!cap.isOpened()) {
-            cap.open("/dev/cameraCoffee", CAP_V4L2);
+            cap.open(17, CAP_V4L2);
             if(!cap.isOpened()) return;
         }
         bool ret = cap.read(img);
