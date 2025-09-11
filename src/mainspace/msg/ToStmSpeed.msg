@@ -1,3 +1,3 @@
-float64 vx
-float64 vy
-float64 w
+int32 vx
+int32 vy
+int32 w

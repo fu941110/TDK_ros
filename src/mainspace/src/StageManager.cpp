@@ -66,6 +66,7 @@ private:
       Stage3_->publish(std_msgs::msg::Bool().set__data(false));
       Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 2 reset");
+      cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
       now_stage = 2; 
     }
     else if(isClose(now_position, Stage3_reset) && now_stage != 3) 
@@ -102,17 +103,13 @@ private:
             first_time_coffee = false;
             cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
         }
-        if(isClose(last_position_, Stage2_coffee_2) && first_time_coffee_2) 
+        else if(isClose(last_position_, Stage2_coffee_2) && first_time_coffee_2) 
         {
             first_time_coffee_2 = false;
-            // 等等再改
             command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
         }
         //open down camera
-        else if((isClose(last_position_, Stage2_desk1) ||
-                isClose(last_position_, Stage2_desk2) ||
-                isClose(last_position_, Stage2_desk3) ||
-                isClose(last_position_, Stage2_desk4)) && first_time_desk)   
+        else if((isClose(last_position_, Stage2_desk)) && first_time_desk)   
         {
             first_time_desk = false;
             cameraDesk2_->publish(std_msgs::msg::Bool().set__data(true));
@@ -167,9 +164,6 @@ protected:
     // CheckPoint Stage2_coffee = {7.03, 0.45};
     CheckPoint Stage2_coffee_2 = {7.03, 0.6};
     CheckPoint Stage2_desk1 = {6.46, 2.09};
-    CheckPoint Stage2_desk2 = {6.96, 2.09}; 
-    CheckPoint Stage2_desk3 = {6.46, 2.79};
-    CheckPoint Stage2_desk4 = {6.96, 2.79};
     CheckPoint Stage2_end = {6.71,3.95};
     CheckPoint Stage3_reset = {6.71, 3.95};
 

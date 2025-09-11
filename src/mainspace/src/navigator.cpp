@@ -90,11 +90,20 @@ void NavigatorNode::loadWayPoints(const std::string &filename)
 //also add a waypoint by setting theta to 9999
 void NavigatorNode::positionCallback(const mainspace::msg::Position::SharedPtr msg)
 {
-  if(!waypoints_.empty() && msg->theta > 1000) 
+  if(msg->theta > 9000)
+  {
+    mainspace::msg::ToStmSpeed temp_vel;
+    temp_vel.vx = int(msg->x);
+    temp_vel.vy = int(msg->y);
+    temp_vel.w = 0;
+    speed_pub_->publish(temp_vel);
+    return;
+  }
+  else if(!waypoints_.empty() && msg->theta > 1000) 
   {
     return;
   }
-  if(msg->theta > 1000) 
+  else if(msg->theta > 1000) 
   {
     WayPoint wp;
     wp.x = msg->x + last_position_.x;
@@ -119,7 +128,7 @@ double NavigatorNode::SpeedPercent(double distance, double k, double max_distanc
 {
     double percent = std::log1p(k * std::abs(distance)) / std::log1p(k * max_distance);
     percent = std::clamp(percent, 0.0, 1.0);
-    return (distance < 0 ? -1 : 1) * (min_speed + (max_speed - min_speed) * percent); 
+    return (distance < 0 ? -8 : 8) * (min_speed + (max_speed - min_speed) * percent); 
 }
 
 bool NavigatorNode::ArriveAtWaypoint()
@@ -220,16 +229,14 @@ void NavigatorNode::controlLoop()
       //   break;
     }
 
-    vx = std::clamp(vx, -1.0, 1.0);
-    vy = std::clamp(vy, -1.0, 1.0);
-    w = std::clamp(w, -1.0, 1.0);
-
-
+    vx = std::clamp(vx, -8.0, 8.0);
+    vy = std::clamp(vy, -8.0, 8.0);
+    w = std::clamp(w, -8.0, 8.0);
     
     mainspace::msg::ToStmSpeed cmd;
-    cmd.vx = vx * 0.5;
-    cmd.vy = vy * 0.5;
-    cmd.w  = w * 0.5;
+    cmd.vx = int(vx + (vx > 0 ? 1 : -1));
+    cmd.vy = int(vy + (vy > 0 ? 1 : -1));
+    cmd.w  = int(w + (w > 0 ? 1 : -1));
     speed_pub_->publish(cmd);
 
     // //test/////////////////////////////////////////////////////////////////////////////

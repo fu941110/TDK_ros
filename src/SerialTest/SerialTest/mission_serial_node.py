@@ -36,7 +36,16 @@ class MissionSerialNode(Node):
         # 開啟串列埠
         try:
             # port既得改
-            self.ser = serial.Serial('/dev/ttyACM1', 115200, timeout=0.1)
+            self.ser = serial.Serial(
+                '/dev/ttyACM1',
+                115200,
+                timeout=0.01,
+                rtscts=False,
+                dsrdtr=False,
+                xonxoff=False
+            )
+            ser.reset_input_buffer()   # 清掉接收端緩衝區 (RX)
+            ser.reset_output_buffer()  # 清掉發送端緩衝區 (TX)
             self.get_logger().info('Serial port opened: /dev/ttyACM1')
             self.running = True
             self.reader_thread = threading.Thread(target=self.uart_reader_thread, daemon=True)

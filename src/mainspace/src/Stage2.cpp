@@ -63,60 +63,36 @@ private:
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
   }
-  void SendRoute()
-  {
-    mainspace::msg::CsvFile csv_path;
-    if(number == 1)
-    {
-      csv_path.file = "/Stage2Path_easy_csv/coffee1.csv";
-    }
-    else if(number == 2)
-    {
-      csv_path.file = "/Stage2Path_easy_csv/coffee2.csv";
-    }
-    else if(number == 3)
-    {
-      csv_path.file = "/Stage2Path_easy_csv/coffee3.csv";
-    }  
-    else if(number == 4)
-    {
-      csv_path.file = "/Stage2Path_easy_csv/coffee4.csv";
-    }
+  // void SendRoute()
+  // {
+  //   mainspace::msg::CsvFile csv_path;
+  //   if(number == 1)
+  //   {
+  //     csv_path.file = "/Stage2Path_easy_csv/coffee1.csv";
+  //   }
+  //   else if(number == 2)
+  //   {
+  //     csv_path.file = "/Stage2Path_easy_csv/coffee2.csv";
+  //   }
+  //   else if(number == 3)
+  //   {
+  //     csv_path.file = "/Stage2Path_easy_csv/coffee3.csv";
+  //   }  
+  //   else if(number == 4)
+  //   {
+  //     csv_path.file = "/Stage2Path_easy_csv/coffee4.csv";
+  //   }
 
-    csvfile_pub_->publish(csv_path);
-  }
+  //   csvfile_pub_->publish(csv_path);
+  // }
 
   void coffeeRead(const mainspace::msg::Coffee::SharedPtr msg)
   {
     type = msg->type;
     number = msg->number;
-
-    mainspace::msg::Position position_msg;
-    if(position_msg.y != 0.0)  //only once
-    {
-      return;
-    }
-    else if(type == 0)
-    {
-      position_msg.x = 0.0;
-      position_msg.y = -0.1;
-      position_msg.theta = 9999;
-    } 
-    else if(type == 1)
-    {
-      position_msg.x = 0.0;
-      position_msg.y = 0.1;
-      position_msg.theta = 9999;
-    }
-    else
-    {
-      return;
-    }
-    // now, I don't need to do this
-    // position_pub_->publish(position_msg);
     
     //to STM, take coffee
-    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
+    // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
 
     //test, 寫在STM，/////////////////////////////////////////////////////////////////
     // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee_OK"));
@@ -130,36 +106,22 @@ private:
     double x = msg->x;
     double y = msg->y;
 
+    //test/////////////////////////////////////////////////////////////////////////////////////////////////////
+    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+
     //can put down coffee
     if(x < 101 && x > 59 && y < 21 && y > -21) 
     {
       //stop robot
+      mainspace::msg::Position position_msg;
+      position_msg.x = 0;
+      position_msg.y = 0;
+      position_msg.theta = 9999;
+      position_pub_->publish(position_msg);
       pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
 
-      mainspace::msg::CsvFile csv_path;
-      if(number == 1)
-      {
-        csv_path.file = "/Stage2Path_easy_csv/desk1.csv";
-        csvfile_pub_->publish(csv_path);
-      }
-      else if(number == 2)
-      {
-        csv_path.file = "/Stage2Path_easy_csv/desk2.csv";
-        csvfile_pub_->publish(csv_path);
-      }
-      else if(number == 3)
-      {
-        csv_path.file = "/Stage2Path_easy_csv/desk3.csv";
-        csvfile_pub_->publish(csv_path);
-      }
-      else if(number == 4)
-      {
-        csv_path.file = "/Stage2Path_easy_csv/desk4.csv";
-        csvfile_pub_->publish(csv_path);
-      }
-
       //to STM, put down coffee
-      // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+      command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
 
       //test, 寫在STM，/////////////////////////////////////////////////////////////////
       // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
@@ -170,21 +132,10 @@ private:
     //adjust position
     else 
     {
-      double px = 0.0005;
-      double py = 0.0005;
-
-      double dx = -y*py;
-      double dy = -(x-80)*px;
-
-      if(number == 2 || number == 4)
-      {
-        dx = -dx;
-        dy = -dy;
-      }
-
+      //nav will publish /stm_position speed by using these coeffcients
       mainspace::msg::Position position_msg;
-      position_msg.x = dx;
-      position_msg.y = dy;
+      position_msg.x = y < 0 ? 1.0 : -1.0;
+      position_msg.y = x < 0 ? 1.0 : -1.0;
       position_msg.theta = 9999;
       position_pub_->publish(position_msg);
     }

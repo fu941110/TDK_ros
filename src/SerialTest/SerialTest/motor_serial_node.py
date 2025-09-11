@@ -29,12 +29,12 @@ class MotorSerialNode(Node):
         # Position publisher（STM32 ⇒ ROS2）
         self.position_publisher = self.create_publisher(Position, 'stm_position', 10)
 
-        # self.speed_subscription = self.create_subscription(
-        #     ToStmSpeed,
-        #     'motor_speed',
-        #     self.speed_callback,
-        #     10
-        # )
+        self.speed_subscription = self.create_subscription(
+            ToStmSpeed,
+            'motor_speed',
+            self.speed_callback,
+            10
+        )
         self.coffee_subscription = self.create_subscription(
             Coffee,
             'coffee',
@@ -47,7 +47,6 @@ class MotorSerialNode(Node):
             self.pause_callback,
             10
         )
-        
 
         # 開啟串列埠
         try:
@@ -59,6 +58,9 @@ class MotorSerialNode(Node):
                 dsrdtr=False,
                 xonxoff=False
             )
+            ser.reset_input_buffer()   # 清掉接收端緩衝區 (RX)
+            ser.reset_output_buffer()  # 清掉發送端緩衝區 (TX)
+
             self.ser.dtr = False
             self.ser.rts = False
             self.get_logger().info('Serial port opened: /dev/ttyACM0')
@@ -98,7 +100,7 @@ class MotorSerialNode(Node):
                 self.get_logger().error(f"UART read exception: {e}")
 
     def speed_callback(self, msg):
-        data = f"V:{msg.vx:.4f} {msg.vy:.4f} {msg.w:.4f}\n"
+        data = f"V:{msg.vx} {msg.vy} {msg.w}\n"
         with self.lock:
             if self.speed_queue is None:
                 self.speed_queue = data
@@ -123,7 +125,6 @@ class MotorSerialNode(Node):
         now = time.time()
         try:
             with self.lock:
-                # --- 如果有 pending CMD，先檢查 ACK ---
                 if self.pause_queue:
                     if not self.ack_queue.empty():
                         self.ack_queue.get_nowait()   
