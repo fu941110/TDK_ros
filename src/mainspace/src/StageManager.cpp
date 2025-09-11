@@ -66,7 +66,6 @@ private:
       Stage3_->publish(std_msgs::msg::Bool().set__data(false));
       Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 2 reset");
-      cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
       now_stage = 2; 
     }
     else if(isClose(now_position, Stage3_reset) && now_stage != 3) 
@@ -88,6 +87,7 @@ private:
   {
     switch (now_stage) {
       case 1:
+        cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
         //end Stage1, start Stage2
         if(isClose(last_position_, Stage1_end)) 
         {

@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from mainspace.msg import Command
+import os, psutil
 import serial
 import time
 import threading
@@ -44,8 +45,9 @@ class MissionSerialNode(Node):
                 dsrdtr=False,
                 xonxoff=False
             )
-            ser.reset_input_buffer()   # 清掉接收端緩衝區 (RX)
-            ser.reset_output_buffer()  # 清掉發送端緩衝區 (TX)
+            self.ser.reset_input_buffer()   # 清掉接收端緩衝區 (RX)
+            self.ser.reset_output_buffer()  # 清掉發送端緩衝區 (TX)
+
             self.get_logger().info('Serial port opened: /dev/ttyACM1')
             self.running = True
             self.reader_thread = threading.Thread(target=self.uart_reader_thread, daemon=True)
@@ -120,7 +122,7 @@ class MissionSerialNode(Node):
     def check_final_ack_timeout(self):
         if self.waiting_final_ack and self.last_ros_cmd:
             elapsed = time.time() - self.final_ack_timer_start
-            if elapsed > 10.0:
+            if elapsed > 10000000.0:
                 # 超時補發
                 msg = Command()
                 msg.info = f"{self.last_ros_cmd}_OK"
@@ -138,6 +140,8 @@ class MissionSerialNode(Node):
         super().destroy_node()
             
 def main(args=None):
+    p = psutil.Process(os.getpid())
+    p.nice(-10)
     print("[other_serial_node] Starting node...")
     rclpy.init(args=args)
     node = MissionSerialNode()

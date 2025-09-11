@@ -5,6 +5,7 @@ from rclpy.executors import MultiThreadedExecutor
 from rclpy.executors import SingleThreadedExecutor
 from std_msgs.msg import String
 from mainspace.msg import Position, ToStmSpeed, Coffee, Pause
+import os, psutil
 import serial
 import time
 import threading
@@ -58,8 +59,8 @@ class MotorSerialNode(Node):
                 dsrdtr=False,
                 xonxoff=False
             )
-            ser.reset_input_buffer()   # 清掉接收端緩衝區 (RX)
-            ser.reset_output_buffer()  # 清掉發送端緩衝區 (TX)
+            self.ser.reset_input_buffer()   # 清掉接收端緩衝區 (RX)
+            self.ser.reset_output_buffer()  # 清掉發送端緩衝區 (TX)
 
             self.ser.dtr = False
             self.ser.rts = False
@@ -159,6 +160,8 @@ class MotorSerialNode(Node):
         super().destroy_node()
             
 def main(args=None):
+    p = psutil.Process(os.getpid())
+    p.nice(-10)
     print("[mission_serial_node] Starting node...")
     rclpy.init(args=args)
     node = MotorSerialNode()

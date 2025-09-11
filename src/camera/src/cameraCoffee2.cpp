@@ -160,19 +160,19 @@ public:
                     int dx = cx - center_x;
                     int dy = cy - center_y;
                     if(dx >= 0 && dy <= 0) {
-                        coffee_number = 2; // 假設咖啡杯在右上
+                        coffee_number = 3; // 假設咖啡杯在右上
                     } else if(dx <= 0 && dy <= 0) {
-                        coffee_number = 1; // 假設咖啡杯在左上
+                        coffee_number = 2; // 假設咖啡杯在左上
                     } else if(dx <= 0 && dy >= 0) {
-                        coffee_number = 3; // 假設咖啡杯在左下
+                        coffee_number = 0; // 假設咖啡杯在左下
                     } else if(dx >= 0 && dy >= 0) {
-                        coffee_number = 4; // 假設咖啡杯在右下
+                        coffee_number = 1; // 假設咖啡杯在右下
                     }
                     
                     if(color == Scalar(0, 255, 0)) {
-                        coffee_type = 1;
-                    } else {
                         coffee_type = 0;
+                    } else {
+                        coffee_type = 1;
                     }
                     mainspace::msg::Coffee coffee_msg;
                     coffee_msg.type = coffee_type;
