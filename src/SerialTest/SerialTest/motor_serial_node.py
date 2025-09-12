@@ -25,6 +25,9 @@ class MotorSerialNode(Node):
         self.pending_time = 0.0       
         self.ack_timeout = 1.0
 
+        # self.last_flush = time.time()  # 紀錄上次 flush 的時間
+        # self.flush_interval = 3.0
+
         self.timer = self.create_timer(0.1, self.timer_callback)
 
         # Position publisher（STM32 ⇒ ROS2）
@@ -124,6 +127,13 @@ class MotorSerialNode(Node):
     # ----------- Timer 統一處理 UART ----------
     def timer_callback(self):
         now = time.time()
+        # if now - self.last_flush > self.flush_interval:
+        #     try:
+        #         # self.ser.reset_output_buffer()
+        #         self.get_logger().debug("[UART] RX buffer flushed")
+        #     except Exception as e:
+        #         self.get_logger().error(f"[UART] flush failed: {e}")
+        #     self.last_flush = now
         try:
             with self.lock:
                 if self.pause_queue:
@@ -134,6 +144,7 @@ class MotorSerialNode(Node):
                     elif now - self.pending_time > self.ack_timeout:
                         self.ser.write(self.pause_queue.encode('utf-8'))
                         self.ser.flush()
+                        time.sleep(0.01)
                         self.pending_time = now
                         self.get_logger().warn(f"Resent CMD: {self.pause_queue.strip()}")
                 elif self.coffee_queue:
@@ -144,6 +155,7 @@ class MotorSerialNode(Node):
                     elif now - self.pending_time > self.ack_timeout:
                         self.ser.write(self.coffee_queue.encode('utf-8'))
                         self.ser.flush()
+                        time.sleep(0.01)
                         self.pending_time = now
                         self.get_logger().warn(f"Resent CMD: {self.coffee_queue.strip()}")
                 elif self.speed_queue:
@@ -161,7 +173,7 @@ class MotorSerialNode(Node):
             
 def main(args=None):
     p = psutil.Process(os.getpid())
-    p.nice(-10)
+    p.nice(5)
     print("[mission_serial_node] Starting node...")
     rclpy.init(args=args)
     node = MotorSerialNode()

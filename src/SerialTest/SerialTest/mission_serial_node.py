@@ -141,7 +141,7 @@ class MissionSerialNode(Node):
             
 def main(args=None):
     p = psutil.Process(os.getpid())
-    p.nice(-10)
+    p.nice(5)
     print("[other_serial_node] Starting node...")
     rclpy.init(args=args)
     node = MissionSerialNode()
