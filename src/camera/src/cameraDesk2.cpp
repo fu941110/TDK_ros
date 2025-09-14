@@ -14,7 +14,7 @@ public:
         desk_pub_ = this->create_publisher<mainspace::msg::Desk>("/desk", 10);
 
         timer_ = this->create_wall_timer(
-            300ms, std::bind(&CameraDesk2::timerCallback, this));
+            500ms, std::bind(&CameraDesk2::timerCallback, this));
 
         // mainspace::msg::Desk desk_msg;
         // desk_msg.x = 0; // 假設桌子位置

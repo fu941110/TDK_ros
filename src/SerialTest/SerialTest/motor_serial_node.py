@@ -23,12 +23,12 @@ class MotorSerialNode(Node):
 
         self.pending_cmd = None       
         self.pending_time = 0.0       
-        self.ack_timeout = 1.0
+        self.ack_timeout = 2.5
 
-        # self.last_flush = time.time()  # 紀錄上次 flush 的時間
-        # self.flush_interval = 3.0
+        self.last_flush = time.time()  # 紀錄上次 flush 的時間
+        self.flush_interval = 6.0
 
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.timer = self.create_timer(0.3, self.timer_callback)
 
         # Position publisher（STM32 ⇒ ROS2）
         self.position_publisher = self.create_publisher(Position, 'stm_position', 10)
@@ -57,7 +57,10 @@ class MotorSerialNode(Node):
             self.ser = serial.Serial(
                 '/dev/ttyACM0',
                 115200,
-                timeout=0.01,
+                bytesize=serial.EIGHTBITS,
+                parity=serial.PARITY_NONE,
+                stopbits=serial.STOPBITS_ONE,
+                timeout=0.05,
                 rtscts=False,
                 dsrdtr=False,
                 xonxoff=False
@@ -69,13 +72,17 @@ class MotorSerialNode(Node):
             self.ser.rts = False
             self.get_logger().info('Serial port opened: /dev/ttyACM0')
             self.running = True
+
             self.reader_thread = threading.Thread(target=self.uart_reader_thread, daemon=True)
             self.reader_thread.start()
+
+            # self.tx_stop = threading.Event()
+            # self.tx_thread = threading.Thread(target=self.tx_worker, daemon=True)
+            # self.tx_thread.start()
+
         except serial.SerialException as e:
             self.get_logger().error(f"Could not open serial port: {e}")
             return
-
-        # self.timer = self.create_timer(0.01, self.timer_callback)
         
         
     def uart_reader_thread(self):
@@ -105,21 +112,24 @@ class MotorSerialNode(Node):
 
     def speed_callback(self, msg):
         data = f"V:{msg.vx} {msg.vy} {msg.w}\n"
-        with self.lock:
+        # with self.lock:
+        if True:
             if self.speed_queue is None:
                 self.speed_queue = data
                 self.pending_time = 0
 
     def coffee_callback(self, msg):
         data = f"C:{4 * (msg.type) + msg.number}\n"
-        with self.lock:
+        # with self.lock:
+        if True:
             if self.coffee_queue is None:
                 self.coffee_queue = data
                 self.pending_time = 0
 
     def pause_callback(self, msg):
         data = f"P:{int(msg.pause)}\n"
-        with self.lock:
+        # with self.lock:
+        if True:
             if self.pause_queue is None:
                 self.pause_queue = data
                 self.pending_time = 0
@@ -127,13 +137,13 @@ class MotorSerialNode(Node):
     # ----------- Timer 統一處理 UART ----------
     def timer_callback(self):
         now = time.time()
-        # if now - self.last_flush > self.flush_interval:
-        #     try:
-        #         # self.ser.reset_output_buffer()
-        #         self.get_logger().debug("[UART] RX buffer flushed")
-        #     except Exception as e:
-        #         self.get_logger().error(f"[UART] flush failed: {e}")
-        #     self.last_flush = now
+        if now - self.last_flush > self.flush_interval:
+            try:
+                # self.ser.reset_output_buffer()
+                self.get_logger().debug("[UART] RX buffer flushed")
+            except Exception as e:
+                self.get_logger().error(f"[UART] flush failed: {e}")
+            self.last_flush = now
         try:
             with self.lock:
                 if self.pause_queue:
@@ -143,10 +153,11 @@ class MotorSerialNode(Node):
                         self.pause_queue = None
                     elif now - self.pending_time > self.ack_timeout:
                         self.ser.write(self.pause_queue.encode('utf-8'))
-                        self.ser.flush()
-                        time.sleep(0.01)
+                        # self.ser.flush()
+                        # time.sleep(0.01)
                         self.pending_time = now
-                        self.get_logger().warn(f"Resent CMD: {self.pause_queue.strip()}")
+                        # self.get_logger().warn(f"Resent CMD: {self.pause_queue.strip()}")
+                        self.ser.flush()
                 elif self.coffee_queue:
                     if not self.ack_queue.empty():
                         self.ack_queue.get_nowait()   
@@ -154,16 +165,54 @@ class MotorSerialNode(Node):
                         self.coffee_queue = None
                     elif now - self.pending_time > self.ack_timeout:
                         self.ser.write(self.coffee_queue.encode('utf-8'))
-                        self.ser.flush()
-                        time.sleep(0.01)
+                        # self.ser.flush()
+                        # time.sleep(0.01)
                         self.pending_time = now
-                        self.get_logger().warn(f"Resent CMD: {self.coffee_queue.strip()}")
+                        # self.get_logger().warn(f"Resent CMD: {self.coffee_queue.strip()}")
+                        self.ser.flush()
                 elif self.speed_queue:
                     self.ser.write(self.speed_queue.encode('utf-8'))
                     self.ser.flush()
-
         except Exception as e:
             self.get_logger().error(f"Serial write error: {e}")
+
+    # def tx_worker(self):
+    #     while not self.tx_stop.is_set():
+    #         now = time.time()
+    #         with self.lock:
+    #             if self.pause_queue:
+    #                 if not self.ack_queue.empty():
+    #                     self.ack_queue.get_nowait()
+    #                     self.get_logger().info("ACK received, CMD done")
+    #                     self.pause_queue = None
+    #                 elif now - self.pending_time > self.ack_timeout:
+    #                     self._send(self.pause_queue)
+    #                     self.pending_time = now
+    #                     self.get_logger().warn(f"Resent CMD: {self.pause_queue.strip()}")
+
+    #             elif self.coffee_queue:
+    #                 if not self.ack_queue.empty():
+    #                     self.ack_queue.get_nowait()
+    #                     self.get_logger().info("ACK received, CMD done")
+    #                     self.coffee_queue = None
+    #                 elif now - self.pending_time > self.ack_timeout:
+    #                     self._send(self.coffee_queue)
+    #                     self.pending_time = now
+    #                     self.get_logger().warn(f"Resent CMD: {self.coffee_queue.strip()}")
+
+    #             elif self.speed_queue:
+    #                 self._send(self.speed_queue)
+
+    #         time.sleep(0.01)  # 避免 busy-loop
+
+    # # ---------------- Helper ----------------
+    # def _send(self, data: str):
+    #     try:
+    #         self.ser.write(data.encode("utf-8"))
+    #         self.ser.flush()
+    #         time.sleep(0.005)  # 小延遲避免拼包
+    #     except Exception as e:
+    #         self.get_logger().error(f"[UART] write failed: {e}")
             
     def destroy_node(self):
         self.running = False

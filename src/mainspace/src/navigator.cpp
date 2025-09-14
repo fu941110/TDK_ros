@@ -31,7 +31,7 @@ NavigatorNode::NavigatorNode(bool init)
     
     //mainLoop timer
     control_timer_ = this->create_wall_timer(
-      100ms, std::bind(&NavigatorNode::controlLoop, this));
+      250ms, std::bind(&NavigatorNode::controlLoop, this));
 
     //test///////////////////////////////////////////////////////////////
     csv_path = ament_index_cpp::get_package_share_directory("mainspace") + "/MainPath_csv/Stage2.csv";

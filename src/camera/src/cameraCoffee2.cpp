@@ -16,7 +16,7 @@ public:
         coffee_pub_ = this->create_publisher<mainspace::msg::Coffee>("/coffee", 10);
 
         timer_ = this->create_wall_timer(
-            100ms, std::bind(&CameraCoffee2::timerCallback, this));
+            500ms, std::bind(&CameraCoffee2::timerCallback, this));
 
         //test, 刪///////////////////////////////////////////////////////////////////////
         // mainspace::msg::Coffee coffee_msg;

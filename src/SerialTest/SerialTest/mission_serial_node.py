@@ -24,7 +24,7 @@ class MissionSerialNode(Node):
             10
         )
         self.last_sent_time = 0.0
-        self.send_interval = 0.3
+        self.send_interval = 3.0
         self.running = True
 
         # 用來保存上一筆 ROS2 指令，與其超時檢查用
@@ -32,7 +32,7 @@ class MissionSerialNode(Node):
         self.waiting_final_ack = False
         self.final_ack_timer_start = 0.0
 
-        self.create_timer(0.5, self.check_final_ack_timeout)
+        self.create_timer(0.1, self.check_final_ack_timeout)
 
         # 開啟串列埠
         try:
@@ -40,7 +40,10 @@ class MissionSerialNode(Node):
             self.ser = serial.Serial(
                 '/dev/ttyACM1',
                 115200,
-                timeout=0.01,
+                bytesize=serial.EIGHTBITS,
+                parity=serial.PARITY_NONE,
+                stopbits=serial.STOPBITS_ONE,
+                timeout=0.1,
                 rtscts=False,
                 dsrdtr=False,
                 xonxoff=False
@@ -101,7 +104,7 @@ class MissionSerialNode(Node):
         self.waiting_final_ack = False  # 重置狀態
 
         with self.lock:
-            max_retry = 10
+            max_retry = 3
             retry = 0
             while not self.wait_for_ack(timeout=0.2):
                 now = time.time()
@@ -113,8 +116,9 @@ class MissionSerialNode(Node):
                         data = f"CMD:{msg.info}\n"
                         self.ser.write(data.encode('utf-8'))
                         self.last_sent_time = now
-                        self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
+                        # self.get_logger().info(f"[ROS2 ⇒ STM32] Sent: {data.strip()}")
                         retry += 1
+                        self.ser.flush()
                     except Exception as e:
                         self.get_logger().error(f"Serial write error: {e}")
                         return
