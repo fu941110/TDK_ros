@@ -29,6 +29,13 @@ ls /dev/video*
 - `about uart`
   
 
+source install/setup.bash
 
+ls /dev/ttyACM*
+
+stty -F /dev/ttyACM0
+setserial /dev/ttyACM0 low_latency
+stty -F /dev/ttyACM1
+setserial /dev/ttyACM1 low_latency
 
 
