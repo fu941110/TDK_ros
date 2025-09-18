@@ -5,10 +5,10 @@ read the following details to know how to run code
 ## ros2 environment
 
 ```bash
-//run once each terminal
+#run once each terminal
 source install/setup.bash
 
-//if you change the coding content
+#if you change the coding content
 colcon build 
 ```
 
@@ -18,7 +18,7 @@ colcon build
 - if the tunnel path is incorrect, unplug all and retry
 
 ```bash
-//run to inspect when you unplug stm or camera
+#run to inspect when you unplug stm or camera
 ls /dev/ttyACM*
 ls /dev/video*
 ```
@@ -31,19 +31,28 @@ ls /dev/video*
 ## about uart and pi system
 
 ```bash
-//run once
+#run once
 stty -F /dev/ttyACM0
 setserial /dev/ttyACM0 low_latency
 stty -F /dev/ttyACM1
 setserial /dev/ttyACM1 low_latency
 
-//run once
+#run once
 systemctl status motor_serial_node.service
 systemctl status mission_serial_node.service
 
-//run once if the service is active
+#run once if the service is active
 systemctl stop motor_serial_node.service
 systemctl stop mission_serial_node.service
+```
+## before launch
+
+- `inspect node`
+```bash
+ros2 node list
+
+#run if there is any node exist
+ros2 
 ```
 
 ## launch
@@ -65,17 +74,7 @@ ros2 launch mainspace mainNodes.launch.py
 ```bash
 ros2 topic echo /topic_name
 ros2 topic echo /coffee
-//we usually watch coffee
+#we usually watch coffee
 ```
-- ``
-```bash
-ros2 launch mainspace mainNodes.launch.py
-```
-- `launch`
-```bash
-ros2 launch mainspace mainNodes.launch.py
-```
-
-
 
 
