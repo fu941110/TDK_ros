@@ -48,14 +48,33 @@ systemctl stop mission_serial_node.service
 
 ## launch
 
+- if there is any [ERROR] on terminal, inspect usb device tunnel
+
+- `launch`
 ```bash
 ros2 launch mainspace mainNodes.launch.py
 ```
-- if there is any [ERROR] on terminal, inspect usb device tunnel
-- else continue
+- some info will be shown on this termianl, [INFO], or [WARN] 
+- you can also open another terminal to watch somthing
+- `topic` - track if message is sent
+    - /stm_position
+    - /commandToSTM
+    - /commandToROS
+    - /pause
+    - /coffee  -> coffeecolor, coffeedesk
 ```bash
-
-
+ros2 topic echo /topic_name
+ros2 topic echo /coffee
+//we usually watch coffee
+```
+- ``
+```bash
+ros2 launch mainspace mainNodes.launch.py
+```
+- `launch`
+```bash
+ros2 launch mainspace mainNodes.launch.py
+```
 
 
 
