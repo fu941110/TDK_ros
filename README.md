@@ -20,13 +20,14 @@ colcon build
 ```bash
 //run to inspect when you unplug stm or camera
 ls /dev/ttyACM*
-//stm wheel: /dev/ttyACM0
-//stm tasks: /dev/ttyACM1
 
 ls /dev/video*
-//camera for coffee card: /dev/video17
-//camera for desk: /dev/video4
 ```
+
+  stm wheel: /dev/ttyACM0
+  stm tasks: /dev/ttyACM1
+  camera for coffee card: /dev/video17
+  camera for desk: /dev/video4
 
 ## about uart and pi system
 
