@@ -20,7 +20,6 @@ colcon build
 ```bash
 //run to inspect when you unplug stm or camera
 ls /dev/ttyACM*
-
 ls /dev/video*
 ```
 - tunnel 
@@ -32,15 +31,32 @@ ls /dev/video*
 ## about uart and pi system
 
 ```bash
+//run once
 stty -F /dev/ttyACM0
 setserial /dev/ttyACM0 low_latency
 stty -F /dev/ttyACM1
 setserial /dev/ttyACM1 low_latency
 
+//run once
 systemctl status motor_serial_node.service
 systemctl status mission_serial_node.service
-//if
 
+//run once if the service is active
+systemctl stop motor_serial_node.service
+systemctl stop mission_serial_node.service
 ```
+
+## launch
+
+```bash
+ros2 launch mainspace mainNodes.launch.py
+```
+- if there is any [ERROR] on terminal, inspect usb device tunnel
+- else continue
+```bash
+
+
+
+
 
 
