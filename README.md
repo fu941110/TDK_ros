@@ -2,40 +2,44 @@
 
 read the following details to know how to run code
 
-## Setup
-
-- `ros2 environment`
+## ros2 environment
 
 ```bash
+//run once each terminal
 source install/setup.bash
-colcon build   //if you change the coding content
+
+//if you change the coding content
+colcon build 
 ```
 
-- `usb device` - find stm and camera tunnel
-  - connect from bottom to up
-  - there are many tunnel for camera, you just need to find if the target tunnel is exist
-  - if the tunnel path is incorrect, unplug all and retry
+## usb device - find stm and camera tunnel
+- connect from bottom to up
+- there are many tunnel for camera, you just need to find if the target tunnel is exist
+- if the tunnel path is incorrect, unplug all and retry
 
 ```bash
+//run to inspect when you unplug stm or camera
 ls /dev/ttyACM*
-//stm for wheel: /dev/ttyACM0
-//stm for tasks: /dev/ttyACM1
+//stm wheel: /dev/ttyACM0
+//stm tasks: /dev/ttyACM1
 
 ls /dev/video*
 //camera for coffee card: /dev/video17
 //camera for desk: /dev/video4
 ```
 
-- `about uart`
-  
+## about uart and pi system
 
-source install/setup.bash
-
-ls /dev/ttyACM*
-
+```bash
 stty -F /dev/ttyACM0
 setserial /dev/ttyACM0 low_latency
 stty -F /dev/ttyACM1
 setserial /dev/ttyACM1 low_latency
+
+systemctl status motor_serial_node.service
+systemctl status mission_serial_node.service
+//if
+
+```
 
 
