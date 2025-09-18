@@ -24,10 +24,10 @@ ls /dev/ttyACM*
 ls /dev/video*
 ```
 
-  stm wheel: /dev/ttyACM0
-  stm tasks: /dev/ttyACM1
-  camera for coffee card: /dev/video17
-  camera for desk: /dev/video4
+  - stm wheel: /dev/ttyACM0
+  - stm tasks: /dev/ttyACM1
+  - camera for coffee card: /dev/video17
+  - camera for desk: /dev/video4
 
 ## about uart and pi system
 
