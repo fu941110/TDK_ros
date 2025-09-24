@@ -53,12 +53,12 @@ private:
   void CommandCallBack(const mainspace::msg::Command::SharedPtr msg)
   {
     //receive takecoffee OK, push new route to navigator and run
-    if(msg->info == "Stage2_takecoffee_OK")
+    if(msg->info == "S2_1_OK")
     {
       // SendRoute();
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
-    if(msg->info == "Stage2_putdowncoffee_OK")
+    if(msg->info == "S2_2_OK")
     {
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
@@ -107,38 +107,38 @@ private:
     double y = msg->y;
 
     //test/////////////////////////////////////////////////////////////////////////////////////////////////////
-    command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+    command_pub_->publish(mainspace::msg::Command().set__info("S2_2"));
 
     //can put down coffee
-    if(x < 101 && x > 59 && y < 21 && y > -21) 
-    {
-      //stop robot
-      mainspace::msg::Position position_msg;
-      position_msg.x = 0;
-      position_msg.y = 0;
-      position_msg.theta = 9999;
-      position_pub_->publish(position_msg);
-      // pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
+    // if(x < 101 && x > 59 && y < 21 && y > -21) 
+    // {
+    //   //stop robot
+    //   mainspace::msg::Position position_msg;
+    //   position_msg.x = 0;
+    //   position_msg.y = 0;
+    //   position_msg.theta = 9999;
+    //   position_pub_->publish(position_msg);
+    //   // pause_pub_->publish(mainspace::msg::Pause().set__pause(true));
 
-      //to STM, put down coffee
-      // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
+    //   //to STM, put down coffee
+    //   // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee"));
 
-      //test, 寫在STM，/////////////////////////////////////////////////////////////////
-      // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
+    //   //test, 寫在STM，/////////////////////////////////////////////////////////////////
+    //   // command_pub_->publish(mainspace::msg::Command().set__info("Stage2_putdowncoffee_OK"));
 
-      //destory cameraDesk2 node
-      cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
-    } 
-    //adjust position
-    else 
-    {
-      //nav will publish /stm_position speed by using these coeffcients
-      mainspace::msg::Position position_msg;
-      position_msg.x = y < 0 ? 1.0 : -1.0;
-      position_msg.y = x < 0 ? 1.0 : -1.0;
-      position_msg.theta = 9999;
-      position_pub_->publish(position_msg);
-    }
+    //   //destory cameraDesk2 node
+    //   cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
+    // } 
+    // //adjust position
+    // else 
+    // {
+    //   //nav will publish /stm_position speed by using these coeffcients
+    //   mainspace::msg::Position position_msg;
+    //   position_msg.x = y < 0 ? 1.0 : -1.0;
+    //   position_msg.y = x < 0 ? 1.0 : -1.0;
+    //   position_msg.theta = 9999;
+    //   position_pub_->publish(position_msg);
+    // }
 
     cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
   }

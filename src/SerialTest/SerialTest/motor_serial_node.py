@@ -119,7 +119,7 @@ class MotorSerialNode(Node):
                 self.pending_time = 0
 
     def coffee_callback(self, msg):
-        data = f"C:{4 * (msg.type) + msg.number}\n"
+        data = f"C{4 * (msg.type) + msg.number}\n"
         # with self.lock:
         if True:
             if self.coffee_queue is None:
@@ -127,7 +127,7 @@ class MotorSerialNode(Node):
                 self.pending_time = 0
 
     def pause_callback(self, msg):
-        data = f"P:{int(msg.pause)}\n"
+        data = f"P{int(msg.pause)}\n"
         # with self.lock:
         if True:
             if self.pause_queue is None:
@@ -156,7 +156,7 @@ class MotorSerialNode(Node):
                         # self.ser.flush()
                         # time.sleep(0.01)
                         self.pending_time = now
-                        # self.get_logger().warn(f"Resent CMD: {self.pause_queue.strip()}")
+                        self.get_logger().warn(f"Resent CMD: {self.pause_queue.strip()}")
                         self.ser.flush()
                 elif self.coffee_queue:
                     if not self.ack_queue.empty():
@@ -168,7 +168,7 @@ class MotorSerialNode(Node):
                         # self.ser.flush()
                         # time.sleep(0.01)
                         self.pending_time = now
-                        # self.get_logger().warn(f"Resent CMD: {self.coffee_queue.strip()}")
+                        self.get_logger().warn(f"Resent CMD: {self.coffee_queue.strip()}")
                         self.ser.flush()
                 elif self.speed_queue:
                     self.ser.write(self.speed_queue.encode('utf-8'))

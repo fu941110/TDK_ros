@@ -106,7 +106,7 @@ private:
         else if(isClose(last_position_, Stage2_coffee_2) && first_time_coffee_2) 
         {
             first_time_coffee_2 = false;
-            command_pub_->publish(mainspace::msg::Command().set__info("Stage2_takecoffee"));
+            command_pub_->publish(mainspace::msg::Command().set__info("S2_1"));
         }
         //open down camera
         else if((isClose(last_position_, Stage2_desk)) && first_time_desk)   
