@@ -1,0 +1,2 @@
+x,y,theta,mode,radius        #mode: {mix, arc, shift_src}
+6.46,2.79,180,1,0
