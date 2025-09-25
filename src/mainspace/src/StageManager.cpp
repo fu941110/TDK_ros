@@ -70,9 +70,9 @@ private:
 
       cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
-      first_time_coffee = false;
-      first_time_coffee_2 = false;
-      first_time_desk = false;
+      first_time_coffee = true;
+      first_time_coffee_2 = true;
+      first_time_desk = true;
     }
     else if(isClose(now_position, Stage3_reset)) 
     {
@@ -88,12 +88,14 @@ private:
       RCLCPP_WARN(this->get_logger(), "Stage 4 reset");
       now_stage = 4; 
     }
+    //stage5, wait for writing something 
+    
   }
   void ManagerLoop()
   {
     switch (now_stage) {
       case 1:
-        cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
+        // cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
         //end Stage1, start Stage2
         if(isClose(last_position_, Stage1_end)) 
         {

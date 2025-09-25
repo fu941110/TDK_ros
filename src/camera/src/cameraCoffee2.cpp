@@ -132,7 +132,7 @@ public:
         for (const auto& contour : contours) {
             double area = contourArea(contour);
             // printf("Area: %f\n", area);
-            if (area < 3500 || area > 80000) continue; 
+            if (area < 5000 || area > 80000) continue; 
 
             vector<Point> approx;
             approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
@@ -145,7 +145,7 @@ public:
 
                 // 檢查中心點的像素值是否為黑色（近似判斷）
                 Vec3b pixel = masked.at<Vec3b>(cy, cx);
-                bool isBlack = (pixel[0] < 60 || pixel[1] < 60 || pixel[2] < 60); // BGR 都接近 0
+                bool isBlack = (pixel[0] < 50 || pixel[1] < 50 || pixel[2] < 50); // BGR 都接近 0
 
                 Scalar color = isBlack ? Scalar(255, 0, 0) : Scalar(0, 0, 255); // 藍色 or 紅色
 
@@ -160,7 +160,7 @@ public:
                     double totalColor = meanColor[0] + meanColor[1] + meanColor[2];
 
                     // 閾值可依需求調整，這裡設定為 120*3 = 360
-                    color = (totalColor < 240) ? Scalar(0, 255, 0) : Scalar(0, 0, 255);
+                    color = (totalColor < 200) ? Scalar(0, 255, 0) : Scalar(0, 0, 255);
                 }
                 if(color != Scalar(0, 0, 255)) 
                 {
