@@ -57,14 +57,6 @@ setserial /dev/ttyACM0 low_latency
 stty -F /dev/ttyACM1
 setserial /dev/ttyACM1 low_latency
 
-# run once
-systemctl status motor_serial_node.service
-systemctl status mission_serial_node.service
-
-# run once if the service is active
-systemctl stop motor_serial_node.service
-systemctl stop mission_serial_node.service
-```
 ## before launch
 
 - you should do this every time before launch
