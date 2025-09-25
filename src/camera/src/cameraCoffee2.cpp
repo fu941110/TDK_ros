@@ -62,26 +62,33 @@ public:
         vector<vector<Point>> contours;
         findContours(edge, contours, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
-        double maxArea = 0;
+        // double maxArea = 0;
         vector<Point> bestContour;
 
-        for (const auto& contour : contours) {
-            double area = contourArea(contour);
-            if (area < 30000) continue;  // 過濾太小的雜訊
+        // for (const auto& contour : contours) {
+        //     double area = contourArea(contour);
+        //     if (area < 30000) continue;  // 過濾太小的雜訊
 
-            vector<Point> approx;
-            approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
+        //     vector<Point> approx;
+        //     approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
 
-            if (approx.size() == 4 && isContourConvex(approx)) {
-                if (area > maxArea) {
-                    maxArea = area;
-                    bestContour = approx;
-                    Moments m = moments(approx);
-                    center_x = static_cast<int>(m.m10 / m.m00);
-                    center_y = static_cast<int>(m.m01 / m.m00);
-                }
-            }
-        }
+        //     if (approx.size() == 4 && isContourConvex(approx)) {
+        //         if (area > maxArea) {
+        //             maxArea = area;
+        //             bestContour = approx;
+        //             Moments m = moments(approx);
+        //             center_x = static_cast<int>(m.m10 / m.m00);
+        //             center_y = static_cast<int>(m.m01 / m.m00);
+        //         }
+        //     }
+        // }
+
+        center_x = edge.cols / 2;
+        center_y = edge.rows / 2;
+        bestContour.push_back(Point(edge.cols*0.1, 0));                     // 左上
+        bestContour.push_back(Point(edge.cols*0.9 - 1, 0));      // 右上
+        bestContour.push_back(Point(edge.cols*0.9 - 1, edge.rows - 1)); // 右下
+        bestContour.push_back(Point(edge.cols*0.1, edge.rows - 1));      // 左下
 
         Mat output = img.clone();
         if (!bestContour.empty()) {
@@ -125,7 +132,7 @@ public:
         for (const auto& contour : contours) {
             double area = contourArea(contour);
             // printf("Area: %f\n", area);
-            if (area < 1500 || area > 80000) continue; 
+            if (area < 3500 || area > 80000) continue; 
 
             vector<Point> approx;
             approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
@@ -138,7 +145,7 @@ public:
 
                 // 檢查中心點的像素值是否為黑色（近似判斷）
                 Vec3b pixel = masked.at<Vec3b>(cy, cx);
-                bool isBlack = (pixel[0] < 100 || pixel[1] < 100 || pixel[2] < 100); // BGR 都接近 0
+                bool isBlack = (pixel[0] < 60 || pixel[1] < 60 || pixel[2] < 60); // BGR 都接近 0
 
                 Scalar color = isBlack ? Scalar(255, 0, 0) : Scalar(0, 0, 255); // 藍色 or 紅色
 
@@ -153,7 +160,7 @@ public:
                     double totalColor = meanColor[0] + meanColor[1] + meanColor[2];
 
                     // 閾值可依需求調整，這裡設定為 120*3 = 360
-                    color = (totalColor < 360) ? Scalar(0, 255, 0) : Scalar(0, 0, 255);
+                    color = (totalColor < 240) ? Scalar(0, 255, 0) : Scalar(0, 0, 255);
                 }
                 if(color != Scalar(0, 0, 255)) 
                 {

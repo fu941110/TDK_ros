@@ -33,12 +33,12 @@ class MotorSerialNode(Node):
         # Position publisher（STM32 ⇒ ROS2）
         self.position_publisher = self.create_publisher(Position, 'stm_position', 10)
 
-        self.speed_subscription = self.create_subscription(
-            ToStmSpeed,
-            'motor_speed',
-            self.speed_callback,
-            10
-        )
+        # self.speed_subscription = self.create_subscription(
+        #     ToStmSpeed,
+        #     'motor_speed',
+        #     self.speed_callback,
+        #     10
+        # )
         self.coffee_subscription = self.create_subscription(
             Coffee,
             'coffee',
@@ -60,7 +60,7 @@ class MotorSerialNode(Node):
                 bytesize=serial.EIGHTBITS,
                 parity=serial.PARITY_NONE,
                 stopbits=serial.STOPBITS_ONE,
-                timeout=0.05,
+                timeout=0.03,
                 rtscts=False,
                 dsrdtr=False,
                 xonxoff=False
@@ -110,13 +110,13 @@ class MotorSerialNode(Node):
             except Exception as e:
                 self.get_logger().error(f"UART read exception: {e}")
 
-    def speed_callback(self, msg):
-        data = f"V:{msg.vx} {msg.vy} {msg.w}\n"
-        # with self.lock:
-        if True:
-            if self.speed_queue is None:
-                self.speed_queue = data
-                self.pending_time = 0
+    # def speed_callback(self, msg):
+    #     data = f"V:{msg.vx} {msg.vy} {msg.w}\n"
+    #     # with self.lock:
+    #     if True:
+    #         if self.speed_queue is None:
+    #             self.speed_queue = data
+    #             self.pending_time = 0
 
     def coffee_callback(self, msg):
         data = f"C{4 * (msg.type) + msg.number}\n"

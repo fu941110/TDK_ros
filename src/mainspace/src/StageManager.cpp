@@ -61,21 +61,27 @@ private:
   {
     auto message = *msg;
     CheckPoint now_position = {message.x, message.y};
-    if(isClose(now_position, Stage2_reset) && now_stage != 2) 
+    if(isClose(now_position, Stage2_reset)) 
     {
       Stage3_->publish(std_msgs::msg::Bool().set__data(false));
       Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 2 reset");
       now_stage = 2; 
+
+      cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
+      cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
+      first_time_coffee = false;
+      first_time_coffee_2 = false;
+      first_time_desk = false;
     }
-    else if(isClose(now_position, Stage3_reset) && now_stage != 3) 
+    else if(isClose(now_position, Stage3_reset)) 
     {
       Stage2_->publish(std_msgs::msg::Bool().set__data(false));
       Stage4_->publish(std_msgs::msg::Bool().set__data(false));
       RCLCPP_WARN(this->get_logger(), "Stage 3 reset");
       now_stage = 3; 
     }
-    else if(isClose(now_position, Stage4_reset) && now_stage != 4) 
+    else if(isClose(now_position, Stage4_reset)) 
     {
       Stage2_->publish(std_msgs::msg::Bool().set__data(false));
       Stage3_->publish(std_msgs::msg::Bool().set__data(false));
@@ -119,6 +125,7 @@ private:
         {
             now_stage = 3;
             Stage2_->publish(std_msgs::msg::Bool().set__data(false));
+            cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
         }
         break;
       case 3:

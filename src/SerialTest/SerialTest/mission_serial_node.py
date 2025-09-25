@@ -126,7 +126,7 @@ class MissionSerialNode(Node):
     def check_final_ack_timeout(self):
         if self.waiting_final_ack and self.last_ros_cmd:
             elapsed = time.time() - self.final_ack_timer_start
-            if elapsed > 10000000.0:
+            if elapsed > 100000000.0:
                 # 超時補發
                 msg = Command()
                 msg.info = f"{self.last_ros_cmd}_OK"
