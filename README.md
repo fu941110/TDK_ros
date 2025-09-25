@@ -56,7 +56,7 @@ stty -F /dev/ttyACM0
 setserial /dev/ttyACM0 low_latency
 stty -F /dev/ttyACM1
 setserial /dev/ttyACM1 low_latency
-
+```
 ## before launch
 
 - you should do this every time before launch
