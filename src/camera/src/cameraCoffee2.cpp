@@ -51,7 +51,7 @@ public:
         masked = layerMask(img);
         // imshow("Masked Result", masked);　　// 層遮罩結果
 
-        end = findFourSquare(masked);
+        end = findFourSquare(img);
         // imshow("Four Square Detection", end);  // 四方形檢測結果
     }
 
@@ -83,12 +83,12 @@ public:
         //     }
         // }
 
-        center_x = edge.cols / 2;
-        center_y = edge.rows / 2;
-        bestContour.push_back(Point(edge.cols*0.1, 0));                     // 左上
-        bestContour.push_back(Point(edge.cols*0.9 - 1, 0));      // 右上
-        bestContour.push_back(Point(edge.cols*0.9 - 1, edge.rows - 1)); // 右下
-        bestContour.push_back(Point(edge.cols*0.1, edge.rows - 1));      // 左下
+        center_x = img.cols *0.57;
+        center_y = img.rows *0.7;
+        bestContour.push_back(Point(img.cols*0.1, img.rows*0.3));                     // 左上
+        bestContour.push_back(Point(img.cols*0.9 - 1, img.rows*0.3));      // 右上
+        bestContour.push_back(Point(img.cols*0.9 - 1, img.rows - 1)); // 右下
+        bestContour.push_back(Point(img.cols*0.1, img.rows - 1));      // 左下
 
         Mat output = img.clone();
         if (!bestContour.empty()) {
@@ -108,7 +108,7 @@ public:
                 bitwise_and(img, img, masked, mask);
         }
 
-        return masked;
+        return img;
     }
 
     //find and distinguish four square inside the rectangle
@@ -132,7 +132,7 @@ public:
         for (const auto& contour : contours) {
             double area = contourArea(contour);
             // printf("Area: %f\n", area);
-            if (area < 5000 || area > 80000) continue; 
+            if (area < 2300 || area > 80000) continue; 
 
             vector<Point> approx;
             approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
@@ -145,7 +145,7 @@ public:
 
                 // 檢查中心點的像素值是否為黑色（近似判斷）
                 Vec3b pixel = masked.at<Vec3b>(cy, cx);
-                bool isBlack = (pixel[0] < 50 || pixel[1] < 50 || pixel[2] < 50); // BGR 都接近 0
+                bool isBlack = (pixel[0] < 70 || pixel[1] < 70 || pixel[2] < 70); // BGR 都接近 0
 
                 Scalar color = isBlack ? Scalar(255, 0, 0) : Scalar(0, 0, 255); // 藍色 or 紅色
 
@@ -160,7 +160,7 @@ public:
                     double totalColor = meanColor[0] + meanColor[1] + meanColor[2];
 
                     // 閾值可依需求調整，這裡設定為 120*3 = 360
-                    color = (totalColor < 200) ? Scalar(0, 255, 0) : Scalar(0, 0, 255);
+                    color = (totalColor < 300) ? Scalar(0, 255, 0) : Scalar(0, 0, 255);
                 }
                 if(color != Scalar(0, 0, 255)) 
                 {
@@ -186,7 +186,7 @@ public:
                     coffee_msg.number = coffee_number;
                     coffee_pub_->publish(coffee_msg);
 
-                    // printf("Coffee number: %d, Type: %s\n", coffee_number, coffee_type);
+                    printf("Coffee number: %d, Type: %d\n", coffee_number, coffee_type);
                 }
                 polylines(output, approx, true, color, 2);
             }

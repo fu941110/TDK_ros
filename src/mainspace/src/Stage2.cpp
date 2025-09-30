@@ -58,7 +58,23 @@ private:
       // SendRoute();
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
-    if(msg->info == "S2_2_OK")
+    else if(msg->info == "S2_2_OK")
+    {
+      pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
+    }
+    else if(msg->info == "S3_1_OK")
+    {
+      pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
+    }
+    else if(msg->info == "S3_2_OK")
+    {
+      pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
+    }
+    else if(msg->info == "S3_3_OK")
+    {
+      pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
+    }
+    else if(msg->info == "S3_4_OK")
     {
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }

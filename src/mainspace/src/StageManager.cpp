@@ -74,19 +74,26 @@ private:
       first_time_coffee_2 = true;
       first_time_desk = true;
     }
-    else if(isClose(now_position, Stage3_reset)) 
+    else if(isClose(now_position, Stage3_open)) 
     {
-      Stage2_->publish(std_msgs::msg::Bool().set__data(false));
-      Stage4_->publish(std_msgs::msg::Bool().set__data(false));
-      RCLCPP_WARN(this->get_logger(), "Stage 3 reset");
-      now_stage = 3; 
+      cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
+      command_pub_->publish(mainspace::msg::Command().set__info("S3_1"));
+      RCLCPP_WARN(this->get_logger(), "Stage 3 open");
     }
-    else if(isClose(now_position, Stage4_reset)) 
+    else if(isClose(now_position, Stage3_take)) 
     {
-      Stage2_->publish(std_msgs::msg::Bool().set__data(false));
-      Stage3_->publish(std_msgs::msg::Bool().set__data(false));
-      RCLCPP_WARN(this->get_logger(), "Stage 4 reset");
-      now_stage = 4; 
+      command_pub_->publish(mainspace::msg::Command().set__info("S3_2"));
+      RCLCPP_WARN(this->get_logger(), "Stage 3 take");
+    }
+    else if(isClose(now_position, Stage3_put)) 
+    {
+      command_pub_->publish(mainspace::msg::Command().set__info("S3_3"));
+      RCLCPP_WARN(this->get_logger(), "Stage 3 putdown");
+    }
+    else if(isClose(now_position, Stage3_back)) 
+    {
+      command_pub_->publish(mainspace::msg::Command().set__info("S3_4"));
+      RCLCPP_WARN(this->get_logger(), "Stage 3 back");
     }
     //stage5, wait for writing something 
     
@@ -126,7 +133,7 @@ private:
         else if(isClose(last_position_, Stage2_end))  
         {
             now_stage = 3;
-            Stage2_->publish(std_msgs::msg::Bool().set__data(false));
+            // Stage2_->publish(std_msgs::msg::Bool().set__data(false));
             cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
         }
         break;
@@ -174,7 +181,11 @@ protected:
     CheckPoint Stage2_coffee_2 = {7.03, 0.6};
     CheckPoint Stage2_desk = {6.46, 2.09};
     CheckPoint Stage2_end = {6.71,3.95};
-    CheckPoint Stage3_reset = {6.71, 3.95};
+
+    CheckPoint Stage3_open = {3.00, 1.00};
+    CheckPoint Stage3_take = {3.00, 2.00};
+    CheckPoint Stage3_putdown = {3.00, 3.00};
+    CheckPoint Stage3_back = {3.00, 4.00};
 
     CheckPoint Stage3_end = {3.9, 6.2};
     CheckPoint Stage4_reset = {3.9, 6.2};
