@@ -32,6 +32,7 @@ public:
       100ms, std::bind(&StageManager::ManagerLoop, this));
 
     command_pub_ = this->create_publisher<mainspace::msg::Command>("/commandToSTM", 10);  
+    pause_pub_ = this->create_publisher<mainspace::msg::Command>("/pause", 10);  
 
     //send Bool to control_node, then decide which node will be open or closed
     Stage2_ = this->create_publisher<std_msgs::msg::Bool>("/Stage2_start", 10);
@@ -68,6 +69,7 @@ private:
       RCLCPP_WARN(this->get_logger(), "Stage 2 reset");
       now_stage = 2; 
 
+      pause_pub_->publish(std_msgs::msg::Bool().set__data(true));
       cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
       last_position_ = Stage2_reset;
@@ -166,6 +168,7 @@ protected:
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr Stage2_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr cameraCoffee2_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr cameraDesk2_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr Pause;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr Stage3_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr Stage4_;
 
