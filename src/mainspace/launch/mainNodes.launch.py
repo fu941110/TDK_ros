@@ -7,6 +7,7 @@ def generate_launch_description():
         Node(package='SerialTest', executable='mission_serial_node', name='mission_serial_node', output='screen'),
         Node(package='SerialTest', executable='motor_serial_node', name='motor_serial_node', output='screen'),
         Node(package='mainspace', executable='navigator_main', name='navigator_main', output='screen'),
+        Node(package='mainspace', executable='Stage2', name='Stage2', output='screen'),
         Node(package='mainspace', executable='StageManager', name='StageManager', output='screen'),
         Node(package='SerialTest', executable='control_node', name='control_node', output='screen'),
     ])

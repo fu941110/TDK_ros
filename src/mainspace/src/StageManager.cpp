@@ -70,6 +70,7 @@ private:
 
       cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(true));
       cameraDesk2_->publish(std_msgs::msg::Bool().set__data(false));
+      last_position_ = Stage2_reset;
       first_time_coffee = true;
       first_time_coffee_2 = true;
       first_time_desk = true;
@@ -85,7 +86,7 @@ private:
       command_pub_->publish(mainspace::msg::Command().set__info("S3_2"));
       RCLCPP_WARN(this->get_logger(), "Stage 3 take");
     }
-    else if(isClose(now_position, Stage3_put)) 
+    else if(isClose(now_position, Stage3_putdown)) 
     {
       command_pub_->publish(mainspace::msg::Command().set__info("S3_3"));
       RCLCPP_WARN(this->get_logger(), "Stage 3 putdown");

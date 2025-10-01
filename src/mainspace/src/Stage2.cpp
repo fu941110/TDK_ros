@@ -13,7 +13,6 @@ public:
   Stage2()
   : NavigatorNode(false)  
   {
-
     //get coffee and desk info by cameraCoffee2 and cameraDesk2
     coffee_sub_ = this->create_subscription<mainspace::msg::Coffee>(
       "/coffee", 10, std::bind(&Stage2::coffeeRead, this, _1));
@@ -56,6 +55,7 @@ private:
     if(msg->info == "S2_1_OK")
     {
       // SendRoute();
+      // cameraCoffee2_->publish(std_msgs::msg::Bool().set__data(false));
       pause_pub_->publish(mainspace::msg::Pause().set__pause(false));
     }
     else if(msg->info == "S2_2_OK")

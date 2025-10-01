@@ -28,7 +28,7 @@ class MotorSerialNode(Node):
         self.last_flush = time.time()  # 紀錄上次 flush 的時間
         self.flush_interval = 6.0
 
-        self.timer = self.create_timer(0.3, self.timer_callback)
+        self.timer = self.create_timer(0.45, self.timer_callback)
 
         # Position publisher（STM32 ⇒ ROS2）
         self.position_publisher = self.create_publisher(Position, 'stm_position', 10)
@@ -122,9 +122,8 @@ class MotorSerialNode(Node):
         data = f"C{4 * (msg.type) + msg.number}\n"
         # with self.lock:
         if True:
-            if self.coffee_queue is None:
-                self.coffee_queue = data
-                self.pending_time = 0
+            self.coffee_queue = data
+            self.pending_time = 0
 
     def pause_callback(self, msg):
         data = f"P{int(msg.pause)}\n"

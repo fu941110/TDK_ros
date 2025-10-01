@@ -11,12 +11,13 @@ class CameraCoffee2 : public Camera {
 public:
     CameraCoffee2() : Camera(false)
     {
+        combo = 0;
         using namespace std::chrono_literals;
 
         coffee_pub_ = this->create_publisher<mainspace::msg::Coffee>("/coffee", 10);
 
         timer_ = this->create_wall_timer(
-            500ms, std::bind(&CameraCoffee2::timerCallback, this));
+            300ms, std::bind(&CameraCoffee2::timerCallback, this));
 
         //test, 刪///////////////////////////////////////////////////////////////////////
         // mainspace::msg::Coffee coffee_msg;
@@ -83,8 +84,8 @@ public:
         //     }
         // }
 
-        center_x = img.cols *0.57;
-        center_y = img.rows *0.7;
+        center_x = img.cols *0.5;
+        center_y = img.rows *0.65;
         bestContour.push_back(Point(img.cols*0.1, img.rows*0.3));                     // 左上
         bestContour.push_back(Point(img.cols*0.9 - 1, img.rows*0.3));      // 右上
         bestContour.push_back(Point(img.cols*0.9 - 1, img.rows - 1)); // 右下
@@ -132,7 +133,7 @@ public:
         for (const auto& contour : contours) {
             double area = contourArea(contour);
             // printf("Area: %f\n", area);
-            if (area < 2300 || area > 80000) continue; 
+            if (area < 3000 || area > 80000) continue; 
 
             vector<Point> approx;
             approxPolyDP(contour, approx, 0.02 * arcLength(contour, true), true);
@@ -181,12 +182,21 @@ public:
                     } else {
                         coffee_type = 1;
                     }
-                    mainspace::msg::Coffee coffee_msg;
-                    coffee_msg.type = coffee_type;
-                    coffee_msg.number = coffee_number;
-                    coffee_pub_->publish(coffee_msg);
+                    if(last_coffee_number == coffee_number && last_coffee_type == coffee_type) combo++;
+                    else combo = 0;
 
-                    printf("Coffee number: %d, Type: %d\n", coffee_number, coffee_type);
+                    if(combo > 5)
+                    {
+                        mainspace::msg::Coffee coffee_msg;
+                        coffee_msg.type = coffee_type;
+                        coffee_msg.number = coffee_number;
+                        coffee_pub_->publish(coffee_msg);
+                    }
+                    
+                    last_coffee_number = coffee_number;
+                    last_coffee_type = coffee_type;
+
+                    // printf("Coffee number: %d, Type: %d\n", coffee_number, coffee_type);
                 }
                 polylines(output, approx, true, color, 2);
             }
@@ -203,6 +213,9 @@ private:
     // coffee info
     int coffee_number = 0;
     int coffee_type = 0;
+    int last_coffee_number = 0;
+    int last_coffee_type = 0;
+    int combo = 0;
 
     rclcpp::Publisher<mainspace::msg::Coffee>::SharedPtr coffee_pub_;
     rclcpp::TimerBase::SharedPtr timer_;
